@@ -1,0 +1,5 @@
+node_modules
+.prettierignore
+package.json
+package-lock.json
+pnpm-lock.yaml

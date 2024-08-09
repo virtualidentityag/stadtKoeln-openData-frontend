@@ -13,9 +13,18 @@ dependencies:
     version: 5.3.3(@popperjs/core@2.11.8)
 
 devDependencies:
+  '@destination/prettier-plugin-twig':
+    specifier: ^1.5.0
+    version: 1.5.0(prettier@3.3.3)
   '@vituum/vite-plugin-twig':
     specifier: ^1.1.0
     version: 1.1.0(sass@1.77.8)
+  husky:
+    specifier: ^9.1.4
+    version: 9.1.4
+  prettier:
+    specifier: ^3.3.3
+    version: 3.3.3
   sass:
     specifier: ^1.77.8
     version: 1.77.8
@@ -39,6 +48,17 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.14.1
+    dev: true
+
+  /@destination/prettier-plugin-twig@1.5.0(prettier@3.3.3):
+    resolution: {integrity: sha512-cTgy7lQOs0eTdNIqNQL9YDZ2ZFRyOzF5MfF07Lp8o1LLDMqjJgYfD382LIrXZ1E5s+ViYSgQJacR2U4Zx16XKw==}
+    peerDependencies:
+      prettier: ^2.0.0 || ^3.0.0
+    dependencies:
+      html-styles: 1.0.0
+      line-column: 1.0.2
+      ohm-js: 16.6.0
+      prettier: 3.3.3
     dev: true
 
   /@esbuild/aix-ppc64@0.21.5:
@@ -731,6 +751,16 @@ packages:
       is-glob: 4.0.3
     dev: true
 
+  /html-styles@1.0.0:
+    resolution: {integrity: sha512-cDl5dcj73oI4Hy0DSUNh54CAwslNLJRCCoO+RNkVo+sBrjA/0+7E/xzvj3zH/GxbbBLGJhE0hBe1eg+0FINC6w==}
+    dev: true
+
+  /husky@9.1.4:
+    resolution: {integrity: sha512-bho94YyReb4JV7LYWRWxZ/xr6TtOTt8cMfmQ39MQYJ7f/YE268s3GdghGwi+y4zAeqewE5zYLvuhV0M0ijsDEA==}
+    engines: {node: '>=18'}
+    hasBin: true
+    dev: true
+
   /immutable@4.3.7:
     resolution: {integrity: sha512-1hqclzwYwjRDFLjcFxOM5AYkkG0rpFPpr1RLPMEuGczoS7YA8gLhy8SWXYRAA/XwfEHpfo3cw5JGioS32fnMRw==}
     dev: true
@@ -757,6 +787,24 @@ packages:
   /is-number@7.0.0:
     resolution: {integrity: sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==}
     engines: {node: '>=0.12.0'}
+    dev: true
+
+  /isarray@1.0.0:
+    resolution: {integrity: sha512-VLghIWNM6ELQzo7zwmcg0NmTVyWKYjvIeM83yjp0wRDTmUnrM678fQbcKBo6n2CJEF0szoG//ytg+TKla89ALQ==}
+    dev: true
+
+  /isobject@2.1.0:
+    resolution: {integrity: sha512-+OUdGJlgjOBZDfxnDjYYG6zp487z0JGNQq3cYQYg5f5hKR+syHMsaztzGeml/4kGG55CSpKSpWTY+jYGgsHLgA==}
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      isarray: 1.0.0
+    dev: true
+
+  /line-column@1.0.2:
+    resolution: {integrity: sha512-Ktrjk5noGYlHsVnYWh62FLVs4hTb8A3e+vucNZMgPeAOITdshMSgv4cCZQeRDjm7+goqmo6+liZwTXo+U3sVww==}
+    dependencies:
+      isarray: 1.0.0
+      isobject: 2.1.0
     dev: true
 
   /locutus@2.0.32:
@@ -821,6 +869,11 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
+  /ohm-js@16.6.0:
+    resolution: {integrity: sha512-X9P4koSGa7swgVQ0gt71UCYtkAQGOjciJPJAz74kDxWt8nXbH5HrDOQG6qBDH7SR40ktNv4x61BwpTDE9q4lRA==}
+    engines: {node: '>=0.12.1'}
+    dev: true
+
   /once@1.4.0:
     resolution: {integrity: sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==}
     dependencies:
@@ -843,6 +896,12 @@ packages:
       nanoid: 3.3.7
       picocolors: 1.0.1
       source-map-js: 1.2.0
+    dev: true
+
+  /prettier@3.3.3:
+    resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /proxy-from-env@1.1.0:
