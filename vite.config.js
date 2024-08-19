@@ -14,4 +14,9 @@ export default {
       },
     }),
   ],
+  experimental: {
+    renderBuiltUrl(filename) {
+      return `./${filename}`
+    },
+  },
 }
