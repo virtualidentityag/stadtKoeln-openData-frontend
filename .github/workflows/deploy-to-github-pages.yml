@@ -88,7 +88,7 @@ jobs:
           rm deployment/index.html
           mkdir -p deployment/assets
           mv dist/preview.html deployment/index.html
-          mv dist/assets/styles*.css deployment/assets/
+          mv dist/assets/@styles*.css deployment/assets/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
