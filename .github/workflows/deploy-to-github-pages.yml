@@ -81,7 +81,6 @@ jobs:
       - name: Generate index file
         run: |
           branches=$(ls deployment/archives/*.tar | xargs -n 1 basename | sed 's/.tar//')
-          echo "branches=$branches" >> $GITHUB_ENV
           node scripts/build-preview.js $branches > deployment/index.html
           rm -rf src/pages/*
           cp deployment/index.html src/pages/preview.twig
