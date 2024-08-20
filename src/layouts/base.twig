@@ -2,7 +2,13 @@
 <html lang='de'>
   <head>
     <title>Stadt Koeln - Open Data</title>
-    <link rel='stylesheet' href='/src/styles/styles.scss'>
+    {#
+      https://github.com/vitejs/vite/issues/3924
+      It seems that vite with twig sorts the stylesheets by name in the build process.
+      For that reason, we need to prepend the main stylesheet with '@'
+      to ensure it is always the first being loaded
+    #}
+    <link rel='stylesheet' href='/src/styles/@styles.scss'>
 
     {% set theme = theme is defined ? theme : 'light' %}
     <link rel='stylesheet' href='/src/styles/themes/{{ theme }}.css'>
