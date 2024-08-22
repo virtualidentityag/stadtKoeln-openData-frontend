@@ -1,0 +1,21 @@
+<div class='card mb-3'>
+  {% if thumbnail %}
+    <img class='card-img-top' src='{{ thumbnail.src }}' alt='{{ thumbnail.alt }}'>
+  {% endif %}
+
+  <div class='card-body'>
+    <h5 class='card-title'>{{ title }}</h5>
+    <p class='card-subtitle text-muted'>{{ subtitle }}</p>
+    <p class='card-text'>
+      {{ description }}
+    </p>
+    <p>
+      <span>Formate:</span>
+      <span class='d-inline-flex gap-3 ml-2'>
+        {% for format in formats %}
+          <span> <i class='bi bi-filetype-{{ format|lower }} fs-5'></i> {{ format | upper }} </span>
+        {% endfor %}
+      </span>
+    </p>
+  </div>
+</div>

@@ -1,6 +1,134 @@
 {% extends 'layouts::base.twig' %}
 
 {% block content %}
-  <h1>Startseite</h1>
-  <a href='./dark'>Dark Mode</a>
+  <section class='row py-5'>
+    <div class='col-8'>
+      <h1>Die beste Grundlage fur fundierte Entscheidungen: offene Daten aus Ihrer Region.</h1>
+
+      <form class='form-inline d-flex gap-2 my-4'>
+        <input
+          class='form-control mr-sm-2'
+          type='search'
+          placeholder='Datensatze suchen'
+          aria-label='Datensatze suchen'
+        >
+        <button class='btn btn-danger my-2 my-sm-0' type='submit'><i class='bi bi-search'></i></button>
+      </form>
+
+      <p>
+        Hier finden alle Kölner – ob Bürger, Verwaltung, Unternehmen oder Wissenschaft – offene Datensätze, um gemeinsam
+        einen Mehrwert für alle zu schaffen.
+      </p>
+    </div>
+  </section>
+
+  <section class='row py-5'>
+    <div class='col-12 mb-4 d-flex justify-content-between align-items-center'>
+      <h2>Beliebte Datensätze</h2>
+      <a href='#'>> alle Datensätze</a>
+    </div>
+
+    <div class='col-12'>
+      <div class='row'>
+        <div class='col-6'>
+          {%
+            include 'partials::card.twig' with {
+            'thumbnail': {
+            src: 'https://picsum.photos/960/540',
+            alt: 'Virtual Identity AG'
+            },
+            'title': 'Baumkataster Köln 2020',
+            'subtitle': 'Herausgeber: Stadt Köln',
+            'description': 'Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua...',
+            'formats': ['json', 'pdf']
+            }
+          %}
+        </div>
+
+        <div class='col-6'>
+          {%
+            include 'partials::card.twig' with {
+            'title': 'Baumkataster Köln 2020',
+            'subtitle': 'Herausgeber: Stadt Köln',
+            'description': 'Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua...',
+            'formats': ['json', 'pdf']
+            }
+          %}
+          {%
+            include 'partials::card.twig' with {
+            'title': 'Baumkataster Köln 2020',
+            'subtitle': 'Herausgeber: Stadt Köln',
+            'description': 'Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua...',
+            'formats': ['json', 'pdf']
+            }
+          %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class='row py-5 border-top'>
+    <div class='col-12 mb-4 d-flex justify-content-between align-items-center'>
+      <h2>News</h2>
+      <a href='#'>> alle News</a>
+    </div>
+
+    <div class='col-12'>
+      <div class='row'>
+        <div class='col-6'>
+          <img class='img-fluid' src='https://picsum.photos/960/540' alt='Virtual Identity AG'>
+        </div>
+        <div class='col-6'>
+          <h3>Titel lorem ipsum</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+            dolore magna aliquyam erat, sed diam voluptua...
+          </p>
+          <div class='d-flex justify-content-end'>
+            <a href='#'>> weiterlesen</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class='row py-5 border-top'>
+    <div class='col-12 mb-4 d-flex justify-content-between align-items-center'>
+      <h2>Beliebte Kategorien</h2>
+    </div>
+
+    <div class='col-12'>
+      <div class='row'>
+        {% for i in 0..5 %}
+          <div class='col-2'>
+            <a href='#' class='ratio ratio-1x1'>
+              <div class='d-flex flex-column justify-content-center align-items-center bg-body-tertiary'>
+                <i class='bi bi-tag-fill fs-1'></i>
+                <p>Bevölkerung</p>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class='col-12 mt-4 d-flex justify-content-center'>
+      <button class='btn btn-link text-decoration-none'><i class='bi bi-chevron-down'></i> ALLE ANZEIGEN</button>
+    </div>
+  </section>
+
+  <section class='row py-5 border-top'>
+    <div class='col-12 mb-4 d-flex justify-content-between align-items-center'>
+      <h2>Daten über Schnittstelle nutzen</h2>
+    </div>
+
+    <p>
+      Erfahren Sie hier wie Sie mit der DKAN API unsere offenen Datensätze für Ihre eigenen Projekte anschauen,
+      herunterladen und programmsteuern können.
+    </p>
+
+    <div class='d-flex justify-content-end'>
+      <a href='#'>> weiterlesen</a>
+    </div>
+  </section>
 {% endblock %}
