@@ -2,7 +2,10 @@
 <html lang='de'>
   <head>
     <title>Stadt Koeln - Open Data</title>
+
     <link rel='stylesheet' href='/src/styles/styles.scss'>
+    {% set theme = theme is defined ? theme : 'light' %}
+    <link rel='stylesheet' href='/src/styles/themes/{{ theme }}.css'>
   </head>
   <body class='min-vh-100 d-flex flex-column'>
     {% include 'partials::header.twig' %}
