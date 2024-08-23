@@ -2,12 +2,14 @@
 <html lang='de'>
   <head>
     <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Stadt Koeln - Open Data</title>
 
     <link rel='stylesheet' href='/src/styles/styles.scss'>
     {% set theme = theme is defined ? theme : 'default' %}
     <link rel='stylesheet' href='/src/styles/themes/{{ theme }}.css'>
 
+    <script type='module' src='/src/js/bootstrap.js' defer></script>
     <script src='/src/js/darkmode.js'></script>
   </head>
   <body class='min-vh-100 d-flex flex-column'>
