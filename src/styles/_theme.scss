@@ -5,6 +5,29 @@
   --link-hover-color-rgb: var(--primary-text-emphasis-rgb);
 }
 
+.text-bg-primary {
+  color: var(--light) !important;
+  background-color: var(--primary) !important;
+}
+
+.btn-primary {
+  --btn-bg: var(--primary);
+  --btn-color: var(--light);
+  --btn-border-color: var(--primary);
+
+  --btn-hover-bg: var(--primary-hover);
+  --btn-hover-color: var(--primary);
+  --btn-hover-border-color: var(--primary);
+
+  --btn-active-bg: var(--primary);
+  --btn-active-color: var(--light);
+  --btn-active-border-color: var(--primary);
+
+  --btn-disabled-bg: var(--primary);
+  --btn-disabled-color: var(--light);
+  --btn-disabled-border-color: var(--primary);
+}
+
 .nav-pills {
   --nav-pills-link-active-bg: var(--primary);
   --nav-pills-link-active-color: var(--light);
