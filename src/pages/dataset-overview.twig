@@ -15,14 +15,16 @@
 
       <div class='row'>
         <div class='col-8'>
-          <form class='form-inline d-flex gap-2 my-4'>
+          <form action='./dataset-overview' class='form-inline d-flex gap-2 my-4'>
             <input
               class='form-control mr-sm-2'
               type='search'
               placeholder='Datensatze suchen'
               aria-label='Datensatze suchen'
             >
-            <button class='btn btn-danger my-2 my-sm-0' type='submit'><i class='bi bi-search'></i></button>
+            <button class='btn btn-primary my-2 my-sm-0' type='submit' aria-label='Search'>
+              <i class='bi bi-search'></i>
+            </button>
           </form>
         </div>
       </div>
@@ -34,7 +36,7 @@
 
     <div class='row mt-4'>
       <aside class='col-3'>
-        <h5 class='mb-3'>Filtern nach</h5>
+        <h3 class='h5 mb-3'>Filtern nach</h3>
 
         {%
           include 'partials::dataset-overview/filters.twig' with {
@@ -132,7 +134,7 @@
         %}
       </aside>
       <div class='col'>
-        <div class='d-flex align-items-center justify-content-end'>
+        <div class='d-flex gap-3 align-items-center justify-content-end'>
           <p class='m-0'>
             <strong>Sortieren nach</strong>
           </p>

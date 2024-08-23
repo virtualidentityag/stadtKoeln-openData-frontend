@@ -1,7 +1,7 @@
 <div class='d-flex flex-column gap-4'>
   {% for category in data %}
     <div>
-      <h6>{{ category.title }}</h6>
+      <h4 class='h6'>{{ category.title }}</h4>
       <div class='d-flex flex-column gap-2 align-items-start'>
         {% for filter in category.filters %}
           {% set id = 'flexCheckChecked' ~ loop.parent.loop.index ~ loop.index %}

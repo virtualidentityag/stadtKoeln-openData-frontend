@@ -1,0 +1,158 @@
+{% extends 'layouts::base.twig' %}
+{% set theme = 'default' %}
+
+{% block content %}
+  <nav aria-label='breadcrumb'>
+    <ol class='breadcrumb'>
+      <li class='breadcrumb-item'><a href='./'>Home</a></li>
+      <li class='breadcrumb-item active' aria-current='page'>Apps</li>
+    </ol>
+  </nav>
+
+  <section class='row py-4'>
+    <div class='col-8'>
+      <h1 class='mb-3'>Apps und Anwendungsbeispiele</h1>
+      <p>
+        Lorem ipsum Einleitungstext zum Thema Apps, der kurz beschreibt, wie und warum man offene Daten nutzt und der
+        Öffentlichkeit zum Ausprobieren zur Verfügung stellt.
+      </p>
+    </div>
+  </section>
+
+  <section class='row pb-5'>
+    <article class='col-12 mb-5'>
+      <div class='row'>
+        <div class='col-12 '>
+          <div class='ratio ratio-21x9 mb-3'>
+            <img src='https://picsum.photos/960/540' alt='Virtual Identity AG'>
+          </div>
+        </div>
+        <div class='col-10'>
+          <h2 class='h3'>App name lorem</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+            clita kasd gubergren, no sea takimata sanctus.
+          </p>
+        </div>
+        <div class='col-12 d-flex justify-content-end'>
+          {%
+            include 'partials::icon-link.twig' with {
+            href: '#',
+            text: 'Zur Anwendung',
+            icon: 'chevron-right'
+            }
+          %}
+        </div>
+      </div>
+    </article>
+    <article class='col-6 mb-5'>
+      <div class='row'>
+        <div class='col-12 '>
+          <div class='ratio ratio-21x9 mb-3'>
+            <img src='https://picsum.photos/960/540' alt='Virtual Identity AG'>
+          </div>
+        </div>
+        <div class='col-10'>
+          <div class='d-flex gap-3 align-items-center mb-2'>
+            <h2 class='h3 m-0'>App name lorem</h2>
+            <span class='badge text-bg-danger'>NOT AVAILABLE</span>
+          </div>
+
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+            clita kasd gubergren, no sea takimata sanctus.
+          </p>
+        </div>
+        <div class='col-12 d-flex justify-content-end'>
+          {%
+            include 'partials::icon-link.twig' with {
+            href: '#',
+            text: 'Zur Anwendung',
+            icon: 'chevron-right'
+            }
+          %}
+        </div>
+      </div>
+    </article>
+    <article class='col-6 mb-5'>
+      <div class='row'>
+        <div class='col-12 '>
+          <div class='ratio ratio-21x9 mb-3'>
+            <img src='https://picsum.photos/960/540' alt='Virtual Identity AG'>
+          </div>
+        </div>
+        <div class='col-10'>
+          <h2 class='h3'>App name lorem</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+            clita kasd gubergren, no sea takimata sanctus.
+          </p>
+        </div>
+        <div class='col-12 d-flex justify-content-end'>
+          {%
+            include 'partials::icon-link.twig' with {
+            href: '#',
+            text: 'Zur Anwendung',
+            icon: 'chevron-right'
+            }
+          %}
+        </div>
+      </div>
+    </article>
+    <article class='col-6 mb-5'>
+      <div class='row'>
+        <div class='col-12 '>
+          <div class='ratio ratio-21x9 mb-3'>
+            <img src='https://picsum.photos/960/540' alt='Virtual Identity AG'>
+          </div>
+        </div>
+        <div class='col-10'>
+          <h2 class='h3'>App name lorem</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+            clita kasd gubergren, no sea takimata sanctus.
+          </p>
+        </div>
+        <div class='col-12 d-flex justify-content-end'>
+          {%
+            include 'partials::icon-link.twig' with {
+            href: '#',
+            text: 'Zur Anwendung',
+            icon: 'chevron-right'
+            }
+          %}
+        </div>
+      </div>
+    </article>
+    <article class='col-6 mb-5'>
+      <div class='row'>
+        <div class='col-12 '>
+          <div class='ratio ratio-21x9 mb-3'>
+            <img src='https://picsum.photos/960/540' alt='Virtual Identity AG'>
+          </div>
+        </div>
+        <div class='col-10'>
+          <h2 class='h3'>App name lorem</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+            clita kasd gubergren, no sea takimata sanctus.
+          </p>
+        </div>
+        <div class='col-12 d-flex justify-content-end'>
+          {%
+            include 'partials::icon-link.twig' with {
+            href: '#',
+            text: 'Zur Anwendung',
+            icon: 'chevron-right'
+            }
+          %}
+        </div>
+      </div>
+    </article>
+  </section>
+{% endblock %}
