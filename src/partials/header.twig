@@ -10,15 +10,9 @@
 
     <ul class='nav nav-pills'>
       <li class='nav-item'>
-        {% if theme == 'dark' %}
-          <a href='./' class='nav-link'>
-            <i class='bi bi-sun-fill'></i>
-          </a>
-        {% else %}
-          <a href='./dark' class='nav-link'>
-            <i class='bi bi-moon-fill'></i>
-          </a>
-        {% endif %}
+        <button toggle-dark-mode class='btn btn-link' aria-label='Toggle dark mode'>
+          <i class='bi bi-moon-fill'></i>
+        </button>
       </li>
       <li class='nav-item'><a href='./' class='nav-link'>Daten</a></li>
       <li class='nav-item'><a href='#' class='nav-link'>News</a></li>

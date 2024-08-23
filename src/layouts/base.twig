@@ -5,8 +5,10 @@
     <title>Stadt Koeln - Open Data</title>
 
     <link rel='stylesheet' href='/src/styles/styles.scss'>
-    {% set theme = theme is defined ? theme : 'light' %}
+    {% set theme = theme is defined ? theme : 'default' %}
     <link rel='stylesheet' href='/src/styles/themes/{{ theme }}.css'>
+
+    <script src='/src/js/darkmode.js'></script>
   </head>
   <body class='min-vh-100 d-flex flex-column'>
     {% include 'partials::header.twig' %}

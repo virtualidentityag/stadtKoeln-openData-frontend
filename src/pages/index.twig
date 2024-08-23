@@ -1,4 +1,5 @@
 {% extends 'layouts::base.twig' %}
+{% set theme = 'default' %}
 
 {% block content %}
   <section class='row py-5'>
@@ -25,7 +26,13 @@
   <section class='row py-5'>
     <div class='col-12 mb-4 d-flex justify-content-between align-items-center'>
       <h2>Beliebte Datensätze</h2>
-      <a href='#'>> alle Datensätze</a>
+      {%
+        include 'partials::icon-link.twig' with {
+        href: '#',
+        text: 'Alle Datensätze',
+        icon: 'arrow-right'
+        }
+      %}
     </div>
 
     <div class='col-12'>
@@ -70,7 +77,13 @@
   <section class='row py-5 border-top'>
     <div class='col-12 mb-4 d-flex justify-content-between align-items-center'>
       <h2>News</h2>
-      <a href='#'>> alle News</a>
+      {%
+        include 'partials::icon-link.twig' with {
+        href: '#',
+        text: 'Alle News',
+        icon: 'arrow-right'
+        }
+      %}
     </div>
 
     <div class='col-12'>
@@ -85,7 +98,13 @@
             dolore magna aliquyam erat, sed diam voluptua...
           </p>
           <div class='d-flex justify-content-end'>
-            <a href='#'>> weiterlesen</a>
+            {%
+              include 'partials::icon-link.twig' with {
+              href: '#',
+              text: 'Weiterlesen',
+              icon: 'arrow-right'
+              }
+            %}
           </div>
         </div>
       </div>
@@ -128,7 +147,13 @@
     </p>
 
     <div class='d-flex justify-content-end'>
-      <a href='#'>> weiterlesen</a>
+      {%
+        include 'partials::icon-link.twig' with {
+        href: '#',
+        text: 'Weiterlesen',
+        icon: 'arrow-right'
+        }
+      %}
     </div>
   </section>
 {% endblock %}
