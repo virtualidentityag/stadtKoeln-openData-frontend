@@ -1,10 +1,16 @@
 <div class='card mb-3'>
   {% if thumbnail %}
-    <img class='card-img-top' src='{{ thumbnail.src }}' alt='{{ thumbnail.alt }}'>
+    <div class='ratio ratio-16x9'>
+      <img class='card-img-top' src='{{ thumbnail.src }}' alt='{{ thumbnail.alt }}'>
+    </div>
   {% endif %}
 
   <div class='card-body'>
-    <h5 class='card-title'>{{ title }}</h5>
+    <h5 class='card-title'>
+      <a href='./dataset-detail' class='text-decoration-none'>
+        {{ title }}
+      </a>
+    </h5>
     <p class='card-subtitle text-muted'>{{ subtitle }}</p>
     <p class='card-text'>
       {{ description }}
