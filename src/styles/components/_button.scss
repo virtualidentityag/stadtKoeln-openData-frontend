@@ -1,0 +1,39 @@
+.btn-primary {
+  --btn-bg: var(--primary);
+  --btn-color: var(--color-on-primary);
+  --btn-border-color: var(--primary);
+
+  --btn-hover-bg: var(--primary-hover);
+  --btn-hover-color: var(--color-on-primary);
+  --btn-hover-border-color: var(--primary-hover);
+
+  --btn-active-bg: var(--primary-active);
+  --btn-active-color: var(--color-on-primary);
+  --btn-active-border-color: var(--primary-active);
+
+  --btn-disabled-bg: var(--primary);
+  --btn-disabled-color: var(--color-on-primary);
+  --btn-disabled-border-color: var(--primary);
+
+  --btn-focus-shadow-rgb: var(--primary-shadow-rgb);
+}
+
+.btn-secondary {
+  --btn-bg: var(--secondary);
+  --btn-color: var(--color-on-secondary);
+  --btn-border-color: var(--secondary);
+
+  --btn-hover-bg: var(--secondary-hover);
+  --btn-hover-color: var(--color-on-secondary);
+  --btn-hover-border-color: var(--secondary-hover);
+
+  --btn-active-bg: var(--secondary-active);
+  --btn-active-color: var(--color-on-secondary);
+  --btn-active-border-color: var(--secondary-active);
+
+  --btn-disabled-bg: var(--secondary);
+  --btn-disabled-color: var(--color-on-secondary);
+  --btn-disabled-border-color: var(--secondary);
+
+  --btn-focus-shadow-rgb: var(--secondary-shadow-rgb);
+}

@@ -13,12 +13,12 @@
     <script src='/src/js/darkmode.js'></script>
   </head>
   <body class='min-vh-100 d-flex flex-column'>
-    {% include 'partials::header.twig' %}
+    {% include 'partials::base/b_header.twig' %}
 
     <main class='container flex-grow-1'>
       {% block content %}{% endblock %}
     </main>
 
-    {% include 'partials::footer.twig' %}
+    {% include 'partials::base/b_footer.twig' %}
   </body>
 </html>

@@ -1,6 +1,7 @@
 @import 'bootstrap/scss/functions';
 
 $prefix: '';
+$secondary: #fff;
 
 // Required
 @import 'bootstrap/scss/variables';
@@ -48,4 +49,5 @@ $prefix: '';
 
 @import 'icons';
 @import 'ratio';
+@import 'components';
 @import 'theme';

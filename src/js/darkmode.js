@@ -1,5 +1,5 @@
 function updateDarkmodeIcons() {
-  const isDarkmode = document.documentElement.hasAttribute('data-theme')
+  const isDarkmode = document.documentElement.hasAttribute('data-bs-theme')
 
   document.querySelectorAll('[toggle-dark-mode] i').forEach((icon) => {
     const remove = isDarkmode ? 'bi-moon-fill' : 'bi-sun-fill'
@@ -11,19 +11,19 @@ function updateDarkmodeIcons() {
 }
 
 function removeDarkmode() {
-  document.documentElement.removeAttribute('data-theme')
+  document.documentElement.removeAttribute('data-bs-theme')
   localStorage.removeItem('theme')
   updateDarkmodeIcons()
 }
 
 function setDarkmode() {
-  document.documentElement.setAttribute('data-theme', 'dark')
+  document.documentElement.setAttribute('data-bs-theme', 'dark')
   localStorage.setItem('theme', 'dark')
   updateDarkmodeIcons()
 }
 
 function toggleDarkmode() {
-  if (document.documentElement.hasAttribute('data-theme')) {
+  if (document.documentElement.hasAttribute('data-bs-theme')) {
     removeDarkmode()
   } else {
     setDarkmode()

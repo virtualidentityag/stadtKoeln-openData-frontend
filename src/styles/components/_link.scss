@@ -1,0 +1,9 @@
+.link {
+  text-decoration: none;
+
+  color: rgba(var(--link-color-rgb), 1);
+
+  &:hover {
+    color: rgba(var(--link-hover-color-rgb), 1);
+  }
+}
