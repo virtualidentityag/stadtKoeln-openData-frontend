@@ -10,7 +10,7 @@
     </div>
   {% endif %}
 
-  <div class='col-7 card-body d-flex flex-column gap-2'>
+  <div class='{{ direction == 'horizontal' ? 'col-7' : '' }} card-body d-flex flex-column gap-2'>
     <h5 class='card-title mb-0'>
       {{ title }}
     </h5>
@@ -22,7 +22,7 @@
     {% if formats %}
       <div>
         {% for format in formats %}
-          <span class='badge text-bg-primary rounded-pill'>{{ format | upper }} </span>
+          <span class='badge text-bg-primary rounded-pill text-uppercase'>{{ format | upper }} </span>
         {% endfor %}
       </div>
     {% endif %}
