@@ -9,8 +9,7 @@
     {% set theme = theme is defined ? theme : 'default' %}
     <link rel='stylesheet' href='/src/styles/themes/{{ theme }}.css'>
 
-    <script type='module' src='/src/js/bootstrap.js' defer></script>
-    <script src='/src/js/darkmode.js'></script>
+    <script type='module' src='/src/js/scripts.js' defer></script>
   </head>
   <body class='min-vh-100 d-flex flex-column'>
     {% include 'partials::base/b_header.twig' %}
