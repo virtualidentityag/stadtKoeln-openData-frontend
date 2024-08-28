@@ -1,0 +1,223 @@
+{% extends 'layouts::base.twig' %}
+{% set theme = 'default' %}
+
+{% block content %}
+  <nav aria-label='breadcrumb'>
+    <ol class='breadcrumb'>
+      <li class='breadcrumb-item'><a href='./'>Startseite</a></li>
+      <li class='breadcrumb-item active' aria-current='page'>Daten</li>
+    </ol>
+  </nav>
+
+  <section class='row py-4'>
+    <div class='col-8'>
+      <h1>Bitte geben Sie einen Suchbegriff ein.</h1>
+
+      <div class='row'>
+        <div class='col-8'>
+          <form action='./dataset-overview' class='form-inline d-flex gap-2 my-4'>
+            <input
+              class='form-control mr-sm-2'
+              type='search'
+              placeholder='Datensatze suchen'
+              aria-label='Datensatze suchen'
+            >
+            <button class='btn btn-primary my-2 my-sm-0' type='submit' aria-label='Search'>
+              <i class='bi bi-search'></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class='row py-4'>
+    <h2 class='h3'>Ihre Suche nach "Struktur" ergab 387 Treffer.</h2>
+
+    <div class='row mt-4'>
+      <aside class='col-3'>
+        <h3 class='h5 mb-3'>Filtern nach</h3>
+
+        {%
+          include 'partials::dataset-overview/filters.twig' with {
+          data: [
+          {
+          title: 'Kategorien',
+          moreFiltersCount: 7,
+          filters: [
+          {
+          label: 'Infrastruktur, Bauen & Wohnen',
+          results: 120
+          },
+          {
+          label: 'Bevölkerung',
+          results: 42
+          },
+          {
+          label: 'Geo',
+          results: 22
+          },
+          {
+          label: 'Gesundheit',
+          results: 16,
+          },
+          ]
+          },
+          {
+          title: 'Format',
+          moreFiltersCount: 3,
+          filters: [
+          {
+          label: 'csv',
+          results: 135
+          },
+          {
+          label: 'json',
+          results: 42
+          },
+          {
+          label: 'xml',
+          results: 22
+          },
+          {
+          label: 'xlsx',
+          results: 16,
+          },
+          ]
+          },
+          {
+          title: 'Herausgeber',
+          moreFiltersCount: 0,
+          filters: [
+          {
+          label: 'Stadt Köln',
+          results: 120
+          },
+          {
+          label: 'Landesdatenbank NRW',
+          results: 42
+          },
+          {
+          label: 'Meinung fur Köln',
+          results: 22
+          },
+          {
+          label: 'Polizei Köln',
+          results: 16,
+          },
+          ]
+          },
+          {
+          title: 'Erstellungsdatum',
+          moreFiltersCount: 10,
+          filters: [
+          {
+          label: '2024',
+          results: 120
+          },
+          {
+          label: '2022',
+          results: 42
+          },
+          {
+          label: '2016',
+          results: 22
+          },
+          {
+          label: '2015',
+          results: 16,
+          },
+          ]
+          }
+          ]
+          }
+        %}
+      </aside>
+      <div class='col'>
+        <div class='d-flex gap-3 align-items-center justify-content-end'>
+          <p class='m-0'>
+            <strong>Sortieren nach</strong>
+          </p>
+          <div class='dropdown'>
+            <button
+              class='btn btn-link nav-link dropdown-toggle'
+              type='button'
+              data-bs-toggle='dropdown'
+              aria-expanded='false'
+            >
+              Erstellungsdatum absteigend
+            </button>
+            <ul class='dropdown-menu'>
+              <li><a class='dropdown-item' href='#'>Action</a></li>
+              <li><a class='dropdown-item' href='#'>Another action</a></li>
+              <li><a class='dropdown-item' href='#'>Something else here</a></li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div>
+            {%
+              include 'partials::dataset-overview/result-item.twig' with {
+              'thumbnail': {
+              src: 'https://picsum.photos/540/540',
+              alt: 'Virtual Identity AG'
+              },
+              'title': 'Baumkataster Köln 2020',
+              'subtitle': 'Herausgeber: Stadt Köln',
+              'description': 'Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua...',
+              'formats': ['json', 'pdf']
+              }
+            %}
+            {%
+              include 'partials::dataset-overview/result-item.twig' with {
+              'title': 'Baumkataster Köln 2020',
+              'subtitle': 'Herausgeber: Stadt Köln',
+              'description': 'Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua...',
+              'formats': ['json', 'pdf']
+              }
+            %}
+            {%
+              include 'partials::dataset-overview/result-item.twig' with {
+              'title': 'Baumkataster Köln 2020',
+              'subtitle': 'Herausgeber: Stadt Köln',
+              'description': 'Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua...',
+              'formats': ['json', 'pdf']
+              }
+            %}
+            {%
+              include 'partials::dataset-overview/result-item.twig' with {
+              'thumbnail': {
+              src: 'https://picsum.photos/540/540',
+              alt: 'Virtual Identity AG'
+              },
+              'title': 'Baumkataster Köln 2020',
+              'subtitle': 'Herausgeber: Stadt Köln',
+              'description': 'Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua...',
+              'formats': ['json', 'pdf']
+              }
+            %}
+            {%
+              include 'partials::dataset-overview/result-item.twig' with {
+              'title': 'Baumkataster Köln 2020',
+              'subtitle': 'Herausgeber: Stadt Köln',
+              'description': 'Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua...',
+              'formats': ['json', 'pdf']
+              }
+            %}
+          </div>
+          <div class='d-flex justify-content-end'>
+            <nav aria-label='Page navigation example'>
+              <ul class='pagination'>
+                <li class='page-item'><a class='page-link' href='#'>Previous</a></li>
+                <li class='page-item'><a class='page-link' href='#'>1</a></li>
+                <li class='page-item'><a class='page-link' href='#'>2</a></li>
+                <li class='page-item'><a class='page-link' href='#'>3</a></li>
+                <li class='page-item'><a class='page-link' href='#'>Next</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
