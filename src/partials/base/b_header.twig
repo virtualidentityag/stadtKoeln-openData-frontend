@@ -1,27 +1,58 @@
-<header class='header py-3 mb-5 border-bottom'>
-  <nav class='container d-flex flex-wrap justify-content-center'>
+<header class='header mb-5 border-bottom'>
+  <nav class='navbar navbar-expand-xl p-3 container d-flex justify-content-between'>
     <a
       href='./'
       aria-current='page'
-      class='d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none fs-4'
+      class='d-flex align-items-center me-md-auto text-dark text-decoration-none'
     >
       <img class='h-full' src='./assets/odk-logo.svg' alt='Stadt Koeln Logo'>
     </a>
 
-    <ul class='nav'>
-      <li class='nav-item fs-5'>
-        <button toggle-dark-mode class='btn nav-link' aria-label='Toggle dark mode'>
-          <i class='bi bi-moon-fill'></i>
-        </button>
-      </li>
-      <li class='nav-item'><a href='./dataset-overview' class='nav-link fs-5'>Daten</a></li>
-      <li class='nav-item'><a href='#' class='nav-link fs-5'>News</a></li>
-      <li class='nav-item'><a href='#' class='nav-link fs-5'>Herausgeber</a></li>
-      <li class='nav-item'><a href='./apps' class='nav-link fs-5'>Apps</a></li>
-      <li class='nav-item'><a href='#' class='nav-link fs-5'>Anfragen</a></li>
-      <li class='nav-item fs-5'>
-        <a href='./dataset-overview' class='nav-link' aria-label='search'><i class='bi bi-search'></i></a>
-      </li>
-    </ul>
+    <div class='d-flex align-items-center gap-4'>
+      <div id='header-nav' class='offcanvas offcanvas-end' aria-modal='true' role='dialog'>
+        <div class='offcanvas-header'>
+          <h5 class='offcanvas-title'>Stadt Koeln</h5>
+          <button type='button' class='btn btn-close' data-bs-dismiss='offcanvas' aria-label='Close'>
+            <i class='bi bi-x-lg'></i>
+          </button>
+        </div>
+        <div class='offcanvas-body'>
+          <ul class='nav flex-column flex-xl-row fs-5'>
+            <li>
+              <button toggle-dark-mode class='btn nav-link rounded-0' aria-label='Toggle dark mode'>
+                <i class='bi bi-moon-fill'></i>
+              </button>
+            </li>
+            <li><a href='./dataset-overview' class='nav-link'>Daten</a></li>
+            <li><a href='#' class='nav-link'>News</a></li>
+            <li><a href='#' class='nav-link'>Herausgeber</a></li>
+            <li><a href='./apps' class='nav-link'>Apps</a></li>
+            <li><a href='#' class='nav-link'>Anfragen</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <button
+        class='navbar-toggler btn btn-sm btn-outline-light'
+        data-bs-toggle='offcanvas'
+        data-bs-target='#header-nav'
+      >
+        <i class='bi bi-list fs-4'></i>
+      </button>
+
+      <form action='./dataset-overview' class='d-none d-lg-flex gap-2'>
+        <input
+          class='form-control mr-sm-2'
+          type='search'
+          placeholder='Datensatze suchen'
+          aria-label='Datensatze suchen'
+        >
+        <button class='btn btn-outline-light' type='submit'>Search</button>
+      </form>
+
+      <a href='./dataset-overview' class='link d-block d-lg-none fs-3'>
+        <i class='bi bi-search'></i>
+      </a>
+    </div>
   </nav>
 </header>

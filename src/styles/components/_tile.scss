@@ -10,16 +10,18 @@
     --tile-color: var(--tile-hover-color);
   }
 
-  &:focus {
-    --tile-shadow-rgb: var(--primary-shadow-rgb);
+  &:focus,
+  &:focus-visible {
     outline: none;
+
+    > div {
+      box-shadow: 0 0 0 var(--focus-ring-width) var(--focus-ring-color);
+    }
   }
 
   > div {
     background-color: var(--tile-background);
     color: var(--tile-color);
-    outline: none;
-    box-shadow: 0 0 0 0.25rem rgba(var(--tile-shadow-rgb), 0.5);
     transition:
       background-color 0.15s,
       box-shadow 0.15s ease-in-out;
@@ -34,9 +36,5 @@
   &:focus {
     --tile-background: var(--tile-hover-background);
     --tile-color: var(--tile-hover-color);
-  }
-
-  &:focus {
-    --tile-shadow-rgb: var(--primary-shadow-rgb);
   }
 }

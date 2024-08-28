@@ -2,11 +2,34 @@
   --header-background: var(--primary);
   --header-link-color: rgba(var(--light-rgb), 0.8);
   --header-link-hover-color: var(--light);
+  --focus-ring-color: var(--color-on-primary);
+  --link-color-rgb: var(--light-rgb);
 
   background-color: var(--header-background);
+
+  .navbar {
+    --navbar-color: var(--light);
+  }
 
   .nav {
     --nav-link-color: var(--header-link-color);
     --nav-link-hover-color: var(--header-link-hover-color);
+  }
+
+  .offcanvas {
+    @media (max-width: breakpoint-max(xl)) {
+      --header-link-color: var(--body-color);
+      --header-link-hover-color: var(--primary);
+      --focus-ring-color: var(--primary);
+    }
+  }
+
+  .navbar-toggler {
+    --navbar-toggler-border-color: var(--light);
+
+    &:focus,
+    &:focus-visible {
+      box-shadow: var(--btn-focus-box-shadow);
+    }
   }
 }
