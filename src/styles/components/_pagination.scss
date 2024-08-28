@@ -1,0 +1,7 @@
+.pagination {
+  --pagination-active-color: var(--color-on-primary);
+  --pagination-active-bg: var(--primary);
+  --pagination-active-border-color: var(--primary);
+  --pagination-focus-box-shadow: 0 0 0 var(--focus-ring-width)
+    var(--focus-ring-color);
+}

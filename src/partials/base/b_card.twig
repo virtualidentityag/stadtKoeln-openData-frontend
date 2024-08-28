@@ -1,4 +1,4 @@
-{% set classes = 'card row w-100 text-decoration-none h-100 overflow-hidden' %}
+{% set classes = 'card px-0 text-decoration-none h-100 overflow-hidden' %}
 {% set classes = classes ~ (direction == 'horizontal' ? ' d-flex flex-row' : '' ) %}
 
 <a href='{{ href }}' class='{{ classes }}'>
@@ -11,8 +11,11 @@
   {% endif %}
 
   <div class='{{ direction == 'horizontal' ? 'col-7' : '' }} card-body d-flex flex-column gap-2'>
-    <h5 class='card-title mb-0'>
+    <h5 class='card-title d-flex align-items-center mb-0'>
       {{ title }}
+      {% if tag %}
+        <span class='badge text-bg-secondary fw-normal text-uppercase'>{{ tag }}</span>
+      {% endif %}
     </h5>
     <p class='card-subtitle m0 text-muted'>{{ subtitle }}</p>
     <p class='card-text m-0'>

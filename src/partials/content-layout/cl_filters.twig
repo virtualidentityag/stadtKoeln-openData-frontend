@@ -4,7 +4,7 @@
       <h4 class='h6'>{{ category.title }}</h4>
       <div class='d-flex flex-column gap-2 align-items-start'>
         {% for filter in category.filters %}
-          {% set id = 'flexCheckChecked' ~ loop.parent.loop.index ~ loop.index %}
+          {% set id = 'filter-' ~ loop.parent.loop.index ~ loop.index %}
 
           <div class='form-check'>
             <input
@@ -16,14 +16,12 @@
             <label class='form-check-label' for='{{ id }}'>
               {{ filter.label }}
             </label>
-            <span class='badge text-bg-secondary'>{{ filter.results }}</span>
+            <span class='text-muted'>({{ filter.results }})</span>
           </div>
         {% endfor %}
 
         {% if category.moreFiltersCount > 0 %}
-          <button class='btn btn-link text-muted text-decoration-none p-0'>
-            {{ category.moreFiltersCount }} weitere anzeigen
-          </button>
+          <button class='btn btn-link text-decoration'>{{ category.moreFiltersCount }} weitere anzeigen</button>
         {% endif %}
       </div>
     </div>

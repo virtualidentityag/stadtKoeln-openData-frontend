@@ -1,3 +1,10 @@
+:root {
+  --link-color: var(--primary);
+  --link-color-rgb: var(--primary-rgb);
+  --link-hover-color: var(--primary-hover);
+  --link-hover-color-rgb: var(--primary-hover-rgb);
+}
+
 a {
   &:focus,
   &:focus-visible {
