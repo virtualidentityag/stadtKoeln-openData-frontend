@@ -1,0 +1,23 @@
+a {
+  &:focus,
+  &:focus-visible {
+    outline: solid var(--focus-ring-width) var(--focus-ring-color);
+  }
+}
+
+.link {
+  text-decoration: none;
+
+  color: rgba(var(--link-color-rgb), 1);
+
+  &:hover {
+    color: rgba(var(--link-hover-color-rgb), 1);
+  }
+}
+
+.nav-link {
+  &:focus,
+  &:focus-visible {
+    box-shadow: 0 0 0 var(--focus-ring-width) var(--focus-ring-color);
+  }
+}

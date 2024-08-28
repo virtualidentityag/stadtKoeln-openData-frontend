@@ -1,0 +1,246 @@
+{% extends 'layouts::base.twig' %}
+{% set theme = 'default' %}
+
+{% block content %}
+  <nav aria-label='breadcrumb'>
+    <ol class='breadcrumb'>
+      <li class='breadcrumb-item'><a href='./'>Startseite</a></li>
+      <li class='breadcrumb-item'><a href='./dataset-overview'>Daten</a></li>
+      <li class='breadcrumb-item active' aria-current='page'>Detail</li>
+    </ol>
+  </nav>
+
+  <section class='row pt-4 pb-5'>
+    <div class='col-12 mb-4 d-flex justify-content-between'>
+      <div class='d-flex align-items-center gap-3'>
+        <h1 class='m-0'>Baumkataster Köln 2020</h1>
+        <span class='badge text-bg-primary text-uppercase'>SERIES</span>
+      </div>
+      <button class='btn nav-link'>
+        <i class='bi bi-share me-2'></i>
+        Share
+      </button>
+    </div>
+
+    <div class='col-12 mb-4 d-flex align-items-center justify-content-between'>
+      <h2 class='m-0'>Über diesen Datensatz</h2>
+
+      <p class='m-0'>
+        <strong>Aktualisierung:</strong>
+        15.08.2022
+      </p>
+    </div>
+
+    <article class='col-10'>
+      <div class='ratio ratio-21x9 mb-3'>
+        <img src='https://picsum.photos/960/540' alt='Virtual Identity AG'>
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus.
+      </p>
+      {%
+        include 'partials::icon-link.twig' with {
+        href: '#',
+        text: 'Mehr',
+        icon: 'chevron-down'
+        }
+      %}
+    </article>
+  </section>
+
+  <section class='row py-4 border-top'>
+    <div class='col-8'>
+      <h3 class='h5 mb-3'>Dateien und Quellen</h3>
+      <div class='py-3'>
+        <div class='d-flex gap-3 align-items-center mb-2'>
+          <div class='bg-body-secondary px-2'>
+            <i class='bi bi-filetype-csv fs-1'></i>
+          </div>
+          <p class='m-0'>Personal Planstellen Ordnungsamt Koeln CSV</p>
+        </div>
+        <a href='#' class='btn btn-primary text-uppercase'>DOWNLOAD</a>
+      </div>
+      <div class='py-3'>
+        <div class='d-flex gap-3 align-items-center mb-2'>
+          <div class='bg-body-secondary px-2'>
+            <i class='bi bi-filetype-json fs-1 '></i>
+          </div>
+          <p class='m-0'>Personal Planstellen Ordnungsamt Koeln JSON</p>
+        </div>
+        <a href='#' class='btn btn-primary text-uppercase'>DOWNLOAD</a>
+      </div>
+      <div class='py-3'>
+        <div class='d-flex gap-3 align-items-center mb-2'>
+          <div class='bg-body-secondary px-2'>
+            <i class='bi bi-filetype-xlsx fs-1 '></i>
+          </div>
+          <p class='m-0'>Personal Planstellen Ordnungsamt Koeln XLSX</p>
+        </div>
+        <a href='#' class='btn btn-primary text-uppercase'>DOWNLOAD</a>
+      </div>
+    </div>
+    <div class='col-2'>
+      <h3 class='h5'>Herausgeber</h3>
+      <div class='ratio ratio-1x1'>
+        <img src='https://picsum.photos/540/540' alt='Virtual Identity AG'>
+      </div>
+    </div>
+  </section>
+
+  <section class='row py-4 border-top'>
+    <div class='col-8'>
+      <div class='d-flex align-items-center gap-3 mb-3'>
+        <h3 class='h5 m-0'>Weitere Datensätze der Datenserie</h3>
+        <span class='badge text-bg-primary text-uppercase'>SERIES</span>
+      </div>
+
+      <div>
+        <a href='./dataset-detail' class='nav-link'>
+          <p class='m-0'><strong>Baumkataster Köln 2019</strong></p>
+        </a>
+        <p>
+          <span class='d-inline-flex gap-3 ml-2'>
+            <span class='text-uppercase'> <i class='bi bi-filetype-json fs-5'></i> JSON </span>
+            <span class='text-uppercase'> <i class='bi bi-filetype-pdf fs-5'></i> PDF </span>
+          </span>
+        </p>
+      </div>
+
+      <div>
+        <a href='./dataset-detail' class='nav-link'>
+          <p class='m-0'><strong>Baumkataster Köln 2018</strong></p>
+        </a>
+        <p>
+          <span class='d-inline-flex gap-3 ml-2'>
+            <span class='text-uppercase'> <i class='bi bi-filetype-json fs-5'></i> JSON </span>
+            <span class='text-uppercase'> <i class='bi bi-filetype-pdf fs-5'></i> PDF </span>
+          </span>
+        </p>
+      </div>
+
+      <button class='btn btn-link nav-link p-0'><i class='bi bi-chevron-down'></i> ALLE ANZEIGEN</button>
+    </div>
+  </section>
+
+  <section class='row py-4 border-top'>
+    <div class='col-8'>
+      <h3 class='h5 mb-3'>Weitere Formate</h3>
+
+      <p class='mb-1'>
+        <span>Datensatz Inhalt:</span>
+        <span class='d-inline-flex gap-3 ml-2'>
+          <span class='text-uppercase'> <i class='bi bi-filetype-json fs-5'></i> JSON </span>
+          <span class='text-uppercase'> <i class='bi bi-filetype-pdf fs-5'></i> PDF </span>
+        </span>
+      </p>
+
+      <p class='m-0'>
+        <span>Datensatz Metadaten im DCAT-AP.de-Format:</span>
+        <span class='d-inline-flex gap-3 ml-2'>
+          <span class='text-uppercase'> <i class='bi bi-filetype-json fs-5 '></i> JSON </span>
+          <span class='text-uppercase'> <i class='bi bi-filetype-pdf fs-5'></i> PDF </span>
+        </span>
+      </p>
+    </div>
+  </section>
+
+  <section class='row py-4 border-top'>
+    <div class='col-8'>
+      <h3 class='h5 mb-3'>Kategorien</h3>
+
+      <p class='badge text-bg-primary fs-6 text-uppercase'>Lorem</p>
+      <p class='badge text-bg-primary fs-6 text-uppercase'>Lorem</p>
+      <p class='badge text-bg-primary fs-6 text-uppercase'>Lorem</p>
+    </div>
+  </section>
+
+  <section class='row py-4 border-top'>
+    <div class='col-8'>
+      <h3 class='h5 mb-3'>Zusätzliche Informationen</h3>
+
+      <div>
+        <p class='mb-1'><strong>Feldbeschreibung, e.g. "Veröffentlichungsdatum"</strong></p>
+        <p>Wert, e.g. 2022-07-26</p>
+      </div>
+
+      <div>
+        <p class='mb-1'><strong>Feldbeschreibung, e.g. "Veröffentlichungsdatum"</strong></p>
+        <p>Wert, e.g. 2022-07-26</p>
+      </div>
+
+      <div>
+        <p class='mb-1'><strong>Feldbeschreibung, e.g. "Veröffentlichungsdatum"</strong></p>
+        <p>Wert, e.g. 2022-07-26</p>
+      </div>
+
+      <div>
+        <p class='mb-1'><strong>Feldbeschreibung, e.g. "Veröffentlichungsdatum"</strong></p>
+        <p>Wert, e.g. 2022-07-26</p>
+      </div>
+    </div>
+  </section>
+
+  <section class='row py-4 border-top'>
+    <div class='col-8'>
+      <h3 class='h5 mb-3'>DCAT-AP.de Datensatzinformation</h3>
+
+      <div>
+        <p class='mb-1'><strong>Feldbeschreibung, e.g. "Herausgeber"</strong></p>
+        <p>Wert, e.g. Redaktion offenedaten-koeln</p>
+      </div>
+    </div>
+  </section>
+
+  <section class='row py-4 border-top'>
+    <div class='col-8'>
+      <h3 class='h5 mb-3'>Tags</h3>
+
+      <div>
+        <p class='text-muted'>LOREM, LOREM, LOREM</p>
+      </div>
+    </div>
+  </section>
+
+  <section class='row py-4 border-top'>
+    <div class='col-10'>
+      <div class='accordion' id='feedback-geben'>
+        <div class='accordion-item'>
+          <h2 class='accordion-header'>
+            <button
+              class='accordion-button'
+              type='button'
+              data-bs-toggle='collapse'
+              data-bs-target='#feedback-form'
+              aria-expanded='true'
+              aria-controls='collapseOne'
+            >
+              FEEDBACK GEBEN
+            </button>
+          </h2>
+          <div id='feedback-form' class='accordion-collapse collapse show' data-bs-parent='#feedback-form'>
+            <div class='accordion-body'>
+              <p>
+                Haben Sie eine Frage oder Feedback zu diesem Datensatz? Wir freuen uns, von Ihnen zu hören und bemühen
+                uns, zeitnah zu antworten. Geben Sie Ihre Frage bitte in das Formular ein.
+              </p>
+
+              <form action='#'>
+                <div class='mb-3'>
+                  <label for='feedback-name' class='form-label'>Name</label>
+                  <input type='email' class='form-control' id='feedback-name' placeholder='Name'>
+                </div>
+                <div class='mb-3'>
+                  <label for='feedback-text' class='form-label'>Feedback</label>
+                  <textarea class='form-control' id='feedback-text' rows='3'></textarea>
+                </div>
+                <button class='btn btn-primary'>ABSENDEN</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

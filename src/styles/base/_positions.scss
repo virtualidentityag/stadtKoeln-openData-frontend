@@ -1,0 +1,11 @@
+$positions: (absolute, relative, fixed, sticky);
+
+@each $breakpoint, $breakpoint-size in $grid-breakpoints {
+  @each $position in $positions {
+    .position-#{$breakpoint}-#{$position} {
+      @include media-breakpoint-up($breakpoint) {
+        position: #{$position};
+      }
+    }
+  }
+}

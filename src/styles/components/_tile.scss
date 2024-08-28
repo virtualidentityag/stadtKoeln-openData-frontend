@@ -1,0 +1,40 @@
+.tile {
+  --tile-background: var(--secondary-bg);
+  --tile-color: var(--black);
+  --tile-hover-background: var(--primary);
+  --tile-hover-color: var(--white);
+
+  &:hover,
+  &:focus {
+    --tile-background: var(--tile-hover-background);
+    --tile-color: var(--tile-hover-color);
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+
+    > div {
+      box-shadow: 0 0 0 var(--focus-ring-width) var(--focus-ring-color);
+    }
+  }
+
+  > div {
+    background-color: var(--tile-background);
+    color: var(--tile-color);
+    transition:
+      background-color 0.15s,
+      box-shadow 0.15s ease-in-out;
+  }
+}
+
+[data-bs-theme='dark'] .tile {
+  --tile-background: var(--black);
+  --tile-color: var(--white);
+
+  &:hover,
+  &:focus {
+    --tile-background: var(--tile-hover-background);
+    --tile-color: var(--tile-hover-color);
+  }
+}

@@ -1,0 +1,25 @@
+{% set classes = 'card text-decoration-none h-100 overflow-hidden' %}
+{% set classes = classes ~ (direction == 'horizontal' ? ' d-flex flex-row' : '' ) %}
+
+<a href='{{ href }}' class='{{ classes }}'>
+  {% if thumbnail %}
+    <div class='ratio ratio-16x9'>
+      <img class='' src='{{ thumbnail.src }}' alt='{{ thumbnail.alt }}'>
+    </div>
+  {% endif %}
+
+  <div class='card-body d-flex flex-column gap-2'>
+    <h5 class='card-title mb-0'>
+      {{ title }}
+    </h5>
+    <p class='card-subtitle m0 text-muted'>{{ subtitle }}</p>
+    <p class='card-text m-0'>
+      {{ description }}
+    </p>
+    <div>
+      {% for format in formats %}
+        <span class='badge text-bg-primary rounded-pill text-uppercase'>{{ format }}</span>
+      {% endfor %}
+    </div>
+  </div>
+</a>

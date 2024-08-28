@@ -1,0 +1,10 @@
+.text-bg-primary {
+  color: var(--color-on-primary) !important;
+  background-color: var(--primary) !important;
+  --focus-ring-color: var(--color-on-primary);
+}
+
+.text-bg-secondary {
+  color: var(--color-on-secondary) !important;
+  background-color: var(--secondary) !important;
+}

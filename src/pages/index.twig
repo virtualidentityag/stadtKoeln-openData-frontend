@@ -1,6 +1,94 @@
 {% extends 'layouts::base.twig' %}
+{% set theme = 'default' %}
 
 {% block content %}
-  <h1>Startseite</h1>
-  <a href='./dark'>Dark Mode</a>
+  <section class='row pb-5'>
+    <div class='col-12'>
+      <h1 class='display-4 display-md-3 mb-4'>
+        Die beste Grundlage fur fundierte Entscheidungen: offene Daten aus Ihrer Region.
+      </h1>
+
+      <div class='row mb-5'>
+        <div class='col-12 col-md-7'>
+          <form class='form-inline d-flex gap-2'>
+            <input
+              class='form-control mr-sm-2'
+              type='search'
+              placeholder='Datensatze suchen'
+              aria-label='Datensatze suchen'
+            >
+            <button class='btn btn-primary' type='submit' aria-label='Search'>
+              <i class='bi bi-search'></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <h2 class='m-0'>
+        Hier finden alle Kölner – ob Bürger, Verwaltung, Unternehmen oder Wissenschaft – offene Datensätze, um gemeinsam
+        einen Mehrwert für alle zu schaffen.
+      </h2>
+    </div>
+  </section>
+
+  <section class='row pt-4 pb-5'>
+    {%
+      include 'partials::content-layout/cl_section-header.twig' with {
+      title: 'Beliebte Datensätze',
+      link: {
+      href: './dataset-overview',
+      text: 'Alle Datensätze',
+      }
+      }
+    %}
+
+    <div class='col-12'>
+      {% include 'partials::content-layout/cl_card-showcase.twig' %}
+    </div>
+  </section>
+
+  <section class='row py-5 border-top'>
+    {%
+      include 'partials::content-layout/cl_section-header.twig' with {
+      title: 'News',
+      link: {
+      href: '#',
+      text: 'Alle News',
+      }
+      }
+    %}
+
+    <div class='col-12'>
+      {% include 'partials::base/b_highlight-teaser.twig' %}
+    </div>
+  </section>
+
+  <section class='row py-5 border-top'>
+    {%
+      include 'partials::content-layout/cl_section-header.twig' with {
+      title: 'Beliebte Kategorien'
+      }
+    %}
+
+    <div class='col-12'>
+      {% include 'partials::content-layout/cl_tile-showcase.twig' %}
+    </div>
+  </section>
+
+  <section class='row py-5 border-top'>
+    {%
+      include 'partials::content-layout/cl_section-header.twig' with {
+      title: 'Daten über Schnittstelle nutzen'
+      }
+    %}
+
+    <p class='h2 mb-5'>
+      Erfahren Sie hier wie Sie mit der DKAN API unsere offenen Datensätze für Ihre eigenen Projekte anschauen,
+      herunterladen und programmsteuern können.
+    </p>
+
+    <div class='col-12 d-flex justify-content-end'>
+      <button class='btn btn-primary'>Alle Anzeigen</button>
+    </div>
+  </section>
 {% endblock %}

@@ -1,6 +1,7 @@
 @import 'bootstrap/scss/functions';
 
 $prefix: '';
+$enable-negative-margins: true;
 
 // Required
 @import 'bootstrap/scss/variables';
@@ -12,22 +13,22 @@ $prefix: '';
 @import 'bootstrap/scss/reboot';
 
 @import 'bootstrap/scss/type';
-// @import "bootstrap/scss/images";
+@import 'bootstrap/scss/images';
 @import 'bootstrap/scss/containers';
 @import 'bootstrap/scss/grid';
 // @import "bootstrap/scss/tables";
-// @import "bootstrap/scss/forms";
+@import 'bootstrap/scss/forms';
 @import 'bootstrap/scss/buttons';
 @import 'bootstrap/scss/transitions';
-// @import 'bootstrap/scss/dropdown';
+@import 'bootstrap/scss/dropdown';
 // @import "bootstrap/scss/button-group";
 @import 'bootstrap/scss/nav';
-@import 'bootstrap/scss/navbar'; // Requires nav
-// @import "bootstrap/scss/card";
-// @import "bootstrap/scss/breadcrumb";
-// @import "bootstrap/scss/accordion";
-// @import "bootstrap/scss/pagination";
-// @import "bootstrap/scss/badge";
+@import 'bootstrap/scss/navbar';
+@import 'bootstrap/scss/card';
+@import 'bootstrap/scss/breadcrumb';
+@import 'bootstrap/scss/accordion';
+@import 'bootstrap/scss/pagination';
+@import 'bootstrap/scss/badge';
 // @import "bootstrap/scss/alert";
 // @import "bootstrap/scss/progress";
 // @import "bootstrap/scss/list-group";
@@ -38,16 +39,13 @@ $prefix: '';
 // @import 'bootstrap/scss/popover';
 // @import "bootstrap/scss/carousel";
 // @import "bootstrap/scss/spinners";
-// @import 'bootstrap/scss/offcanvas'; // Requires transitions
+@import 'bootstrap/scss/offcanvas'; // Requires transitions
 // @import "bootstrap/scss/placeholders";
 
 // Helpers
-// @import "bootstrap/scss/helpers";
+@import 'bootstrap/scss/helpers';
 
 @import 'bootstrap/scss/utilities/api';
 
-@import 'theme';
-
-body {
-  padding: 0 0.5rem;
-}
+@import 'base';
+@import 'components';

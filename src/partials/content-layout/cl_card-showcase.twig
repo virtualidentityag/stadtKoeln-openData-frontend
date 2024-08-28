@@ -1,0 +1,48 @@
+<div class='row gap-4 gap-md-0'>
+  <div class='col-12 col-md-4 col-lg-6'>
+    {%
+      include 'partials::base/b_card.twig' with {
+      'thumbnail': {
+      src: 'https://picsum.photos/960/540',
+      alt: 'Virtual Identity AG'
+      },
+      'href': './dataset-detail',
+      'title': 'Baumkataster Köln 2020',
+      'subtitle': 'Herausgeber: Stadt Köln',
+      'description': 'Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua...',
+      'formats': ['json', 'pdf']
+      }
+    %}
+  </div>
+
+  <div class='col-md-8 col-lg-6 d-flex flex-column gap-4'>
+    {%
+      include 'partials::base/b_card.twig' with {
+      'direction': 'horizontal',
+      'thumbnail': {
+      src: 'https://picsum.photos/960/540',
+      alt: 'Virtual Identity AG'
+      },
+      'href': './dataset-detail',
+      'title': 'Baumkataster Köln 2020',
+      'subtitle': 'Herausgeber: Stadt Köln',
+      'description': 'Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua...',
+      'formats': ['json', 'rdf']
+      }
+    %}
+    {%
+      include 'partials::base/b_card.twig' with {
+      'direction': 'horizontal',
+      'thumbnail': {
+      src: 'https://picsum.photos/960/540',
+      alt: 'Virtual Identity AG'
+      },
+      'href': './dataset-detail',
+      'title': 'Baumkataster Köln 2020',
+      'subtitle': 'Herausgeber: Stadt Köln',
+      'description': 'Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua...',
+      'formats': ['json', 'rdf']
+      }
+    %}
+  </div>
+</div>

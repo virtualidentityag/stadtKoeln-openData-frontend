@@ -1,19 +1,30 @@
 <!doctype html>
 <html lang='de'>
   <head>
-    <title>Stadt Koeln - Open Data</title>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Offene Daten Köln</title>
 
     <link rel='stylesheet' href='/src/styles/styles.scss'>
-    {% set theme = theme is defined ? theme : 'light' %}
+    {#
+      https://github.com/twbs/icons/issues/1381
+      Due to an issue of vite compiler, the bootstrap-icons needs to be directly imported
+      using the cdn url.
+    #}
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css'>
+
+    {% set theme = theme is defined ? theme : 'default' %}
     <link rel='stylesheet' href='/src/styles/themes/{{ theme }}.css'>
+
+    <script type='module' src='/src/js/scripts.js' defer></script>
   </head>
   <body class='min-vh-100 d-flex flex-column'>
-    {% include 'partials::header.twig' %}
+    {% include 'partials::base/b_header.twig' %}
 
     <main class='container flex-grow-1'>
       {% block content %}{% endblock %}
     </main>
 
-    {% include 'partials::footer.twig' %}
+    {% include 'partials::base/b_footer.twig' %}
   </body>
 </html>
