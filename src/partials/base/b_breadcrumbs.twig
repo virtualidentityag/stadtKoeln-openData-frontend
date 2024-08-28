@@ -1,0 +1,13 @@
+<nav aria-label='breadcrumb'>
+  <ol class='breadcrumb'>
+    {% for link in links %}
+      {% if link.href is defined %}
+        <li class='breadcrumb-item'>
+          <a href='{{ link.href }}'>{{ link.text }}</a>
+        </li>
+      {% else %}
+        <li class='breadcrumb-item active' aria-current='page'>{{ link.text }}</li>
+      {% endif %}
+    {% endfor %}
+  </ol>
+</nav>
