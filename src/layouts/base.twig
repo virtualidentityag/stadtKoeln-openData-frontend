@@ -6,6 +6,13 @@
     <title>Stadt Koeln - Open Data</title>
 
     <link rel='stylesheet' href='/src/styles/styles.scss'>
+    {#
+      https://github.com/twbs/icons/issues/1381
+      Due to an issue of vite compiler, the bootstrap-icons needs to be directly imported
+      using the cdn url.
+    #}
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css'>
+
     {% set theme = theme is defined ? theme : 'default' %}
     <link rel='stylesheet' href='/src/styles/themes/{{ theme }}.css'>
 
