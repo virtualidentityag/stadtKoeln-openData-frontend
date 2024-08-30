@@ -1,0 +1,36 @@
+@each $breakpoint, $breakpoint-size in $grid-breakpoints {
+  .offcanvas.offcanvas-reset-#{$breakpoint} {
+    @include media-breakpoint-up($breakpoint) {
+      --offcanvas-color: var(--offcanvas-color);
+      --offcanvas-bg: var(--offcanvas-bg);
+
+      position: unset;
+      transform: unset;
+      visibility: visible;
+      border: 0;
+      transition: unset;
+
+      ~ .offcanvas-backdrop {
+        display: none;
+      }
+    }
+
+    @include media-breakpoint-down($breakpoint) {
+      --link-color: var(--light);
+      --link-hover-color: var(--primary);
+
+      .text-body-secondary {
+        --secondary-color: rgba(var(--light-rgb), 0.6);
+      }
+    }
+  }
+}
+
+.offcanvas {
+  --offcanvas-color: var(--light);
+  --offcanvas-bg: var(--dark);
+
+  .offcanvas-body {
+    scrollbar-color: var(--light) var(--dark);
+  }
+}

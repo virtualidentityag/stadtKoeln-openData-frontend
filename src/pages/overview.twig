@@ -16,13 +16,13 @@
     }
   %}
 
-  <section class='row mb-5'>
+  <section class='row mb-3 mb-md-4'>
     <div class='col-12'>
       <h1 class='display-3 mb-4'>Bitte geben Sie einen Suchbegriff ein.</h1>
 
       <div class='row'>
-        <div class='col-7'>
-          <form action='./overview' class='form-inline d-flex gap-2'>
+        <div class='col-12 col-md-7'>
+          <form action='./overview' class='d-flex gap-2 align-items-center'>
             <input
               class='form-control mr-sm-2'
               type='search'
@@ -39,179 +39,192 @@
   </section>
 
   <section class='row'>
-    <h2 class='h2 mb-5'>Ihre Suche nach "Struktur" ergab 387 Treffer.</h2>
+    <div class='col-12'>
+      <h2 class='h2 m-0 py-3 py-md-4'>Ihre Suche nach "Struktur" ergab 387 Treffer.</h2>
 
-    <div class='row'>
-      <aside class='col-3'>
-        <h3 class='h5 mb-3'>Filtern nach</h3>
-
-        {%
-          include 'partials::content-layout/cl_filters.twig' with {
-          data: [
-          {
-          title: 'Kategorien',
-          moreFiltersCount: 7,
-          filters: [
-          {
-          label: 'Infrastruktur, Bauen & Wohnen',
-          results: 120
-          },
-          {
-          label: 'Bevölkerung',
-          results: 42
-          },
-          {
-          label: 'Geo',
-          results: 22
-          },
-          {
-          label: 'Gesundheit',
-          results: 16,
-          },
-          ]
-          },
-          {
-          title: 'Format',
-          moreFiltersCount: 3,
-          filters: [
-          {
-          label: 'csv',
-          results: 135
-          },
-          {
-          label: 'json',
-          results: 42
-          },
-          {
-          label: 'xml',
-          results: 22
-          },
-          {
-          label: 'xlsx',
-          results: 16,
-          },
-          ]
-          },
-          {
-          title: 'Herausgeber',
-          moreFiltersCount: 0,
-          filters: [
-          {
-          label: 'Stadt Köln',
-          results: 120
-          },
-          {
-          label: 'Landesdatenbank NRW',
-          results: 42
-          },
-          {
-          label: 'Meinung fur Köln',
-          results: 22
-          },
-          {
-          label: 'Polizei Köln',
-          results: 16,
-          },
-          ]
-          },
-          {
-          title: 'Erstellungsdatum',
-          moreFiltersCount: 10,
-          filters: [
-          {
-          label: '2024',
-          results: 120
-          },
-          {
-          label: '2022',
-          results: 42
-          },
-          {
-          label: '2016',
-          results: 22
-          },
-          {
-          label: '2015',
-          results: 16,
-          },
-          ]
-          }
-          ]
-          }
-        %}
-      </aside>
-      <div class='col-9'>
-        <div class='d-flex gap-3 py-3 align-items-center justify-content-end'>
-          <p class='m-0 text-primary'>
-            <strong>Sortieren nach</strong>
-          </p>
-          <div class='dropdown'>
-            <button
-              class='btn btn-light dropdown-toggle'
-              type='button'
-              data-bs-toggle='dropdown'
-              aria-expanded='false'
-            >
-              Erstellungsdatum absteigend
-            </button>
-            <ul class='dropdown-menu'>
-              <li><a class='dropdown-item' href='#'>Action</a></li>
-              <li><a class='dropdown-item' href='#'>Another action</a></li>
-              <li><a class='dropdown-item' href='#'>Something else here</a></li>
-            </ul>
-          </div>
+      <div class='row pt-3 pt-md-4'>
+        <div class='col-0 col-lg-3'>
+          {%
+            include 'partials::content-layout/cl_filters.twig' with {
+            data: [
+            {
+            title: 'Kategorien',
+            moreFiltersCount: 7,
+            filters: [
+            {
+            label: 'Infrastruktur, Bauen & Wohnen',
+            results: 120
+            },
+            {
+            label: 'Bevölkerung',
+            results: 42
+            },
+            {
+            label: 'Geo',
+            results: 22
+            },
+            {
+            label: 'Gesundheit',
+            results: 16,
+            },
+            ]
+            },
+            {
+            title: 'Format',
+            moreFiltersCount: 3,
+            filters: [
+            {
+            label: 'csv',
+            results: 135
+            },
+            {
+            label: 'json',
+            results: 42
+            },
+            {
+            label: 'xml',
+            results: 22
+            },
+            {
+            label: 'xlsx',
+            results: 16,
+            },
+            ]
+            },
+            {
+            title: 'Herausgeber',
+            moreFiltersCount: 0,
+            filters: [
+            {
+            label: 'Stadt Köln',
+            results: 120
+            },
+            {
+            label: 'Landesdatenbank NRW',
+            results: 42
+            },
+            {
+            label: 'Meinung fur Köln',
+            results: 22
+            },
+            {
+            label: 'Polizei Köln',
+            results: 16,
+            },
+            ]
+            },
+            {
+            title: 'Erstellungsdatum',
+            moreFiltersCount: 10,
+            filters: [
+            {
+            label: '2024',
+            results: 120
+            },
+            {
+            label: '2022',
+            results: 42
+            },
+            {
+            label: '2016',
+            results: 22
+            },
+            {
+            label: '2015',
+            results: 16,
+            },
+            ]
+            }
+            ]
+            }
+          %}
         </div>
-        <div class='mt-3'>
-          <div class='pb-3'>
-            {%
-              include 'partials::base/b_card.twig' with {
-              direction: 'horizontal',
-              href: './dataset-detail',
-              title: 'Baumkataster Köln 2020',
-              subtitle: 'Herausgeber: Stadt Köln',
-              description: 'Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua.Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua.',
-              }
-            %}
+        <div class='col-12 col-lg-9'>
+          <div class='pb-3 pt-0 pt-md-3 d-flex flex-wrap column-gap-3 align-items-center justify-content-end'>
+            <p class='m-0 text-primary'>
+              <strong>Sortieren nach</strong>
+            </p>
+            <div class='dropdown'>
+              <button
+                class='btn btn-light dropdown-toggle'
+                type='button'
+                data-bs-toggle='dropdown'
+                aria-expanded='false'
+              >
+                Erstellungsdatum absteigend
+              </button>
+              <ul class='dropdown-menu'>
+                <li><a class='dropdown-item' href='#'>Action</a></li>
+                <li><a class='dropdown-item' href='#'>Another action</a></li>
+                <li><a class='dropdown-item' href='#'>Something else here</a></li>
+              </ul>
+            </div>
           </div>
-          <div class='py-3'>
-            {%
-              include 'partials::base/b_card.twig' with {
-              direction: 'horizontal',
-              href: './dataset-detail',
-              title: 'Baumkataster Köln 2020',
-              subtitle: 'Herausgeber: Stadt Köln',
-              description: 'Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua.Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua.',
-              }
-            %}
+          <div class='d-flex gap-2 align-items-center justify-content-end d-block d-lg-none'>
+            <p class='h6 fw-semibold m-0'>Filters Nach</p>
+            <button
+              class='btn btn-dark'
+              type='button'
+              data-bs-toggle='offcanvas'
+              data-bs-target='#offcanvas-filters'
+              aria-controls='offcanvas-filters'
+              aria-label='Filter umschalten'
+            >
+              <i class='bi bi-funnel-fill'></i>
+            </button>
           </div>
-          <div class='py-3'>
-            {%
-              include 'partials::base/b_card.twig' with {
-              direction: 'horizontal',
-              thumbnail: {
-              src: 'https://picsum.photos/540/540',
-              alt: 'Virtual Identity AG'
-              },
-              tag: 'Series',
-              title: 'Baumkataster Köln 2020',
-              subtitle: 'Herausgeber: Stadt Köln',
-              description: 'Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua.Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua.',
-              }
-            %}
-          </div>
-          <div class='py-3'>
-            {%
-              include 'partials::base/b_card.twig' with {
-              direction: 'horizontal',
-              href: './dataset-detail',
-              title: 'Baumkataster Köln 2020',
-              subtitle: 'Herausgeber: Stadt Köln',
-              description: 'Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua.Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua.',
-              }
-            %}
-          </div>
-          <div class='pt-3 d-flex justify-content-center'>
-            {% include 'partials::base/b_pagination.twig' %}
+          <div class='mt-3'>
+            <div class='pb-3'>
+              {%
+                include 'partials::base/b_card.twig' with {
+                direction: 'horizontal',
+                href: './dataset-detail',
+                title: 'Baumkataster Köln 2020',
+                subtitle: 'Herausgeber: Stadt Köln',
+                description: 'Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua.Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua.',
+                }
+              %}
+            </div>
+            <div class='py-3'>
+              {%
+                include 'partials::base/b_card.twig' with {
+                direction: 'horizontal',
+                href: './dataset-detail',
+                title: 'Baumkataster Köln 2020',
+                subtitle: 'Herausgeber: Stadt Köln',
+                description: 'Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua.Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua.',
+                }
+              %}
+            </div>
+            <div class='py-3'>
+              {%
+                include 'partials::base/b_card.twig' with {
+                direction: 'horizontal',
+                thumbnail: {
+                src: 'https://picsum.photos/540/540',
+                alt: 'Virtual Identity AG'
+                },
+                tag: 'Series',
+                title: 'Baumkataster Köln 2020',
+                subtitle: 'Herausgeber: Stadt Köln',
+                description: 'Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua.Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua.',
+                }
+              %}
+            </div>
+            <div class='py-3'>
+              {%
+                include 'partials::base/b_card.twig' with {
+                direction: 'horizontal',
+                href: './dataset-detail',
+                title: 'Baumkataster Köln 2020',
+                subtitle: 'Herausgeber: Stadt Köln',
+                description: 'Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua.Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua.',
+                }
+              %}
+            </div>
+            <div class='pt-3 d-flex justify-content-center'>
+              {% include 'partials::base/b_pagination.twig' %}
+            </div>
           </div>
         </div>
       </div>
