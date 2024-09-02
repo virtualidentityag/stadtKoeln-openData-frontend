@@ -11,12 +11,12 @@
   {% endif %}
 
   <div class='{{ direction == 'horizontal' ? 'col-7' : '' }} card-body d-flex flex-column gap-2'>
-    <h5 class='card-title d-flex gap-2 align-items-center mb-0 fw-semibold'>
+    <h3 class='card-title h5 d-flex gap-2 align-items-center mb-0 fw-semibold'>
       {{ title }}
       {% if tag %}
         <span class='badge text-bg-secondary fw-normal text-uppercase'>{{ tag }}</span>
       {% endif %}
-    </h5>
+    </h3>
     <p class='card-subtitle m0 text-muted'>{{ subtitle }}</p>
     <p class='card-text m-0'>
       {{ description }}
