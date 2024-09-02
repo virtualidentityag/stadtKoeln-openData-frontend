@@ -11,8 +11,8 @@
   {% endif %}
 
   <div class='{{ direction == 'horizontal' ? 'col-7' : '' }} card-body d-flex flex-column gap-2'>
-    <h3 class='card-title h5 d-flex gap-2 align-items-center mb-0 fw-semibold'>
-      {{ title }}
+    <h3 class='card-title h5 d-flex gap-2 align-items-center mb-0'>
+      <strong>{{ title }}</strong>
       {% if tag %}
         <span class='badge text-bg-secondary fw-normal text-uppercase'>{{ tag }}</span>
       {% endif %}

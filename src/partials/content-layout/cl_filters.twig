@@ -11,11 +11,13 @@
     </button>
   </div>
   <div class='offcanvas-body'>
-    <h3 class='h5 fw-semibold mb-3'>Filtern nach</h3>
+    <h3 class='h5 mb-3'><strong>Filtern nach</strong></h3>
     <div class='d-flex flex-column gap-4'>
       {% for category in data %}
         <div>
-          <h4 class='h6 fw-semibold'>{{ category.title }}</h4>
+          <h4 class='h6'>
+            <strong>{{ category.title }}</strong>
+          </h4>
           <div class='d-flex flex-column gap-2 align-items-start'>
             {% for filter in category.filters %}
               {% set id = 'filter-' ~ loop.parent.loop.index ~ loop.index %}
