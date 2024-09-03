@@ -14,11 +14,15 @@
   .nav {
     --nav-link-color: var(--header-link-color);
     --nav-link-hover-color: var(--header-link-hover-color);
+
+    @include media-breakpoint-up(xl) {
+      border-bottom: none !important;
+    }
   }
 
   .offcanvas {
-    @media (max-width: breakpoint-max(xl)) {
-      --header-link-color: var(--body-color);
+    @include media-breakpoint-down(xl) {
+      --header-link-color: var(--offcanvas-color);
       --header-link-hover-color: var(--primary);
       --focus-ring-color: var(--primary);
     }

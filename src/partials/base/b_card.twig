@@ -1,25 +1,33 @@
-{% set classes = 'card text-decoration-none h-100 overflow-hidden' %}
+{% set classes = 'card px-0 text-decoration-none h-100 overflow-hidden' %}
 {% set classes = classes ~ (direction == 'horizontal' ? ' d-flex flex-row' : '' ) %}
 
 <a href='{{ href }}' class='{{ classes }}'>
   {% if thumbnail %}
-    <div class='ratio ratio-16x9'>
-      <img class='' src='{{ thumbnail.src }}' alt='{{ thumbnail.alt }}'>
+    <div class='{{ direction == 'horizontal' ? 'col-4' : '' }} p-0'>
+      <div class='ratio ratio-16x9 h-100'>
+        <img src='{{ thumbnail.src }}' alt='{{ thumbnail.alt }}'>
+      </div>
     </div>
   {% endif %}
 
-  <div class='card-body d-flex flex-column gap-2'>
-    <h5 class='card-title mb-0'>
-      {{ title }}
-    </h5>
+  <div class='{{ direction == 'horizontal' ? 'col-7' : '' }} card-body d-flex flex-column gap-2'>
+    <h3 class='card-title h5 d-flex gap-2 align-items-center mb-0'>
+      <strong>{{ title }}</strong>
+      {% if tag %}
+        <span class='badge text-bg-secondary fw-normal text-uppercase'>{{ tag }}</span>
+      {% endif %}
+    </h3>
     <p class='card-subtitle m0 text-muted'>{{ subtitle }}</p>
     <p class='card-text m-0'>
       {{ description }}
     </p>
-    <div>
-      {% for format in formats %}
-        <span class='badge text-bg-primary rounded-pill text-uppercase'>{{ format }}</span>
-      {% endfor %}
-    </div>
+
+    {% if formats %}
+      <div>
+        {% for format in formats %}
+          <span class='badge text-bg-primary rounded-pill text-uppercase'>{{ format | upper }} </span>
+        {% endfor %}
+      </div>
+    {% endif %}
   </div>
 </a>

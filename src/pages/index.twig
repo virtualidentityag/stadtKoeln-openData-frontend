@@ -4,20 +4,20 @@
 {% block content %}
   <section class='row pb-5'>
     <div class='col-12'>
-      <h1 class='display-4 display-md-3 mb-4'>
+      <h1 class='display-3 display-md-3 mb-4'>
         Die beste Grundlage fur fundierte Entscheidungen: offene Daten aus Ihrer Region.
       </h1>
 
       <div class='row mb-5'>
         <div class='col-12 col-md-7'>
-          <form class='form-inline d-flex gap-2'>
+          <form class='form-inline d-flex gap-2' action='overview'>
             <input
-              class='form-control mr-sm-2'
+              class='form-control fs-5 mr-sm-2'
               type='search'
               placeholder='Datensatze suchen'
               aria-label='Datensatze suchen'
             >
-            <button class='btn btn-primary' type='submit' aria-label='Search'>
+            <button class='btn btn-primary fs-5' type='submit' aria-label='Search'>
               <i class='bi bi-search'></i>
             </button>
           </form>
@@ -36,7 +36,7 @@
       include 'partials::content-layout/cl_section-header.twig' with {
       title: 'Beliebte Datensätze',
       link: {
-      href: './dataset-overview',
+      href: './overview',
       text: 'Alle Datensätze',
       }
       }
@@ -75,7 +75,7 @@
     </div>
   </section>
 
-  <section class='row py-5 border-top'>
+  <section class='row py-5 border-top border-bottom'>
     {%
       include 'partials::content-layout/cl_section-header.twig' with {
       title: 'Daten über Schnittstelle nutzen'

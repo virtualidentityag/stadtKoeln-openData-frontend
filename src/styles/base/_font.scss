@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'ApproachKoeln';
+  src: url('/assets/fonts/ApproachKoeln-Rglt.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ApproachKoeln';
+  src: url('/assets/fonts/ApproachKoeln-SmBdlt.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ApproachKoeln';
+  src: url('/assets/fonts/ApproachKoeln-Bdlt.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: 'ApproachKoeln', Arial, sans-serif;
+}
+
+strong {
+  font-weight: 600;
+}
