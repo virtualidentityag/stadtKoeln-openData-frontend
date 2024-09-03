@@ -21,20 +21,29 @@
   %}
 
   <section class='row pb-4 border-bottom'>
-    <div class='col-12 mb-4 d-flex justify-content-between'>
-      <div class='d-flex align-items-start gap-3'>
+    <div class='col-12 mb-4 d-flex justify-content-between align-items-center'>
+      <div class='d-flex align-items-start gap-3 flex-wrap'>
         <h1 class='display-3 m-0'>Baumkataster Köln 2020</h1>
         <span class='badge border border-primary text-primary text-uppercase'>SERIES</span>
       </div>
+      <button class='btn btn-primary d-none d-lg-block'>
+        <i class='bi bi-share'></i>
+        <span class='ms-2'>Share</span>
+      </button>
     </div>
 
     <div class='col-12 pb-3 d-flex align-items-center justify-content-between'>
-      <h2 class='m-0'>Über diesen Datensatz</h2>
+      <div class='flex-grow-1 d-flex flex-column align-items-start justify-content-between align-items-lg-center flex-lg-row'>
+        <h2 class='m-0'>Über diesen Datensatz</h2>
 
-      <p class='m-0'>
-        <strong>Aktualisierung:</strong>
-        15.08.2022
-      </p>
+        <p class='m-0'>
+          <strong>Aktualisierung:</strong>
+          15.08.2022
+        </p>
+      </div>
+      <button class='btn btn-primary d-block d-lg-none' aria-label='Share'>
+        <i class='bi bi-share'></i>
+      </button>
     </div>
 
     <div class='col-12 pt-3'>
@@ -42,11 +51,11 @@
     </div>
   </section>
 
-  <section class='row pt-4 pb-5 border-bottom'>
-    <div class='col-12 col-lg-8'>
-      <h2 class='display-6 mb-4'>Dateien und Quellen</h2>
+  <section class='row justify-content-between py-4 pb-md-5 border-bottom'>
+    <div class='col-12 col-lg-7 col-xl-6 pb-4 pb-lg-0'>
+      <h2 class='display-6 mb-3 mb-md-4'>Dateien und Quellen</h2>
 
-      <div class='d-flex flex-column gap-4'>
+      <div class='d-flex flex-column gap-3 gap-md-4'>
         {%
           include 'partials::base/b_download.twig' with {
           type: 'csv',
@@ -69,23 +78,34 @@
         %}
       </div>
     </div>
+    <div class='col-12 col-lg-5 pt-4 pt-lg-0'>
+      <div class='d-flex align-items-start gap-3 mb-3 mb-md-4'>
+        <h2 class='display-6 m-0'>Kategorien</h2>
+      </div>
+
+      <div class='d-flex flex-wrap gap-2'>
+        <span class='badge badge-small badge-md-large text-bg-secondary text-uppercase'>Lorem</span>
+        <span class='badge badge-small badge-md-large text-bg-secondary text-uppercase'>Lorem</span>
+        <span class='badge badge-small badge-md-large text-bg-secondary text-uppercase'>Lorem</span>
+      </div>
+    </div>
   </section>
 
-  <section class='row pt-4 pb-5 border-bottom'>
+  <section class='row py-4 pb-md-5 border-bottom'>
     <div class='col-12 col-lg-8'>
-      <div class='d-flex align-items-start gap-3 mb-4'>
+      <div class='d-flex align-items-start gap-3 mb-3 mb-md-4'>
         <h2 class='display-6 m-0'>Weitere Datensätze der Datenserie</h2>
         <span class='badge border border-primary text-primary text-uppercase'>SERIES</span>
       </div>
 
-      <div class='d-flex flex-column gap-4 mb-4'>
+      <div class='d-flex flex-column gap-3 gap-md-4 mb-3 mb-md-4'>
         {% for i in 0..2 %}
           <a class='card text-decoration-none p-3 border rounded' href='#'>
             <h3 class='h4 mb-2'><strong>Baumkataster Köln 2018</strong></h3>
             <p class='h4 m-0 d-flex flex-wrap align-items-center gap-2'>
               Formate:
-              <span class='badge badge-sm text-bg-secondary text-uppercase'>JSON</span>
-              <span class='badge badge-sm text-bg-secondary text-uppercase'>RDF</span>
+              <span class='badge badge-small text-bg-secondary text-uppercase'>JSON</span>
+              <span class='badge badge-small text-bg-secondary text-uppercase'>RDF</span>
             </p>
           </a>
         {% endfor %}
@@ -95,23 +115,9 @@
     </div>
   </section>
 
-  <section class='row pt-4 pb-5 border-bottom'>
+  <section class='row py-4 pb-md-5 border-bottom'>
     <div class='col-12 col-lg-8'>
-      <div class='d-flex align-items-start gap-3 mb-4'>
-        <h2 class='display-6 m-0'>Kategorien</h2>
-      </div>
-
-      <div class='d-flex flex-wrap gap-2'>
-        <span class='badge badge-lg text-bg-secondary text-uppercase'>Lorem</span>
-        <span class='badge badge-lg text-bg-secondary text-uppercase'>Lorem</span>
-        <span class='badge badge-lg text-bg-secondary text-uppercase'>Lorem</span>
-      </div>
-    </div>
-  </section>
-
-  <section class='row pt-4 pb-5 border-bottom'>
-    <div class='col-12 col-lg-8'>
-      <div class='d-flex align-items-start gap-3 mb-4'>
+      <div class='d-flex align-items-start gap-3 mb-3 mb-md-4'>
         <h2 class='display-6 m-0'>Zusätzliche Informationen</h2>
       </div>
 
@@ -126,26 +132,26 @@
     </div>
   </section>
 
-  <section class='row pt-4 pb-5 border-bottom'>
+  <section class='row py-4 pb-md-5 border-bottom'>
     <div class='col-12 col-lg-8'>
-      <div class='d-flex align-items-start gap-3 mb-4'>
+      <div class='d-flex align-items-start gap-3 mb-3 mb-md-4'>
         <h2 class='display-6 m-0'>Metadaten Formate</h2>
         <span class='badge border border-primary text-primary text-uppercase'>SERIES</span>
       </div>
 
-      <div class='d-flex flex-column gap-4'>
+      <div class='d-flex flex-column gap-3 gap-md-4'>
         {% for i in 0..1 %}
           <div class='card text-decoration-none p-3 d-flex flex-column gap-3 border rounded'>
             <p class='h4 m-0 d-flex flex-wrap align-items-center gap-2'>
               Datensatz Inhalt:
-              <span class='badge badge-sm text-bg-secondary text-uppercase'>JSON</span>
-              <span class='badge badge-sm text-bg-secondary text-uppercase'>RDF</span>
+              <span class='badge badge-small text-bg-secondary text-uppercase'>JSON</span>
+              <span class='badge badge-small text-bg-secondary text-uppercase'>RDF</span>
             </p>
             <p class='h4 m-0 d-flex flex-wrap align-items-center gap-2'>
               Datensatz Metadaten im DCAT-AP.de-Format:
-              <span class='badge badge-sm text-bg-secondary text-uppercase'>JSON</span>
-              <span class='badge badge-sm text-bg-secondary text-uppercase'>RDF</span>
-              <span class='badge badge-sm text-bg-secondary text-uppercase'>TTL</span>
+              <span class='badge badge-small text-bg-secondary text-uppercase'>JSON</span>
+              <span class='badge badge-small text-bg-secondary text-uppercase'>RDF</span>
+              <span class='badge badge-small text-bg-secondary text-uppercase'>TTL</span>
             </p>
           </div>
         {% endfor %}
@@ -153,16 +159,16 @@
     </div>
   </section>
 
-  <section class='row pt-4 pb-5 border-bottom'>
+  <section class='row py-4 pb-md-5 border-bottom'>
     <div class='col-12 col-lg-8'>
-      <div class='d-flex align-items-start gap-3 mb-4'>
+      <div class='d-flex align-items-start gap-3 mb-3 mb-md-4'>
         <h2 class='display-6 m-0'>Tags</h2>
       </div>
 
       <div class='d-flex flex-wrap gap-2'>
-        <span class='badge badge-lg text-bg-secondary text-uppercase'>Lorem</span>
-        <span class='badge badge-lg text-bg-secondary text-uppercase'>Lorem</span>
-        <span class='badge badge-lg text-bg-secondary text-uppercase'>Lorem</span>
+        <span class='badge badge-small badge-md-large border border-primary text-primary text-uppercase'>Lorem</span>
+        <span class='badge badge-small badge-md-large border border-primary text-primary text-uppercase'>Lorem</span>
+        <span class='badge badge-small badge-md-large border border-primary text-primary text-uppercase'>Lorem</span>
       </div>
     </div>
   </section>

@@ -20,6 +20,7 @@
     margin: 0 calc(var(--hero-overflow) * -1);
     object-fit: cover;
     width: 100vw;
+    min-width: $body-min-width;
     max-width: calc(100% + var(--hero-overflow) * 2);
 
     @include device-without-touchscreen {
