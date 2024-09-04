@@ -172,47 +172,4 @@
       </div>
     </div>
   </section>
-
-  {#
-    <section class='row py-4'>
-    <div class='col-10'>
-    <div class='accordion' id='feedback-geben'>
-    <div class='accordion-item'>
-    <h2 class='accordion-header'>
-    <button
-    class='accordion-button'
-    type='button'
-    data-bs-toggle='collapse'
-    data-bs-target='#feedback-form'
-    aria-expanded='true'
-    aria-controls='collapseOne'
-    >
-    FEEDBACK GEBEN
-    </button>
-    </h2>
-    <div id='feedback-form' class='accordion-collapse collapse show' data-bs-parent='#feedback-form'>
-    <div class='accordion-body'>
-    <p>
-    Haben Sie eine Frage oder Feedback zu diesem Datensatz? Wir freuen uns, von Ihnen zu hören und bemühen
-    uns, zeitnah zu antworten. Geben Sie Ihre Frage bitte in das Formular ein.
-    </p>
-
-    <form action='#'>
-    <div class='mb-3'>
-    <label for='feedback-name' class='form-label'>Name</label>
-    <input type='email' class='form-control' id='feedback-name' placeholder='Name'>
-    </div>
-    <div class='mb-3'>
-    <label for='feedback-text' class='form-label'>Feedback</label>
-    <textarea class='form-control' id='feedback-text' rows='3'></textarea>
-    </div>
-    <button class='btn btn-primary'>ABSENDEN</button>
-    </form>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </section>
-  #}
 {% endblock %}
