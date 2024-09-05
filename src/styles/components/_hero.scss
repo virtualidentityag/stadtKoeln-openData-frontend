@@ -1,0 +1,31 @@
+.hero {
+  --hero-overflow: 160px;
+  --hero-m-bottom: -10%;
+
+  display: flex;
+  justify-content: center;
+  aspect-ratio: 4 / 3;
+  margin-bottom: var(--hero-m-bottom);
+
+  @include media-breakpoint-up(md) {
+    aspect-ratio: 21 / 9;
+  }
+
+  ~ * {
+    position: relative;
+    z-index: 10;
+  }
+
+  > img {
+    margin: 0 calc(var(--hero-overflow) * -1);
+    object-fit: cover;
+    width: 100vw;
+    min-width: $body-min-width;
+    max-width: calc(100% + var(--hero-overflow) * 2);
+
+    @include device-without-touchscreen {
+      $scrollbar-width: 15px;
+      width: calc(100vw - $scrollbar-width);
+    }
+  }
+}

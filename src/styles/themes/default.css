@@ -11,14 +11,6 @@
   --primary-active: #f23333;
   --primary-shadow-rgb: 203, 0, 0;
   --color-on-primary: #fff;
-
-  --secondary: #fff;
-  --secondary-rgb: 255, 255, 255;
-  --secondary-hover: #e7e7e7;
-  --secondary-hover-rgb: 231, 231, 231;
-  --secondary-active: #e7e7e7;
-  --secondary-shadow-rgb: 203, 0, 0;
-  --color-on-secondary: #ef0000;
 }
 
 [data-bs-theme='dark'] {
@@ -34,12 +26,4 @@
   --primary-active: #f23333;
   --primary-shadow-rgb: 255, 255, 255;
   --color-on-primary: #fff;
-
-  --secondary: #fff;
-  --secondary-rgb: 255, 255, 255;
-  --secondary-hover: #e7e7e7;
-  --secondary-hover-rgb: 231, 231, 231;
-  --secondary-active: #e7e7e7;
-  --secondary-shadow-rgb: 203, 0, 0;
-  --color-on-secondary: #ef0000;
 }
