@@ -1,0 +1,157 @@
+{% extends 'layouts::base.twig' %}
+{% set theme = 'default' %}
+
+{% block content %}
+  {%
+    include 'partials::base/b_breadcrumbs.twig' with {
+    links: [
+    {
+    href: './',
+    text: 'Startseite'
+    },
+    {
+    text: 'Daten anfragen'
+    }
+    ]
+    }
+  %}
+
+  <section class='row mb-3 mb-md-4'>
+    <div class='col-12 mb-3'>
+      <h1 class='display-3 mb-4'>Daten anfragen</h1>
+
+      <h2 class='m-0'>
+        Nutzen Sie dieses Formular, um uns mitzuteilen, welche Daten Sie auf unserer Plattform noch vermissen – wir
+        bemühen uns, Ihre Anfragen so schnell wie möglich zu erfüllen.
+      </h2>
+    </div>
+  </section>
+
+  <section class='row mb-4 mb-md-5'>
+    <div class='col-12'>
+      <form class='row'>
+        <div class='col-12 col-md-6 mb-4'>
+          <label for='name' class='form-label'>Name</label>
+          <input type='text' class='form-control' id='name' aria-describedby='name-help'>
+          <div id='name-help' class='form-text'>
+            Nicht öffentlich angezeigt, evtl Verwendung für direkte Kommunikation mit Ihnen.
+          </div>
+        </div>
+        <div class='col-12 col-md-6 mb-4'>
+          <label for='email' class='form-label'>E-Mail Adresse</label>
+          <input type='email' class='form-control' id='email' aria-describedby='email-help'>
+          <div id='email-help' class='form-text'>
+            Nicht öffentlich angezeigt, evtl Verwendung für direkte Kommunikation mit Ihnen.
+          </div>
+        </div>
+        <div class='col-12 col-md-6 mb-4'>
+          <label for='datensatz' class='form-label'>Bezeichung Datensatz*</label>
+          <input type='text' class='form-control' id='datensatz' aria-describedby='datensatz-help'>
+          <div id='datensatz-help' class='form-text'>Bezeichnung des Datensatzes, z.B. Straßenverzeichnis Köln</div>
+        </div>
+        <div class='col-12 col-md-6 mb-4'>
+          <label for='herausgeber' class='form-label'>Herausgeber</label>
+          <input type='text' class='form-control' id='herausgeber' aria-describedby='herausgeber-help'>
+          <div id='herausgeber-help' class='form-text'>Falls Sie wissen, wer Herausgeber der angefragten Daten ist</div>
+        </div>
+        <div class='col-12 mb-4'>
+          <label for='comments' class='form-label'>Comments</label>
+          <textarea class='form-control' placeholder='Leave a comment here' id='comments'></textarea>
+        </div>
+        <div class='col-12 mb-4'>
+          <div class='form-check form-switch'>
+            <input class='form-check-input' type='checkbox' role='switch' id='offentlich' aria-checked='false'>
+            <label class='form-check-label' for='offentlich'>Anfrage öffentlich anzeigen</label>
+          </div>
+        </div>
+        <div class='col-12'>
+          <div class='d-flex justify-content-center'>
+            <button class='btn btn-primary'>Absenden</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  {%
+    include 'partials::content-layout/cl_filters.twig' with {
+    data: [
+    {
+    title: 'Kategorien',
+    moreFiltersCount: 7,
+    filters: [
+    {
+    label: 'Infrastruktur, Bauen & Wohnen',
+    results: 120
+    },
+    {
+    label: 'Bevölkerung',
+    results: 42
+    },
+    {
+    label: 'Geo',
+    results: 22
+    },
+    {
+    label: 'Gesundheit',
+    results: 16,
+    },
+    ]
+    },
+    ]
+    }
+  %}
+
+  <section class='row mb-3 mb-md-4'>
+    <div class='col-12'>
+      <div class='d-flex justify-content-between align-items-center mb-4'>
+        <h2 class='display-6 m-0'>Öffentliche Datenanfragen</h2>
+        <div class='d-flex gap-2 align-items-center justify-content-end'>
+          <p class='h6 m-0 text-end'><strong>Filtern nach</strong></p>
+          <button
+            class='btn btn-dark'
+            type='button'
+            data-bs-toggle='offcanvas'
+            data-bs-target='#offcanvas-filters'
+            aria-controls='offcanvas-filters'
+            aria-label='Filter umschalten'
+          >
+            <i class='bi bi-funnel-fill'></i>
+          </button>
+        </div>
+      </div>
+
+      <div class='d-flex flex-column gap-4 mb-4'>
+        {%
+          include 'partials::base/b_request.twig' with {
+          status: 'coordinating'
+          }
+        %}
+        {%
+          include 'partials::base/b_request.twig' with {
+          status: 'requested'
+          }
+        %}
+        {%
+          include 'partials::base/b_request.twig' with {
+          status: 'denied'
+          }
+        %}
+        {%
+          include 'partials::base/b_request.twig' with {
+          status: 'partially-provided'
+          }
+        %}
+        {%
+          include 'partials::base/b_request.twig' with {
+          status: 'ready'
+          }
+        %}
+      </div>
+
+      <div class='d-flex justify-content-center'>
+        <button class='btn btn-primary'>Mehr</button>
+      </div>
+    </div>
+  </section>
+{% endblock %}
