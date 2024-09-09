@@ -6,8 +6,8 @@
 
   --primary: #a01e28;
   --primary-rgb: 160, 30, 40;
-  --primary-hover: #d60909;
-  --primary-hover-rgb: 214, 9, 9;
+  --primary-hover: #801820;
+  --primary-hover-rgb: 128, 24, 32;
   --primary-active: #f23333;
   --primary-shadow-rgb: 203, 0, 0;
   --color-on-primary: #fff;
@@ -21,8 +21,8 @@
 
   --primary: #a01e28;
   --primary-rgb: 160, 30, 40;
-  --primary-hover: #d60909;
-  --primary-hover-rgb: 214, 9, 9;
+  --primary-hover: #801820;
+  --primary-hover-rgb: 128, 24, 32;
   --primary-active: #f23333;
   --primary-shadow-rgb: 255, 255, 255;
   --color-on-primary: #fff;

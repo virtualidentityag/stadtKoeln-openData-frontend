@@ -1,8 +1,8 @@
 :root {
-  --link-color: var(--primary);
-  --link-color-rgb: var(--primary-rgb);
-  --link-hover-color: var(--primary-hover);
-  --link-hover-color-rgb: var(--primary-hover-rgb);
+  --link-color: var(--body-color);
+  --link-color-rgb: var(--body-color-rgb);
+  --link-hover-color: var(--primary);
+  --link-hover-color-rgb: var(--primary-rgb);
 }
 
 a {
@@ -14,11 +14,15 @@ a {
 
 .link {
   text-decoration: none;
-
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--link-color);
   color: rgba(var(--link-color-rgb), 1);
 
-  &:hover {
-    color: rgba(var(--link-hover-color-rgb), 1);
+  &:hover,
+  &:focus,
+  &:focus-within {
+    --link-color: rgba(var(--link-hover-color-rgb), 1);
+    --link-color-rgb: var(--link-hover-color-rgb);
   }
 }
 
