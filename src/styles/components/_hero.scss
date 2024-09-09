@@ -1,19 +1,25 @@
 .hero {
   --hero-overflow: 320px;
-  --hero-m-bottom: -10%;
 
   position: relative;
 
   &-default {
-    --hero-m-bottom: -10%;
+    .hero-inner {
+      margin-bottom: -10%;
+    }
   }
 
   &-background {
-    --hero-m-bottom: -100%;
     margin-bottom: 24px;
 
     @include media-breakpoint-up(lg) {
       margin-bottom: 48px;
+    }
+
+    .hero-inner {
+      position: absolute;
+      inset: 0;
+      margin-bottom: -100%;
     }
   }
 
@@ -23,13 +29,11 @@
   }
 
   &-inner {
-    position: absolute;
-    inset: 0;
+    position: relative;
     z-index: -1;
     display: flex;
     justify-content: center;
     aspect-ratio: 1 / 1;
-    margin-bottom: var(--hero-m-bottom);
 
     @include media-breakpoint-up(sm) {
       aspect-ratio: 4 / 3;
