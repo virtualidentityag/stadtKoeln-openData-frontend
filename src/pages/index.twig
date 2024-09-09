@@ -2,32 +2,47 @@
 {% set theme = 'default' %}
 
 {% block content %}
-  <section class='row pb-5'>
+  <section class='row pb-3 pb-lg-5'>
     <div class='col-12'>
-      <h1 class='display-3 display-md-3 mb-4'>
-        Die beste Grundlage fur fundierte Entscheidungen: offene Daten aus Ihrer Region.
-      </h1>
+      {%
+        include 'partials::base/b_hero.twig' with {
+        src: 'https://picsum.photos/960/540',
+        alt: 'Stadt Koeln',
+        type: 'background'
+        }
+      %}
 
-      <div class='row mb-5'>
-        <div class='col-12 col-md-7'>
-          <form class='form-inline d-flex gap-2' action='overview'>
-            <input
-              class='form-control fs-5 mr-sm-2'
-              type='search'
-              placeholder='Datensatze suchen'
-              aria-label='Datensatze suchen'
-            >
-            <button class='btn btn-primary fs-5' type='submit' aria-label='Search'>
-              <i class='bi bi-search'></i>
-            </button>
-          </form>
+      <div class='row'>
+        <div class='col-12 col-lg-9 mb-4 mb-xl-5'>
+          <div class='text-bg-primary p-4 pb-5'>
+            <h1 class='display-5 mb-4'>
+              Die beste Grundlage für fundierte Entscheidungen: offene Daten aus Ihrer Region.
+            </h1>
+            <form class='form-inline d-flex gap-2' action='overview'>
+              <input
+                class='form-control fs-5 mr-sm-2'
+                type='search'
+                placeholder='Datensatze suchen'
+                aria-label='Datensatze suchen'
+              >
+              <button class='btn btn-outline-primary fs-5' type='submit' aria-label='Search'>
+                <i class='bi bi-search'></i>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <h2 class='m-0'>
-        Hier finden alle Kölner – ob Bürger, Verwaltung, Unternehmen oder Wissenschaft – offene Datensätze, um gemeinsam
-        einen Mehrwert für alle zu schaffen.
-      </h2>
+  <section class='row pb-5'>
+    <div class='col-12'>
+      <div class='p-4 bg-body'>
+        <h2 class='m-0'>
+          Hier finden alle Kölner – ob Bürger, Verwaltung, Unternehmen oder Wissenschaft – offene Datensätze, um
+          gemeinsam einen Mehrwert für alle zu schaffen.
+        </h2>
+      </div>
     </div>
   </section>
 
