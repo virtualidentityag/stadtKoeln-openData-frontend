@@ -1,0 +1,46 @@
+{% extends 'layouts::base.twig' %}
+{% set theme = 'default' %}
+
+{% block content %}
+  <h1>Headlines</h1>
+  <div class='mb-4 p-4 bg-body-secondary'>
+    <p class='display-1'>Display 1 - 80px</p>
+    <p class='display-2'>Display 2 - 72px</p>
+    <p class='display-3'>Display 3 - 64px</p>
+    <p class='display-4'>Display 4 - 56px</p>
+    <p class='display-5'>Display 5 - 48px</p>
+    <p class='display-6'>Display 6 - 40px</p>
+    <br>
+    <p class='h1'>Headline 1 - 40px</p>
+    <p class='h2'>Headline 2 - 32px</p>
+    <p class='h3'>Headline 3 - 28px</p>
+    <p class='h4'>Headline 4 - 24px</p>
+    <p class='h5'>Headline 5 - 20px</p>
+    <p class='h6'>Headline 6 - 16px</p>
+  </div>
+
+  <h1>Copy</h1>
+  <div class='mb-4 p-4 bg-body-secondary'>
+    <p class='fs-4 m-0'>Body extra large - 24px</p>
+    <p class='fs-5 m-0'>Body large - 20px</p>
+    <p class='m-0'>Body regular - 16px</p>
+    <p class='small m-0'>Body small - 14px</p>
+  </div>
+
+  <h1>Buttons</h1>
+  <div class='mb-4 p-4 bg-body-secondary'>
+    <button type='button' class='btn btn-primary'>Primary</button>
+    <button type='button' class='btn btn-secondary'>Secondary</button>
+    <button type='button' class='btn btn-success'>Success</button>
+    <button type='button' class='btn btn-danger'>Danger</button>
+    <button type='button' class='btn btn-warning'>Warning</button>
+    <button type='button' class='btn btn-info'>Info</button>
+    <button type='button' class='btn btn-light'>Light</button>
+    <button type='button' class='btn btn-dark'>Dark</button>
+  </div>
+
+  <h1>Links</h1>
+  <div class='p-4 bg-body-secondary'>
+    <a href='#'>Link component</a>
+  </div>
+{% endblock %}
