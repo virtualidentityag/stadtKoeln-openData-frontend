@@ -14,21 +14,23 @@
 
       <div class='row'>
         <div class='col-12 col-lg-9 mb-4 mb-xl-5'>
-          <div class='text-bg-primary p-4 pb-5'>
-            <h1 class='display-5 mb-4'>
-              Die beste Grundlage für fundierte Entscheidungen: offene Daten aus Ihrer Region.
-            </h1>
-            <form class='form-inline d-flex gap-2' action='overview'>
-              <input
-                class='form-control fs-5 mr-sm-2'
-                type='search'
-                placeholder='Datensatze suchen'
-                aria-label='Datensatze suchen'
-              >
-              <button class='btn btn-outline-primary fs-5' type='submit' aria-label='Search'>
-                <i class='bi bi-search'></i>
-              </button>
-            </form>
+          <div class='text-bg-primary p-3 pb-5'>
+            <div class='p-3'>
+              <h1 class='display-5 mb-4'>
+                Die beste Grundlage für fundierte Entscheidungen: offene Daten aus Ihrer Region.
+              </h1>
+              <form class='form-inline d-flex gap-2' action='overview'>
+                <input
+                  class='form-control fs-5 mr-sm-2'
+                  type='search'
+                  placeholder='Datensatze suchen'
+                  aria-label='Datensatze suchen'
+                >
+                <button class='btn btn-outline-primary fs-5' type='submit' aria-label='Search'>
+                  <i class='bi bi-search'></i>
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -37,8 +39,8 @@
 
   <section class='row pb-5'>
     <div class='col-12'>
-      <div class='p-4 bg-body'>
-        <h2 class='m-0'>
+      <div class='p-3 bg-body'>
+        <h2 class='p-3 m-0'>
           Hier finden alle Kölner – ob Bürger, Verwaltung, Unternehmen oder Wissenschaft – offene Datensätze, um
           gemeinsam einen Mehrwert für alle zu schaffen.
         </h2>
@@ -57,7 +59,7 @@
       }
     %}
 
-    <div class='col-12 mb-4'>
+    <div class='col-6 mb-4'>
       {%
         include 'partials::base/b_card.twig' with {
         'thumbnail': {
@@ -72,7 +74,7 @@
         }
       %}
     </div>
-    <div class='col-12 mb-4'>
+    <div class='col-6 mb-4'>
       {%
         include 'partials::base/b_card.twig' with {
         'thumbnail': {
@@ -87,7 +89,52 @@
         }
       %}
     </div>
-    <div class='col-12'>
+    <div class='col-6 mb-4'>
+      {%
+        include 'partials::base/b_card.twig' with {
+        'thumbnail': {
+        src: 'https://picsum.photos/960/540',
+        alt: 'Virtual Identity AG'
+        },
+        'direction': 'horizontal',
+        'href': './dataset',
+        'title': 'Baumkataster Köln 2020',
+        'subtitle': 'Herausgeber: Stadt Köln',
+        'description': 'Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua...',
+        }
+      %}
+    </div>
+    <div class='col-6 mb-4'>
+      {%
+        include 'partials::base/b_card.twig' with {
+        'thumbnail': {
+        src: 'https://picsum.photos/960/540',
+        alt: 'Virtual Identity AG'
+        },
+        'direction': 'horizontal',
+        'href': './dataset',
+        'title': 'Baumkataster Köln 2020',
+        'subtitle': 'Herausgeber: Stadt Köln',
+        'description': 'Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua...',
+        }
+      %}
+    </div>
+    <div class='col-6'>
+      {%
+        include 'partials::base/b_card.twig' with {
+        'thumbnail': {
+        src: 'https://picsum.photos/960/540',
+        alt: 'Virtual Identity AG'
+        },
+        'direction': 'horizontal',
+        'href': './dataset',
+        'title': 'Baumkataster Köln 2020',
+        'subtitle': 'Herausgeber: Stadt Köln',
+        'description': 'Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua...',
+        }
+      %}
+    </div>
+    <div class='col-6'>
       {%
         include 'partials::base/b_card.twig' with {
         'thumbnail': {
