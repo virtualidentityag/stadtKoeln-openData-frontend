@@ -4,11 +4,31 @@ $prefix: '';
 $enable-negative-margins: true;
 $body-min-width: 375px;
 
-$primary: #a01e28;
+$blue: #008ceb;
+$orange: #ff6e19;
+$yellow: #ffd200;
+$success: #198754;
+$green: #00d282;
+$gray: #827d73;
+$gray-900: #2d2d2d;
 
 // Required
 @import 'bootstrap/scss/variables';
 @import 'bootstrap/scss/variables-dark';
+
+$theme-colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'success': $success,
+  'info': $blue,
+  'warning': $warning,
+  'danger': $danger,
+  'light': $light,
+  'dark': $dark,
+  'green': $green,
+  'gray': $gray,
+);
+
 @import 'bootstrap/scss/maps';
 @import 'bootstrap/scss/mixins';
 @import 'bootstrap/scss/utilities';

@@ -57,12 +57,54 @@
       }
     %}
 
+    <div class='col-12 mb-4'>
+      {%
+        include 'partials::base/b_card.twig' with {
+        'thumbnail': {
+        src: 'https://picsum.photos/960/540',
+        alt: 'Virtual Identity AG'
+        },
+        'direction': 'horizontal',
+        'href': './dataset',
+        'title': 'Baumkataster Köln 2020',
+        'subtitle': 'Herausgeber: Stadt Köln',
+        'description': 'Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua...',
+        }
+      %}
+    </div>
+    <div class='col-12 mb-4'>
+      {%
+        include 'partials::base/b_card.twig' with {
+        'thumbnail': {
+        src: 'https://picsum.photos/960/540',
+        alt: 'Virtual Identity AG'
+        },
+        'direction': 'horizontal',
+        'href': './dataset',
+        'title': 'Baumkataster Köln 2020',
+        'subtitle': 'Herausgeber: Stadt Köln',
+        'description': 'Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua...',
+        }
+      %}
+    </div>
     <div class='col-12'>
-      {% include 'partials::content-layout/cl_card-showcase.twig' %}
+      {%
+        include 'partials::base/b_card.twig' with {
+        'thumbnail': {
+        src: 'https://picsum.photos/960/540',
+        alt: 'Virtual Identity AG'
+        },
+        'direction': 'horizontal',
+        'href': './dataset',
+        'title': 'Baumkataster Köln 2020',
+        'subtitle': 'Herausgeber: Stadt Köln',
+        'description': 'Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua...',
+        }
+      %}
     </div>
   </section>
 
-  <section class='row py-5 border-top'>
+  <section class='row py-5 border-gray border-top border-opacity-25'>
     {%
       include 'partials::content-layout/cl_section-header.twig' with {
       title: 'News',
@@ -78,7 +120,7 @@
     </div>
   </section>
 
-  <section class='row py-5 border-top'>
+  <section class='row py-5 border-gray border-top border-opacity-25'>
     {%
       include 'partials::content-layout/cl_section-header.twig' with {
       title: 'Beliebte Kategorien'
@@ -90,7 +132,7 @@
     </div>
   </section>
 
-  <section class='row py-5 border-top border-bottom'>
+  <section class='row py-5 border-gray border-top border-bottom border-opacity-25'>
     {%
       include 'partials::content-layout/cl_section-header.twig' with {
       title: 'Daten über Schnittstelle nutzen',

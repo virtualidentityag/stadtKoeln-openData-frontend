@@ -11,6 +11,8 @@
   --primary-active: #f23333;
   --primary-shadow-rgb: 203, 0, 0;
   --color-on-primary: #fff;
+
+  --border-color: #827d73;
 }
 
 [data-bs-theme='dark'] {
@@ -26,4 +28,6 @@
   --primary-active: #f23333;
   --primary-shadow-rgb: 255, 255, 255;
   --color-on-primary: #fff;
+
+  --border-color: #827d73;
 }
