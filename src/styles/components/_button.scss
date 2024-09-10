@@ -2,6 +2,10 @@
   --btn-focus-box-shadow: 0 0 0 var(--focus-ring-width) var(--focus-ring-color);
   font-size: 1.25rem;
   font-weight: 600;
+
+  &:focus {
+    border-color: var(--body-bg);
+  }
 }
 
 .btn-primary {
