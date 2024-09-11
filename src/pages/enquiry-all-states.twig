@@ -134,23 +134,27 @@
         %}
         {%
           include 'partials::base/b_request.twig' with {
-          status: 'coordinating'
-          }
-        %}
-        {%
-          include 'partials::base/b_request.twig' with {
-          status: 'coordinating'
-          }
-        %}
-
-        {%
-          include 'partials::base/b_request.twig' with {
           status: 'requested'
           }
         %}
         {%
           include 'partials::base/b_request.twig' with {
-          status: 'coordinating'
+          status: 'denied'
+          }
+        %}
+        {%
+          include 'partials::base/b_request.twig' with {
+          status: 'partially-provided'
+          }
+        %}
+        {%
+          include 'partials::base/b_request.twig' with {
+          status: 'ready'
+          }
+        %}
+        {%
+          include 'partials::base/b_request.twig' with {
+          status: 'reviewing'
           }
         %}
       </div>

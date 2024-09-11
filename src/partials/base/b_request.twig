@@ -8,6 +8,8 @@
   {% set badge = { color: "success", text: 'Teilweise bereit gestellt' } %}
   {% elseif status == 'ready' %}
   {% set badge = { color: "primary", text: 'Datensatz steht bereit' } %}
+  {% elseif status == 'reviewing' %}
+  {% set badge = { color: "info", text: 'Anfrage wird geprüft' } %}
 {% endif %}
 
 <div class='card p-3 border rounded d-flex gap-2'>
