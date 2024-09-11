@@ -7,6 +7,11 @@
   color: var(--gray);
 }
 
+.invalid-feedback,
+.valid-feedback {
+  font-size: 1rem;
+}
+
 .form-control,
 .form-check-input {
   &:focus {
