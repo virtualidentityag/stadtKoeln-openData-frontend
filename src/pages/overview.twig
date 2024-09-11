@@ -142,7 +142,7 @@
         <div class='col-12 col-lg-9'>
           <div class='pb-3 pt-0 pt-md-3 d-flex flex-wrap column-gap-3 align-items-center justify-content-end'>
             <p class='m-0'><strong>Sortieren nach</strong></p>
-            <div class='dropdown '>
+            <div class='dropdown'>
               <button
                 class='btn btn-light dropdown-toggle shadow-sm'
                 type='button'
@@ -171,6 +171,7 @@
               <i class='bi bi-funnel-fill'></i>
             </button>
           </div>
+          <div class='visually-hidden' role='region' aria-live='polite'>5 Ergebnisse</div>
           <div class='mt-3'>
             <div class='pb-3'>
               {%
@@ -200,7 +201,6 @@
                 direction: 'horizontal',
                 thumbnail: {
                 src: 'https://picsum.photos/540/540',
-                alt: 'Virtual Identity AG'
                 },
                 tag: 'Series',
                 title: 'Baumkataster Köln 2020',
