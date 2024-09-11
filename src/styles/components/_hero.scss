@@ -49,11 +49,6 @@
       width: 100vw;
       min-width: $body-min-width;
       max-width: calc(100% + var(--hero-overflow) * 2);
-
-      @include device-without-touchscreen {
-        $scrollbar-width: 15px;
-        width: calc(100vw - $scrollbar-width);
-      }
     }
   }
 }
