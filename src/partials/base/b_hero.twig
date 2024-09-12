@@ -1,3 +1,6 @@
-<div class='hero'>
-  <img src='{{ src }}' alt>
+{% set type = type is defined ? type : 'default' %}
+<div class='hero hero-{{ type }}'>
+  <div class='hero-inner'>
+    <img src='{{ src }}' alt>
+  </div>
 </div>

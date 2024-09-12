@@ -11,4 +11,12 @@
     --nav-link-color: var(--footer-link-color);
     --nav-link-hover-color: var(--footer-link-hover-color);
   }
+
+  a {
+    color: var(---footer-link-color);
+
+    &:hover {
+      color: var(--footer-link-hover-color);
+    }
+  }
 }
