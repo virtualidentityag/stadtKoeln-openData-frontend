@@ -1,191 +1,55 @@
 {% extends 'layouts::base.twig' %}
 {% set theme = 'default' %}
 
-{% block content %}
-  <section class='row pb-3 pb-lg-5'>
-    <div class='col-12'>
-      {%
-        include 'partials::base/b_hero.twig' with {
-        src: 'https://picsum.photos/960/540',
-        type: 'background'
-        }
-      %}
+{%
+  set templates = [
+  {
+  name: 'Home',
+  variants: [{ href: './homepage', label: 'Default ✅'}]
+  },
+  {
+  name: 'Dataset Overview',
+  variants: [{ href: './overview', label: 'Default ❌'}]
+  },
+  {
+  name: 'Dataset Detail',
+  variants:  [{ href: './dataset', label: 'Default ❌'}]
+  },
+  {
+  name: 'Data Enquiry',
+  variants: [
+  { href: './enquiry', label: 'Default ✅'},
+  { href: './enquiry-all-states', label: 'With all states ✅'},
+  { href: './enquiry-validated', label: 'With validated form ✅'},
+  ]
+  },
+  {
+  name: 'Apps',
+  variants:  [{ href: './apps', label: 'Default ❌'}]
+  },
+  ]
+%}
 
-      <div class='row'>
-        <div class='col-12 col-lg-9 mb-4 mb-xl-5'>
-          <div class='text-bg-primary p-3 pb-5'>
-            <div class='p-3'>
-              <h1 class='display-5 mb-4'>
-                Die beste Grundlage für fundierte Entscheidungen: offene Daten aus Ihrer Region.
-              </h1>
-              <form class='form-inline d-flex gap-2' action='overview'>
-                <input
-                  class='form-control fs-5 mr-sm-2'
-                  type='search'
-                  placeholder='Datensatze suchen'
-                  aria-label='Datensatze suchen'
-                >
-                <button class='btn btn-outline-primary fs-5' type='submit' aria-label='Search'>
-                  <i class='bi bi-search'></i>
-                </button>
-              </form>
-            </div>
+{% block content %}
+  <div class='d-flex flex-column gap-4 mt-5'>
+    {% for template in templates %}
+      <div>
+        <h1>{{ template.name }}</h1>
+        <div class='bg-body-secondary rounded p-4'>
+          <div class='row'>
+            {% for variant in template.variants %}
+              <div class='col-3'>
+                <a href='{{ variant.href }}' class='card text-decoration-none'>
+                  <div class='ratio ratio-4x3'>
+                    <img class='bg-body-tertiary'>
+                  </div>
+                  <h3 class='h5 px-2 mt-2'>{{ variant.label }}</h3>
+                </a>
+              </div>
+            {% endfor %}
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class='row pb-5'>
-    <div class='col-12'>
-      <div class='p-3 bg-body'>
-        <h2 class='p-3 m-0'>
-          Hier finden alle Kölner – ob Bürger, Verwaltung, Unternehmen oder Wissenschaft – offene Datensätze, um
-          gemeinsam einen Mehrwert für alle zu schaffen.
-        </h2>
-      </div>
-    </div>
-  </section>
-
-  <section class='row pt-4 pb-5'>
-    {%
-      include 'partials::content-layout/cl_section-header.twig' with {
-      title: 'Beliebte Datensätze',
-      link: {
-      href: './overview',
-      text: 'Alle Datensätze',
-      }
-      }
-    %}
-
-    <div class='col-6 mb-4'>
-      {%
-        include 'partials::base/b_card.twig' with {
-        'thumbnail': {
-        src: 'https://picsum.photos/960/540',
-        },
-        'direction': 'horizontal',
-        'href': './dataset',
-        'title': 'Baumkataster Köln 2020',
-        'subtitle': 'Herausgeber: Stadt Köln',
-        'description': 'Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua...',
-        }
-      %}
-    </div>
-    <div class='col-6 mb-4'>
-      {%
-        include 'partials::base/b_card.twig' with {
-        'thumbnail': {
-        src: 'https://picsum.photos/960/540',
-        },
-        'direction': 'horizontal',
-        'href': './dataset',
-        'title': 'Baumkataster Köln 2020',
-        'subtitle': 'Herausgeber: Stadt Köln',
-        'description': 'Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua...',
-        }
-      %}
-    </div>
-    <div class='col-6 mb-4'>
-      {%
-        include 'partials::base/b_card.twig' with {
-        'thumbnail': {
-        src: 'https://picsum.photos/960/540',
-        },
-        'direction': 'horizontal',
-        'href': './dataset',
-        'title': 'Baumkataster Köln 2020',
-        'subtitle': 'Herausgeber: Stadt Köln',
-        'description': 'Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua...',
-        }
-      %}
-    </div>
-    <div class='col-6 mb-4'>
-      {%
-        include 'partials::base/b_card.twig' with {
-        'thumbnail': {
-        src: 'https://picsum.photos/960/540',
-        },
-        'direction': 'horizontal',
-        'href': './dataset',
-        'title': 'Baumkataster Köln 2020',
-        'subtitle': 'Herausgeber: Stadt Köln',
-        'description': 'Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua...',
-        }
-      %}
-    </div>
-    <div class='col-6'>
-      {%
-        include 'partials::base/b_card.twig' with {
-        'thumbnail': {
-        src: 'https://picsum.photos/960/540',
-        },
-        'direction': 'horizontal',
-        'href': './dataset',
-        'title': 'Baumkataster Köln 2020',
-        'subtitle': 'Herausgeber: Stadt Köln',
-        'description': 'Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua...',
-        }
-      %}
-    </div>
-    <div class='col-6'>
-      {%
-        include 'partials::base/b_card.twig' with {
-        'thumbnail': {
-        src: 'https://picsum.photos/960/540',
-        },
-        'direction': 'horizontal',
-        'href': './dataset',
-        'title': 'Baumkataster Köln 2020',
-        'subtitle': 'Herausgeber: Stadt Köln',
-        'description': 'Lorem ipsum dolor sit amet, consetetur sadipscin invidunt ut labore et erat, sed diam voluptua...',
-        }
-      %}
-    </div>
-  </section>
-
-  <section class='row py-5 border-gray border-top border-opacity-25'>
-    {%
-      include 'partials::content-layout/cl_section-header.twig' with {
-      title: 'News',
-      link: {
-      href: '#',
-      text: 'Alle News anzeigen',
-      }
-      }
-    %}
-
-    <div class='col-12'>
-      {% include 'partials::base/b_highlight-teaser.twig' %}
-    </div>
-  </section>
-
-  <section class='row py-5 border-gray border-top border-opacity-25'>
-    {%
-      include 'partials::content-layout/cl_section-header.twig' with {
-      title: 'Beliebte Kategorien'
-      }
-    %}
-
-    <div class='col-12'>
-      {% include 'partials::content-layout/cl_tile-showcase.twig' %}
-    </div>
-  </section>
-
-  <section class='row py-5 border-gray border-top border-bottom border-opacity-25'>
-    {%
-      include 'partials::content-layout/cl_section-header.twig' with {
-      title: 'Daten über Schnittstelle nutzen',
-      link: {
-      href: '#',
-      text: 'Artikel anzeigen',
-      }
-      }
-    %}
-
-    <p class='h2'>
-      Erfahren Sie hier wie Sie mit der DKAN API unsere offenen Datensätze für Ihre eigenen Projekte anschauen,
-      herunterladen und programmsteuern können.
-    </p>
-  </section>
+    {% endfor %}
+  </div>
 {% endblock %}
