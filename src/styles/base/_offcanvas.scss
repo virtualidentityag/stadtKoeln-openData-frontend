@@ -29,6 +29,7 @@
 .offcanvas {
   --offcanvas-color: var(--light);
   --offcanvas-bg: var(--dark);
+  --link-color: var(--offcanvas-color);
 
   .offcanvas-body {
     scrollbar-color: var(--light) var(--dark);
