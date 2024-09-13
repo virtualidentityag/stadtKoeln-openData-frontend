@@ -1,13 +1,13 @@
 :root {
   color-scheme: light;
 
-  --focus-ring-color: #ef0000;
+  --focus-ring-color: #a01e28;
   --focus-ring-width: 3px;
 
-  --primary: #ef0000;
-  --primary-rgb: 239, 0, 0;
-  --primary-hover: #d60909;
-  --primary-hover-rgb: 214, 9, 9;
+  --primary: #a01e28;
+  --primary-rgb: 160, 30, 40;
+  --primary-hover: #801820;
+  --primary-hover-rgb: 128, 24, 32;
   --primary-active: #f23333;
   --primary-shadow-rgb: 203, 0, 0;
   --color-on-primary: #fff;
@@ -18,13 +18,13 @@
 [data-bs-theme='dark'] {
   color-scheme: dark;
 
-  --focus-ring-color: #ef0000;
+  --focus-ring-color: #a01e28;
   --focus-ring-width: 3px;
 
-  --primary: #ef0000;
-  --primary-rgb: 239, 0, 0;
-  --primary-hover: #d60909;
-  --primary-hover-rgb: 214, 9, 9;
+  --primary: #a01e28;
+  --primary-rgb: 160, 30, 40;
+  --primary-hover: #801820;
+  --primary-hover-rgb: 128, 24, 32;
   --primary-active: #f23333;
   --primary-shadow-rgb: 255, 255, 255;
   --color-on-primary: #fff;

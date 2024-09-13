@@ -75,4 +75,5 @@ $theme-colors: (
 
 body {
   min-width: $body-min-width;
+  overflow-x: hidden;
 }

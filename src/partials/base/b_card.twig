@@ -3,14 +3,14 @@
 
 <a href='{{ href }}' class='{{ classes }}'>
   {% if thumbnail %}
-    <div class='{{ direction == 'horizontal' ? 'col-4' : '' }} p-0'>
-      <div class='ratio ratio-16x9 h-100'>
-        <img src='{{ thumbnail.src }}' alt='{{ thumbnail.alt }}'>
+    <div class='{{ direction == 'horizontal' ? 'col-3' : '' }} p-0 border-end'>
+      <div class='ratio ratio-1x1 h-100'>
+        <img src='{{ thumbnail.src }}' alt>
       </div>
     </div>
   {% endif %}
 
-  <div class='{{ direction == 'horizontal' ? 'col-7' : '' }} card-body d-flex flex-column gap-2'>
+  <div class='{{ direction == 'horizontal' ? 'col-8' : '' }} card-body d-flex flex-column gap-2'>
     <h3 class='card-title h5 d-flex gap-2 align-items-center mb-0'>
       <strong>{{ title }}</strong>
       {% if tag %}
