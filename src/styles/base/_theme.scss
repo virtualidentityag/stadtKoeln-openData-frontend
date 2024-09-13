@@ -17,3 +17,11 @@
     --btn-hover-bg: var(--color-on-primary);
   }
 }
+
+.dark-mode-only {
+  display: none;
+}
+
+[data-bs-theme='dark'] .dark-mode-only {
+  display: initial;
+}

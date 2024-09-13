@@ -5,7 +5,7 @@
   set templates = [
   {
   name: 'Home',
-  variants: [{ href: './homepage', label: 'Default ✅'}]
+  variants: [{ href: './homepage', label: 'Default ✅', thumbnail: 'homepage.webp', thumbnail_dark: 'homepage-dark.webp'}]
   },
   {
   name: 'Dataset Overview',
@@ -18,9 +18,9 @@
   {
   name: 'Data Enquiry',
   variants: [
-  { href: './enquiry', label: 'Default ✅'},
-  { href: './enquiry-all-states', label: 'With all states ✅'},
-  { href: './enquiry-validated', label: 'With validated form ✅'},
+  { href: './enquiry', label: 'Default ✅', thumbnail: 'enquiry.webp', thumbnail_dark: 'enquiry-dark.webp'},
+  { href: './enquiry-all-states', label: 'With all states ✅', thumbnail: 'enquiry-all-states.webp', thumbnail_dark: 'enquiry-all-states-dark.webp'},
+  { href: './enquiry-validated', label: 'With validated form ✅', thumbnail: 'enquiry-validated.webp', thumbnail_dark: 'enquiry-validated-dark.webp'},
   ]
   },
   {
@@ -40,8 +40,14 @@
             {% for variant in template.variants %}
               <div class='col-3'>
                 <a href='{{ variant.href }}' class='card text-decoration-none'>
-                  <div class='ratio ratio-4x3'>
-                    <img class='bg-body-tertiary'>
+                  <div class='ratio ratio-3x4'>
+                    <img class='object-position-top bg-body-tertiary' src='./assets/previews/{{ variant.thumbnail }}'>
+                    {% if variant.thumbnail_dark %}
+                      <img
+                        class='object-position-top bg-body-tertiary dark-mode-only'
+                        src='./assets/previews/{{ variant.thumbnail_dark }}'
+                      >
+                    {% endif %}
                   </div>
                   <h3 class='h5 px-2 mt-2'>{{ variant.label }}</h3>
                 </a>
