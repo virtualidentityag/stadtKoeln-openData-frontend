@@ -12,7 +12,6 @@ $green: #00d282;
 $gray: #827d73;
 $gray-900: #2d2d2d;
 
-// Required
 @import 'bootstrap/scss/variables';
 @import 'bootstrap/scss/variables-dark';
 
@@ -29,22 +28,27 @@ $theme-colors: (
   'gray': $gray,
 );
 
+$aspect-ratios: (
+  '1x1': 100%,
+  '4x3': calc(3 / 4 * 100%),
+  '3x4': calc(4 / 3 * 100%),
+  '16x9': calc(9 / 16 * 100%),
+  '21x9': calc(9 / 21 * 100%),
+);
+
 @import 'bootstrap/scss/maps';
 @import 'bootstrap/scss/mixins';
 @import 'bootstrap/scss/utilities';
 @import 'bootstrap/scss/root';
 @import 'bootstrap/scss/reboot';
-
 @import 'bootstrap/scss/type';
 @import 'bootstrap/scss/images';
 @import 'bootstrap/scss/containers';
 @import 'bootstrap/scss/grid';
-// @import "bootstrap/scss/tables";
 @import 'bootstrap/scss/forms';
 @import 'bootstrap/scss/buttons';
 @import 'bootstrap/scss/transitions';
 @import 'bootstrap/scss/dropdown';
-// @import "bootstrap/scss/button-group";
 @import 'bootstrap/scss/nav';
 @import 'bootstrap/scss/navbar';
 @import 'bootstrap/scss/card';
@@ -52,22 +56,8 @@ $theme-colors: (
 @import 'bootstrap/scss/accordion';
 @import 'bootstrap/scss/pagination';
 @import 'bootstrap/scss/badge';
-// @import "bootstrap/scss/alert";
-// @import "bootstrap/scss/progress";
-// @import "bootstrap/scss/list-group";
-// @import 'bootstrap/scss/close';
-// @import "bootstrap/scss/toasts";
-// @import 'bootstrap/scss/modal'; // Requires transitions
-// @import "bootstrap/scss/tooltip";
-// @import 'bootstrap/scss/popover';
-// @import "bootstrap/scss/carousel";
-// @import "bootstrap/scss/spinners";
-@import 'bootstrap/scss/offcanvas'; // Requires transitions
-// @import "bootstrap/scss/placeholders";
-
-// Helpers
+@import 'bootstrap/scss/offcanvas';
 @import 'bootstrap/scss/helpers';
-
 @import 'bootstrap/scss/utilities/api';
 
 @import 'base';

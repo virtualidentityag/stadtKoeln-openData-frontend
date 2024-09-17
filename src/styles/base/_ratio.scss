@@ -2,3 +2,11 @@
   object-fit: cover;
   object-position: center;
 }
+
+$object-positions: (top, bottom, center, left, right);
+
+@each $name in $object-positions {
+  .object-position-#{$name} {
+    object-position: #{$name};
+  }
+}
