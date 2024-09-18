@@ -5,6 +5,7 @@
   --link-color-rgb: var(--light-rgb);
 
   background-color: var(--header-background);
+  border-bottom-color: var(--header-border-color, #e9ecef) !important;
 
   .logo {
     height: 42px;

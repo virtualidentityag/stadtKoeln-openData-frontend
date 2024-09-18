@@ -13,6 +13,7 @@
   --color-on-primary: #fff;
 
   --border-color: #827d73;
+  --header-border-color: #e9ecef;
 }
 
 [data-bs-theme='dark'] {
@@ -30,4 +31,5 @@
   --color-on-primary: #fff;
 
   --border-color: #827d73;
+  --header-border-color: #827d73;
 }
