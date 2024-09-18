@@ -3,10 +3,11 @@
     <a
       href='./'
       aria-current='page'
-      class='bg-dark p-2 d-flex align-items-center me-md-auto text-dark text-decoration-none'
+      class='p-2 d-flex align-items-center me-md-auto text-dark text-decoration-none'
       title='Startseite Offene Daten Köln'
     >
-      <img class='h-full' src='./assets/odk-logo.svg' alt='Offene Daten Köln'>
+      <img class='logo light-mode-only' src='./assets/odk-logo.svg' alt='Offene Daten Köln'>
+      <img class='logo dark-mode-only' src='./assets/odk-logo-dark.svg' alt='Offene Daten Köln'>
     </a>
 
     <div class='d-flex align-items-center gap-4'>
@@ -39,7 +40,9 @@
             <li><a href='#' class='nav-link'>Anfragen</a></li>
           </ul>
 
-          <img class='d-block d-xl-none w-50' src='./assets/odk-logo.svg' alt='Offene Daten Köln'>
+          <div>
+            <img class='logo d-block d-xl-none' src='./assets/odk-logo-dark.svg' alt='Offene Daten Köln'>
+          </div>
         </div>
       </div>
 
