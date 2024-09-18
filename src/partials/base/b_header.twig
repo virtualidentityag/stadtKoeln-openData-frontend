@@ -3,10 +3,11 @@
     <a
       href='./'
       aria-current='page'
-      class='d-flex align-items-center me-md-auto text-dark text-decoration-none'
+      class='p-2 d-flex align-items-center me-md-auto text-dark text-decoration-none'
       title='Startseite Offene Daten Köln'
     >
-      <img class='h-full' src='./assets/odk-logo.svg' alt='Offene Daten Köln'>
+      <img class='logo light-mode-only' src='./assets/odk-logo.svg' alt='Offene Daten Köln'>
+      <img class='logo dark-mode-only' src='./assets/odk-logo-dark.svg' alt='Offene Daten Köln'>
     </a>
 
     <div class='d-flex align-items-center gap-4'>
@@ -26,7 +27,7 @@
           </button>
         </div>
         <div class='offcanvas-body d-flex flex-column justify-content-between'>
-          <ul class='nav flex-column flex-xl-row fs-5 pb-3 pb-xl-0 border-bottom'>
+          <ul class='nav flex-column align-items-start flex-xl-row fs-5 pb-3 pb-xl-0 border-bottom'>
             <li>
               <button toggle-dark-mode class='btn nav-link rounded-0' aria-label='Toggle dark mode'>
                 <i class='bi bi-moon-fill'></i>
@@ -39,7 +40,9 @@
             <li><a href='#' class='nav-link'>Anfragen</a></li>
           </ul>
 
-          <img class='d-block d-xl-none w-50' src='./assets/odk-logo.svg' alt='Offene Daten Köln'>
+          <div>
+            <img class='logo d-block d-xl-none' src='./assets/odk-logo-dark.svg' alt='Offene Daten Köln'>
+          </div>
         </div>
       </div>
 
@@ -50,7 +53,7 @@
           placeholder='Datensätze suchen'
           aria-label='Datensätze suchen'
         >
-        <button class='btn btn-outline-light' type='submit'>Suche</button>
+        <button class='btn btn-outline-primary' type='submit'>Suche</button>
       </form>
 
       <a href='./overview' class='link d-block d-lg-none fs-3' aria-label='Datensätze suchen'>
@@ -58,7 +61,7 @@
       </a>
 
       <button
-        class='navbar-toggler btn btn-sm btn-outline-light'
+        class='navbar-toggler btn btn-sm btn-outline-primary'
         data-bs-toggle='offcanvas'
         data-bs-target='#header-nav'
         aria-label='Navigation umschalten'

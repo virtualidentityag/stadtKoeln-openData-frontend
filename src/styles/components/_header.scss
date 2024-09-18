@@ -1,22 +1,46 @@
 .header {
-  --header-background: var(--primary);
-  --header-link-color: rgba(var(--light-rgb), 0.8);
-  --header-link-hover-color: var(--light);
-  --focus-ring-color: var(--color-on-primary);
+  --header-background: var(--body-bg);
+  --header-link-color: var(--body-color);
+  --header-link-hover-color: var(--primary);
   --link-color-rgb: var(--light-rgb);
 
   background-color: var(--header-background);
+  border-bottom-color: var(--header-border-color, #e9ecef) !important;
+
+  .logo {
+    height: 42px;
+  }
 
   .navbar {
-    --navbar-color: var(--light);
+    --navbar-color: var(--header-link-color);
   }
 
   .nav {
     --nav-link-color: var(--header-link-color);
     --nav-link-hover-color: var(--header-link-hover-color);
 
+    display: flex;
+    gap: 16px;
+
     @include media-breakpoint-up(xl) {
       border-bottom: none !important;
+    }
+  }
+
+  .nav-link {
+    border-bottom: 2px solid transparent;
+    padding: 8px;
+
+    &:hover {
+      border-bottom-color: var(--header-link-hover-color);
+    }
+  }
+
+  form {
+    --border-color: var(--header-link-color);
+
+    button[type='submit'] {
+      --primary: var(--header-link-color);
     }
   }
 
@@ -29,7 +53,9 @@
   }
 
   .navbar-toggler {
-    --navbar-toggler-border-color: var(--light);
+    --navbar-toggler-border-color: var(--header-link-color);
+
+    align-self: stretch;
 
     &:focus,
     &:focus-visible {
