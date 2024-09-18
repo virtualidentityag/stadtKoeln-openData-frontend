@@ -6,7 +6,7 @@
     <div class='col-12'>
       {%
         include 'partials::base/b_hero.twig' with {
-        src: 'https://picsum.photos/960/540',
+        src: 'https://static.ksta.de/__images/2023/08/25/063fe724-7865-4843-86d8-83e429101402.jpeg?q=75&q=70&w=2000&h=4484&fm=jpeg&s=1c2a6b096dbbc95dd3a9d637962b6d14',
         type: 'background'
         }
       %}
@@ -47,7 +47,7 @@
     </div>
   </section>
 
-  <section class='row pt-4 pb-5'>
+  <section class='row pb-5 mb-3'>
     {%
       include 'partials::content-layout/cl_section-header.twig' with {
       title: 'Beliebte Datensätze',
@@ -58,7 +58,7 @@
       }
     %}
 
-    <div class='col-6 mb-4'>
+    <div class='col-6 mb-3'>
       {%
         include 'partials::base/b_card.twig' with {
         'thumbnail': {
@@ -72,7 +72,7 @@
         }
       %}
     </div>
-    <div class='col-6 mb-4'>
+    <div class='col-6 mb-3'>
       {%
         include 'partials::base/b_card.twig' with {
         'thumbnail': {
@@ -86,7 +86,7 @@
         }
       %}
     </div>
-    <div class='col-6 mb-4'>
+    <div class='col-6 my-3'>
       {%
         include 'partials::base/b_card.twig' with {
         'thumbnail': {
@@ -100,7 +100,7 @@
         }
       %}
     </div>
-    <div class='col-6 mb-4'>
+    <div class='col-6 my-3'>
       {%
         include 'partials::base/b_card.twig' with {
         'thumbnail': {
@@ -114,7 +114,7 @@
         }
       %}
     </div>
-    <div class='col-6'>
+    <div class='col-6 mt-3'>
       {%
         include 'partials::base/b_card.twig' with {
         'thumbnail': {
@@ -128,7 +128,7 @@
         }
       %}
     </div>
-    <div class='col-6'>
+    <div class='col-6 mt-3'>
       {%
         include 'partials::base/b_card.twig' with {
         'thumbnail': {
@@ -144,7 +144,7 @@
     </div>
   </section>
 
-  <section class='row py-5 border-gray border-top border-opacity-25'>
+  <section class='row py-5 mb-3 border-gray border-top border-opacity-25'>
     {%
       include 'partials::content-layout/cl_section-header.twig' with {
       title: 'News',
@@ -156,11 +156,22 @@
     %}
 
     <div class='col-12'>
-      {% include 'partials::base/b_highlight-teaser.twig' %}
+      {%
+        include 'partials::base/b_highlight-teaser.twig' with {
+        content: "
+        <h3 class='mb-3'>Title lorem ipsum</h3>
+        <p class='fs-5 text-lg mb-3'>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+        dolore magna aliquyam erat, sed diam voluptua...
+        </p>
+        <a class='btn btn-primary align-self-center align-self-lg-start' href='#'>Weiterlesen</a>
+        "
+        }
+      %}
     </div>
   </section>
 
-  <section class='row py-5 border-gray border-top border-opacity-25'>
+  <section class='row py-5 mb-3 border-gray border-top border-opacity-25'>
     {%
       include 'partials::content-layout/cl_section-header.twig' with {
       title: 'Beliebte Kategorien'
@@ -172,7 +183,7 @@
     </div>
   </section>
 
-  <section class='row py-5 border-gray border-top border-bottom border-opacity-25'>
+  <section class='row py-5 mb-3 border-gray border-top border-bottom border-opacity-25'>
     {%
       include 'partials::content-layout/cl_section-header.twig' with {
       title: 'Daten über Schnittstelle nutzen',

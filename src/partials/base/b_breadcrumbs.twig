@@ -3,7 +3,7 @@
     {% for link in links %}
       {% if link.href is defined %}
         <li class='breadcrumb-item'>
-          <a href='{{ link.href }}'>{{ link.text }}</a>
+          <a href='{{ link.href }}' class='link-offset-2'>{{ link.text }}</a>
         </li>
       {% else %}
         <li class='breadcrumb-item active' aria-current='page'>{{ link.text }}</li>
