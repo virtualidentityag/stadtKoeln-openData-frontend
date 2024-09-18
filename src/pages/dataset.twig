@@ -47,7 +47,24 @@
     </div>
 
     <div class='col-12 pt-3'>
-      {% include 'partials::content-layout/cl_dataset-hero.twig' %}
+      {%
+        include 'partials::base/b_hero.twig' with {
+        src: 'https://picsum.photos/960/540',
+        }
+      %}
+
+      <div class='row'>
+        <div class='col-12'>
+          <div class='p-4 bg-body'>
+            <p class='h5 mb-4'>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+              et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+              Stet clita kasd gubergren, no sea takimata sanctus.
+            </p>
+            <button class='btn btn-primary'>Mehr</button>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 

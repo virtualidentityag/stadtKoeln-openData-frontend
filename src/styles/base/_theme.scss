@@ -7,4 +7,21 @@
     --btn-bg: var(--color-on-primary);
     --btn-color: var(--primary);
   }
+
+  .btn-outline-primary {
+    --btn-color: var(--color-on-primary);
+    --btn-border-color: var(--color-on-primary);
+    --btn-hover-border-color: var(--color-on-primary);
+    --btn-active-border-color: var(--color-on-primary);
+    --btn-hover-color: var(--primary);
+    --btn-hover-bg: var(--color-on-primary);
+  }
+}
+
+.dark-mode-only {
+  display: none;
+}
+
+[data-bs-theme='dark'] .dark-mode-only {
+  display: initial;
 }

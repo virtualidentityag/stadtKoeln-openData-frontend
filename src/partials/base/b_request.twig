@@ -1,0 +1,29 @@
+{% if status == 'coordinating' %}
+  {% set badge = { color: "info", text: 'In Abstimmung' } %}
+  {% elseif status == 'requested' %}
+  {% set badge = { color: "green", text: 'Datensatz wird angefragt' } %}
+  {% elseif status == 'denied' %}
+  {% set badge = { color: "warning", text: 'Bereitstellung nicht möglich' } %}
+  {% elseif status == 'partially-provided' %}
+  {% set badge = { color: "success", text: 'Teilweise bereit gestellt' } %}
+  {% elseif status == 'ready' %}
+  {% set badge = { color: "primary", text: 'Datensatz steht bereit' } %}
+  {% elseif status == 'reviewing' %}
+  {% set badge = { color: "info", text: 'Anfrage wird geprüft' } %}
+{% endif %}
+
+<div class='card p-3 border rounded d-flex gap-2'>
+  <div class='d-flex justify-content-between align-items-start'>
+    <h3 class='h4 m-0 d-flex flex-wrap gap-2'>
+      Stolpersteine
+      <span class='badge badge-small border border-2 border-{{ badge.color }} text-body fw-semibold'>
+        {{- badge.text -}}
+      </span>
+    </h3>
+    <p class='m-0'>15.08.2022</p>
+  </div>
+  <p class='m-0 fs-5 text-muted'>
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+    magna aliquyam erat, sed diam voluptua...
+  </p>
+</div>

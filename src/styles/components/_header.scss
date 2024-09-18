@@ -55,4 +55,13 @@
       box-shadow: var(--btn-focus-box-shadow);
     }
   }
+
+  .link {
+    border: 0;
+    padding: 0;
+
+    &:hover {
+      --link-hover-color-rgb: var(--light-rgb);
+    }
+  }
 }

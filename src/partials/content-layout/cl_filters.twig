@@ -1,5 +1,16 @@
-<aside class='offcanvas offcanvas-reset-lg offcanvas-end' id='offcanvas-filters'>
-  <div class='offcanvas-header d-flex d-lg-none gap-2 align-items-center justify-content-end'>
+<aside
+  class='
+    offcanvas offcanvas-end
+    {% if showDesktop %} offcanvas-reset-lg {% endif %}
+  '
+  id='offcanvas-filters'
+>
+  <div
+    class='
+      offcanvas-header d-flex gap-2 align-items-center justify-content-end
+      {% if showDesktop %} d-lg-none {% endif %}
+    '
+  >
     <p class='h6 m-0'>Filter schließen</p>
     <button
       type='button'
@@ -12,7 +23,7 @@
   </div>
   <div class='offcanvas-body'>
     <h3 class='h5 mb-3'><strong>Filtern nach</strong></h3>
-    <div class='d-flex flex-column gap-4'>
+    <div class='d-flex flex-column gap-4' role='region' aria-live='polite'>
       {% for category in data %}
         <div>
           <h4 class='h6'>
@@ -43,7 +54,12 @@
         </div>
       {% endfor %}
     </div>
-    <div class='d-flex d-lg-none flex-column gap-2 mt-4'>
+    <div
+      class='
+        d-flex flex-column gap-2 mt-4
+        {% if showDesktop %} d-lg-none {% endif %}
+      '
+    >
       <button type='button' class='btn btn-lg btn-primary'>Filter anwenden</button>
       <button type='button' class='btn btn-lg btn-outline-primary' data-bs-dismiss='offcanvas'>Filter schließen</button>
     </div>
