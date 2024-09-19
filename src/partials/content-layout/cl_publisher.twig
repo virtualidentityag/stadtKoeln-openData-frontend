@@ -1,0 +1,15 @@
+<a href='{{ href }}' class='card text-decoration-none text-body overflow-hidden'>
+  <div class='ratio ratio-16x9'>
+    <img class='img-fluid' src='https://picsum.photos/960/540' alt>
+  </div>
+
+  <div class='card-body'>
+    <h3 class='h5 fw-semibold mb-2'>{{ title }}</h3>
+    {% if description is defined %}
+      <p class='mb-3 lh-sm'>
+        {{ description }}
+      </p>
+    {% endif %}
+    <span class='badge bg-black border border-light'> {{ datasets }} datasets </span>
+  </div>
+</a>

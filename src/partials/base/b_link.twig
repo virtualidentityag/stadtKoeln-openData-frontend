@@ -1,6 +1,15 @@
-<a href='{{ href }}' class='link fs-5'>
-  {% if icon %}
-    <i class='bi bi-{{ icon }} text-primary me-2' aria-hidden='true'></i>
-  {% endif %}
-  {{ text }}
-</a>
+{% if href %}
+  <a href='{{ href }}' class='link fs-5'>
+    {% if icon %}
+      <i class='bi bi-{{ icon }} text-primary me-2' aria-hidden='true'></i>
+    {% endif %}
+    {{ text }}
+  </a>
+{% else %}
+  <button class='btn btn-link fs-5'>
+    {% if icon %}
+      <i class='bi bi-{{ icon }} text-primary me-2' aria-hidden='true'></i>
+    {% endif %}
+    {{ text }}
+  </button>
+{% endif %}

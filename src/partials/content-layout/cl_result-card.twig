@@ -1,0 +1,39 @@
+<a
+  href='{{ href }}'
+  class='card px-0 text-decoration-none h-100 overflow-hidden {{ seen == true ? 'border' : 'border-2' }}'
+>
+  <div class='card-body d-flex align-items-start gap-3'>
+    {% if icon is defined %}
+      <div class='p-4 fs-2 light-mode-only bg-light-gray me-3'>
+        <i class='d-flex bi bi-{{ icon }}'></i>
+      </div>
+      <div class='p-4 fs-2 dark-mode-only border me-3'>
+        <i class='d-flex bi bi-{{ icon }}'></i>
+      </div>
+    {% endif %}
+
+    <div>
+      <h3 class='h5 mb-2 d-flex align-items-center gap-3 {{ seen != true ? 'fw-semibold' : '' }}'>
+        {{ title }}
+        {% if tag is defined %}
+          <span class='badge badge-small border border-2 border-body text-body'>{{ tag }}</span>
+        {% endif %}
+      </h3>
+      <p class='text-muted lh-sm mb-2'>{{ subtitle }}</p>
+      <p class='mb-4'>{{ description }}</p>
+
+      <div class='d-flex align-items-center gap-2'>
+        <p class='text-muted m-0 fw-semibold'>Formate</p>
+
+        <div class='light-mode-only'>
+          <span class='p-2 fw-semibold bg-light-gray text-uppercase'>ZIP</span>
+          <span class='p-2 fw-semibold bg-light-gray text-uppercase'>JSON</span>
+        </div>
+        <div class='dark-mode-only'>
+          <span class='p-2 fw-semibold border text-uppercase'>ZIP</span>
+          <span class='p-2 fw-semibold border text-uppercase'>JSON</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</a>
