@@ -55,6 +55,11 @@
   </div>
 
   <div class='col-12 mt-5 d-flex justify-content-center'>
-    <button class='btn btn-primary'>Alle Kategorien anzeigen</button>
+    {%
+      include 'partials::base/b_link.twig' with {
+      text: 'Alle Kategorien anzeigen',
+      icon: 'plus-lg'
+      }
+    %}
   </div>
 </div>

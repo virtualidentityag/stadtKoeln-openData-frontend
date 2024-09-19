@@ -1,15 +1,12 @@
 <div class='row position-relative'>
   <div class='col-lg-8'>
-    <img class='img-fluid' src='https://picsum.photos/960/540' alt>
+    <div class=' ratio ratio-16x9'>
+      <img class='img-fluid' src='https://picsum.photos/960/540' alt>
+    </div>
   </div>
-  <div class='mt-n5 col-lg-6 position-lg-absolute end-0 top-0 mt-lg-5'>
+  <div class='mt-n5 col-lg-6 position-lg-absolute z-1 end-0 top-0 mt-lg-5'>
     <div class='card-body text-bg-primary p-4 mx-4 mx-lg-0 d-flex flex-column'>
-      <h3 class='mb-3'>Title lorem ipsum</h3>
-      <p class='fs-5 text-lg mb-3'>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-        dolore magna aliquyam erat, sed diam voluptua...
-      </p>
-      <a class='btn btn-primary align-self-center align-self-lg-start' href='#'>Weiterlesen</a>
+      {{ content | raw }}
     </div>
   </div>
 </div>
