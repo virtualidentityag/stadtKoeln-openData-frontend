@@ -1,0 +1,49 @@
+{% extends 'layouts::base.twig' %}
+{% set theme = 'default' %}
+
+{% block content %}
+  {%
+    include 'partials::base/b_breadcrumbs.twig' with {
+    links: [
+    {
+    href: './',
+    text: 'Startseite'
+    },
+    {
+    text: 'Daten'
+    }
+    ]
+    }
+  %}
+
+  <section class='row mb-3 mb-md-4'>
+    <div class='col-12'>
+      <h1 class='display-3 mb-4'>Bitte geben Sie einen Suchbegriff ein.</h1>
+
+      <div class='row'>
+        <div class='col-12 col-md-7'>
+          <form action='./overview' class='d-flex gap-2 align-items-center'>
+            <input
+              class='form-control form-control-lg fs-5 mr-sm-2'
+              type='search'
+              placeholder='Datensätze suchen'
+              aria-label='Datensätze suchen'
+              value='Lorem'
+            >
+            <button class='btn btn-primary fs-5 my-2 my-sm-0' type='submit' aria-label='Search'>
+              <i class='bi bi-search'></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class='row'>
+    <div class='col-12'>
+      <h2 class='h2 m-0 pb-3 pb-md-4'>Ihre Suche nach "Lorem" ergab 0 Datensätze.</h2>
+
+      {% include 'partials::content-layout/cl_results-empty-state.twig' %}
+    </div>
+  </section>
+{% endblock %}
