@@ -9,7 +9,10 @@
   },
   {
   name: 'Dataset Overview',
-  variants: [{ href: './overview', label: 'Default ❌'}]
+  variants: [
+  { href: './overview', label: 'Default ✅', thumbnail: 'overview.webp', thumbnail_dark: 'overview-dark.webp'},
+  { href: './overview-empty', label: 'Empty State ✅', thumbnail: 'overview-empty.webp', thumbnail_dark: 'overview-empty-dark.webp'},
+  ]
   },
   {
   name: 'Dataset Detail',
@@ -34,6 +37,17 @@
   {
   name: 'Blog',
   variants:  [{ href: './blog', label: 'Default ✅', thumbnail: 'blog.webp', thumbnail_dark: 'blog-dark.webp'}]
+  },
+  {
+  name: 'Publisher Overview',
+  variants:  [{ href: './publisher-overview', label: 'Default ✅', thumbnail: 'publisher-overview.webp', thumbnail_dark: 'publisher-overview-dark.webp'}]
+  },
+  {
+  name: 'Publisher Datasets',
+  variants:  [
+  { href: './publisher-datasets', label: 'Default ✅', thumbnail: 'publisher-datasets.webp', thumbnail_dark: 'publisher-datasets-dark.webp'},
+  { href: './publisher-datasets-empty', label: 'Empty State ✅', thumbnail: 'publisher-datasets-empty.webp', thumbnail_dark: 'publisher-datasets-empty-dark.webp'}
+  ]
   },
   ]
 %}

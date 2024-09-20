@@ -1,0 +1,54 @@
+{% extends 'layouts::base.twig' %}
+{% set theme = 'default' %}
+
+{% block content %}
+  {%
+    include 'partials::base/b_breadcrumbs.twig' with {
+    links: [
+    {
+    href: './',
+    text: 'Startseite'
+    },
+    {
+    text: 'Herausgeber Datan'
+    }
+    ]
+    }
+  %}
+
+  <section class='row pt-3 mb-4'>
+    <div class='col-lg-3 mb-lg-0 mb-4'>
+      <div class='d-none d-lg-block card overflow-hidden'>
+        <img class='w-100' src='https://picsum.photos/600/500' alt>
+      </div>
+      <div class='d-block d-lg-none card overflow-hidden ratio ratio-16x9'>
+        <img class='w-100' src='https://picsum.photos/600/500' alt>
+      </div>
+    </div>
+
+    <div class='col-12 col-lg-9'>
+      <h1 class='display-1 mb-4'>Meinung Für Köln</h1>
+
+      <form action='./publisher' class='d-flex gap-2 align-items-center mb-4'>
+        <input
+          class='form-control form-control-lg fs-5 mr-sm-2'
+          type='search'
+          placeholder='Datensätze suchen'
+          aria-label='Datensätze suchen'
+          value='Lorem'
+        >
+        <button class='btn btn-primary fs-5 my-2 my-sm-0' type='submit' aria-label='Datensätze suchen'>
+          <i class='bi bi-search'></i>
+        </button>
+      </form>
+
+      <p class='h2' role='region' aria-live='polite'>Ihre Suche nach "Lorem" ergab 0 Datensätze.</p>
+    </div>
+  </section>
+
+  <section class='row'>
+    <div class='col-12'>
+      {% include 'partials::content-layout/cl_results-empty-state.twig' %}
+    </div>
+  </section>
+{% endblock %}

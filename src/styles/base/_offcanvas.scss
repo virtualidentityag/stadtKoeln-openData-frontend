@@ -1,8 +1,8 @@
 @each $breakpoint, $breakpoint-size in $grid-breakpoints {
   .offcanvas.offcanvas-reset-#{$breakpoint} {
     @include media-breakpoint-up($breakpoint) {
-      --offcanvas-color: var(--offcanvas-color);
-      --offcanvas-bg: var(--offcanvas-bg);
+      --offcanvas-color: var(--body-color);
+      --offcanvas-bg: var(--body-bg);
 
       position: unset;
       transform: unset;
@@ -17,7 +17,9 @@
 
     @include media-breakpoint-down($breakpoint) {
       --link-color: var(--light);
+      --link-color-rgb: var(--light-rgb);
       --link-hover-color: var(--primary);
+      --link-hover-color-rgb: var(--primary-rgb);
 
       .text-body-secondary {
         --secondary-color: rgba(var(--light-rgb), 0.6);
