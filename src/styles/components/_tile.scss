@@ -5,6 +5,18 @@
   --tile-hover-background: var(--primary);
   --tile-hover-color: var(--white);
 
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--tile-background);
+  border: 1px solid var(--tile-border-color);
+  color: var(--tile-color);
+  text-decoration: none;
+  transition:
+    background-color 0.15s,
+    box-shadow 0.15s ease-in-out;
+
   &:hover,
   &:focus {
     --tile-background: var(--tile-hover-background);
@@ -14,19 +26,12 @@
   &:focus,
   &:focus-visible {
     outline: none;
-
-    > div {
-      box-shadow: 0 0 0 var(--focus-ring-width) var(--focus-ring-color);
-    }
+    box-shadow: 0 0 0 var(--focus-ring-width) var(--focus-ring-color);
   }
 
-  > div {
-    background-color: var(--tile-background);
-    border: 1px solid var(--tile-border-color);
-    color: var(--tile-color);
-    transition:
-      background-color 0.15s,
-      box-shadow 0.15s ease-in-out;
+  &-ratio {
+    display: block;
+    padding-top: 100%;
   }
 }
 
