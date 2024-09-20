@@ -1,0 +1,98 @@
+{% extends 'layouts::base.twig' %}
+{% set theme = 'default' %}
+
+{% block content %}
+  {%
+    include 'partials::base/b_breadcrumbs.twig' with {
+    links: [
+    {
+    href: './',
+    text: 'Startseite'
+    },
+    {
+    text: 'Herausgeber'
+    }
+    ]
+    }
+  %}
+
+  <section class='row mb-3'>
+    <div class='col-12'>
+      <h1 class='display-3 mb-4'>Herausgeber der offenen Daten</h1>
+    </div>
+
+    <div class='col-12 col-md-6 col-lg-4 mb-5'>
+      {%
+        include 'partials::content-layout/cl_publisher.twig' with {
+        href: './publisher',
+        title: 'Meinung für Köln',
+        description: 'Auf dem Beteiligungsportal der Stadt Köln "Meinung für Köln", werden Impulse für das Stadtentwicklungskonzept gesammelt.',
+        datasets: 21
+        }
+      %}
+    </div>
+    <div class='col-12 col-md-6 col-lg-4 mb-5'>
+      {%
+        include 'partials::content-layout/cl_publisher.twig' with {
+        href: './publisher',
+        title: 'Landesdatenbank NRW',
+        description: 'Daten zu den Kreisen und Gemeinden des Landes Nordrhein-Westfalen.',
+        datasets: 113
+        }
+      %}
+    </div>
+    <div class='col-12 col-md-6 col-lg-4 mb-5'>
+      {%
+        include 'partials::content-layout/cl_publisher.twig' with {
+        href: './publisher',
+        title: 'Touristischer Data Hub NRW',
+        description: 'Der Data Hub NRW bündelt touristische Daten aus ganz Nordrhein-Westfalen, um Gästen touristische Informationen einfach und schnell bereitzustellen.',
+        datasets: 1
+        }
+      %}
+    </div>
+    <div class='col-12 col-md-6 col-lg-4 mb-5'>
+      {%
+        include 'partials::content-layout/cl_publisher.twig' with {
+        href: './publisher',
+        title: 'GrowSmarter',
+        description: 'transforming cities for a smart, sustainable Europe.',
+        datasets: 1
+        }
+      %}
+    </div>
+    <div class='col-12 col-md-6 col-lg-4 mb-5'>
+      {%
+        include 'partials::content-layout/cl_publisher.twig' with {
+        href: './publisher',
+        title: 'Kölner Zoo',
+        description: 'Aktiengesellschaft Zoologischer Garten Köln.',
+        datasets: 3
+        }
+      %}
+    </div>
+    <div class='col-12 col-md-6 col-lg-4 mb-5'>
+      {%
+        include 'partials::content-layout/cl_publisher.twig' with {
+        href: './publisher',
+        title: 'KölnBäder GmbH',
+        description: 'KölnBäder GmbH',
+        datasets: 1
+        }
+      %}
+    </div>
+    <div class='col-12 col-md-6 col-lg-4 mb-5'>
+      {%
+        include 'partials::content-layout/cl_publisher.twig' with {
+        href: './publisher',
+        title: 'VHS Koeln',
+        description: 'Die Volkshochschule Köln - Weiterbildungseinrichtung',
+        datasets: 1
+        }
+      %}
+    </div>
+    <div class='col-12 justify-content-center pt-3'>
+      {% include 'partials::base/b_pagination.twig' %}
+    </div>
+  </section>
+{% endblock %}

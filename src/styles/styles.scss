@@ -10,6 +10,7 @@ $yellow: #ffd200;
 $success: #198754;
 $green: #00d282;
 $gray: #827d73;
+$light-gray: #e9ecef;
 $gray-900: #2d2d2d;
 
 @import 'bootstrap/scss/variables';
@@ -26,6 +27,7 @@ $theme-colors: (
   'dark': $dark,
   'green': $green,
   'gray': $gray,
+  'light-gray': $light-gray,
 );
 
 $aspect-ratios: (

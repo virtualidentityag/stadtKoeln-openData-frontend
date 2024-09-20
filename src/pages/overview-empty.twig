@@ -28,6 +28,7 @@
               type='search'
               placeholder='Datensätze suchen'
               aria-label='Datensätze suchen'
+              value='Lorem'
             >
             <button class='btn btn-primary fs-5 my-2 my-sm-0' type='submit' aria-label='Search'>
               <i class='bi bi-search'></i>
@@ -40,11 +41,9 @@
 
   <section class='row'>
     <div class='col-12'>
-      <h2 class='h2 m-0 pb-3 pb-md-4' role='region' aria-live='polite'>
-        Ihre Suche nach "Struktur" ergab 387 Treffer.
-      </h2>
+      <h2 class='h2 m-0 pb-3 pb-md-4' role='region' aria-live='polite'>Ihre Suche nach "Lorem" ergab 0 Datensätze.</h2>
 
-      {% include 'partials::content-layout/cl_results.twig' %}
+      {% include 'partials::content-layout/cl_results-empty-state.twig' %}
     </div>
   </section>
 {% endblock %}
