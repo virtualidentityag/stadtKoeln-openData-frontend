@@ -1,8 +1,13 @@
 {% extends 'layouts::base.twig' %}
 {% set theme = 'default' %}
+{%
+  set skip_links = [
+  { href: '#content', text: 'Content' },
+  ]
+%}
 
 {% block content %}
-  <section class='row pb-3 pb-lg-5'>
+  <section id='homepage-search' class='row pb-3 pb-lg-5'>
     <div class='col-12'>
       {%
         include 'partials::base/b_hero.twig' with {
@@ -36,7 +41,7 @@
     </div>
   </section>
 
-  <section class='row pb-5'>
+  <section id='content' class='row pb-5'>
     <div class='col-12'>
       <div class='p-3 bg-body'>
         <h2 class='p-3 m-0'>

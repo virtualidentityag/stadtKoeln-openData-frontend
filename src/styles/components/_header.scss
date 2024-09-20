@@ -2,7 +2,6 @@
   --header-background: var(--body-bg);
   --header-link-color: var(--body-color);
   --header-link-hover-color: var(--primary);
-  --link-color-rgb: var(--light-rgb);
 
   background-color: var(--header-background);
   border-bottom-color: var(--header-border-color, #e9ecef) !important;
@@ -50,6 +49,16 @@
       --header-link-hover-color: var(--primary);
       --focus-ring-color: var(--primary);
     }
+
+    .link {
+      border: 0;
+      padding: 0;
+      --link-color-rgb: var(--light-rgb);
+
+      &:hover {
+        --link-color-rgb: var(--primary-rgb);
+      }
+    }
   }
 
   .navbar-toggler {
@@ -66,9 +75,5 @@
   .link {
     border: 0;
     padding: 0;
-
-    &:hover {
-      --link-hover-color-rgb: var(--light-rgb);
-    }
   }
 }
