@@ -2,7 +2,7 @@
   --footer-color: var(--light);
   --footer-background: var(--dark);
   --footer-link-color: var(--light);
-  --footer-link-hover-color: var(--primary);
+  --footer-link-hover-color: var(--light);
 
   color: var(--footer-color);
   background-color: var(--footer-background);
@@ -17,7 +17,8 @@
   }
 
   a {
-    color: var(---footer-link-color);
+    --focus-ring-color: var(--footer-link-color);
+    color: var(--footer-link-color);
 
     &:hover {
       color: var(--footer-link-hover-color);

@@ -3,7 +3,7 @@
   --tile-border-color: var(--secondary-bg);
   --tile-color: var(--black);
   --tile-hover-background: var(--primary);
-  --tile-hover-color: var(--white);
+  --tile-hover-color: var(--color-on-primary);
 
   position: relative;
   display: flex;
@@ -38,6 +38,7 @@
 [data-bs-theme='dark'] .tile {
   --tile-background: var(--black);
   --tile-color: var(--white);
+  --tile-border-color: var(--border-color);
 
   &:hover,
   &:focus {

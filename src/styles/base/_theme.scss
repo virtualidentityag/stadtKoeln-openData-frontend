@@ -1,7 +1,8 @@
 .text-bg-primary {
-  color: var(--color-on-primary) !important;
-  background-color: var(--primary) !important;
   --focus-ring-color: var(--color-on-primary);
+
+  background-color: var(--primary) !important;
+  color: var(--color-on-primary) !important;
 
   .btn-primary {
     --btn-bg: var(--color-on-primary);
@@ -15,6 +16,18 @@
     --btn-active-border-color: var(--color-on-primary);
     --btn-hover-color: var(--primary);
     --btn-hover-bg: var(--color-on-primary);
+  }
+
+  [data-bs-theme='dark'] & {
+    --body-bg: var(--primary);
+
+    input {
+      color: var(--black);
+
+      &::placeholder {
+        color: var(--gray);
+      }
+    }
   }
 }
 

@@ -19,16 +19,16 @@
 [data-bs-theme='dark'] {
   color-scheme: dark;
 
-  --focus-ring-color: #a01e28;
+  --focus-ring-color: #ffffff;
   --focus-ring-width: 3px;
 
-  --primary: #a01e28;
-  --primary-rgb: 160, 30, 40;
-  --primary-hover: #801820;
-  --primary-hover-rgb: 128, 24, 32;
-  --primary-active: #f23333;
+  --primary: #fff;
+  --primary-rgb: 255, 255, 255;
+  --primary-hover: #fff;
+  --primary-hover-rgb: 255, 255, 255;
+  --primary-active: #ffffff;
   --primary-shadow-rgb: 255, 255, 255;
-  --color-on-primary: #fff;
+  --color-on-primary: #a01e28;
 
   --border-color: #827d73;
   --header-border-color: #827d73;
