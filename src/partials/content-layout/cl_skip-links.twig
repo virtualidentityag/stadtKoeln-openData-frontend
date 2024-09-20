@@ -1,0 +1,14 @@
+<nav class='skip-links position-absolute w-auto'>
+  <ul class='list-group'>
+    {% for link in links %}
+      <li class='list-group-item'>
+        {%
+          include 'partials::base/b_link.twig' with {
+          href: link.href,
+          text: link.text
+          }
+        %}
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

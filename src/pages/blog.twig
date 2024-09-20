@@ -1,7 +1,13 @@
 {% extends 'layouts::base.twig' %}
 {% set theme = 'default' %}
+{%
+  set skip_links = [
+  { href: '#content', text: 'Zum Inhalt' },
+  ]
+%}
 
 {% block content %}
+  <div id='content'></div>
   {%
     include 'partials::base/b_breadcrumbs.twig' with {
     links: [

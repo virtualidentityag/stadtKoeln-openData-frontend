@@ -1,4 +1,4 @@
-<header class='header border-bottom'>
+<header class='header position-relative border-bottom'>
   <nav class='navbar navbar-expand-xl p-3 container d-flex justify-content-between'>
     <a
       href='./'
@@ -10,6 +10,15 @@
       <img class='logo dark-mode-only' src='./assets/odk-logo-dark.svg' alt='Offene Daten Köln'>
     </a>
 
+    {%
+      include 'partials::content-layout/cl_skip-links.twig' with {
+      links: [
+      { href: '#header-nav', text: 'Zur Navigation' },
+      { href: '#header-search', text: 'Zur Suche' },
+      ]|merge(skip_links|default([]))
+      }
+    %}
+
     <div class='d-flex align-items-center gap-4'>
       <div
         id='header-nav'
@@ -19,7 +28,7 @@
         aria-label='Hauptnavigation'
       >
         <div class='offcanvas-header d-flex gap-4 d-xl-none justify-content-end'>
-          <a href='./overview' class='text-decoration-none fs-3' aria-label='Datensätze suchen'
+          <a href='./overview' class='link text-decoration-none fs-3' aria-label='Datensätze suchen'
             ><i class='bi bi-search'></i
           ></a>
           <button type='button' class='btn btn-outline-light' data-bs-dismiss='offcanvas' aria-label='Schließen'>
@@ -48,6 +57,7 @@
 
       <form action='./overview' class='d-none d-lg-flex gap-2'>
         <input
+          id='header-search'
           class='form-control mr-sm-2'
           type='search'
           placeholder='Datensätze suchen'

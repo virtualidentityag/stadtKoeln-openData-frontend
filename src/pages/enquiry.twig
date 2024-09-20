@@ -1,7 +1,13 @@
 {% extends 'layouts::base.twig' %}
 {% set theme = 'default' %}
+{%
+  set skip_links = [
+  { href: '#content', text: 'Zum Inhalt' },
+  ]
+%}
 
 {% block content %}
+  <div id='content'></div>
   {%
     include 'partials::base/b_breadcrumbs.twig' with {
     links: [
@@ -40,7 +46,14 @@
     </div>
   </section>
 
-  <section class='row mb-4 mb-md-5'>
+  <section class='position-relative row mb-4 mb-md-5'>
+    {%
+      include 'partials::content-layout/cl_skip-links.twig' with {
+      links: [
+      { href: "#results", text: "Formular überspringen"}
+      ]
+      }
+    %}
     <div class='col-12'>
       <form class='row pb-3'>
         <div class='col-12 col-md-6 mb-4'>
@@ -120,7 +133,7 @@
     }
   %}
 
-  <section class='row mb-3 mb-md-4'>
+  <section id='results' class='row mb-3 mb-md-4'>
     <div class='col-12'>
       <div class='d-flex justify-content-between align-items-center mb-4'>
         <h2 class='display-6 m-0'>Öffentliche Datenanfragen</h2>

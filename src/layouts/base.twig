@@ -31,7 +31,11 @@
     <script type='module' src='/src/js/scripts.js' defer></script>
   </head>
   <body class='min-vh-100 d-flex flex-column'>
-    {% include 'partials::base/b_header.twig' %}
+    {%
+      include 'partials::base/b_header.twig' with {
+      skip_links: skip_links
+      }
+    %}
 
     <main class='container flex-grow-1'>
       {% block content %}{% endblock %}
