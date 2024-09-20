@@ -1,0 +1,29 @@
+<div class='card px-0 text-decoration-none overflow-hidden'>
+  <div class='ratio ratio-21x9'>
+    <img class='img-fluid' src='https://picsum.photos/960/540' alt>
+  </div>
+
+  <div class='card-body pt-4'>
+    {% if href is not defined %}
+      <span class='badge badge-small border border-2 border-body text-body text-uppercase mb-2'>Nicht Verfügbar</span>
+    {% endif %}
+    <h3 class='h5 fw-semibold'>{{ title }}</h3>
+    {% if description is defined %}
+      <p class='m-0 lh-sm'>
+        {{ description }}
+      </p>
+    {% endif %}
+
+    {% if href is defined %}
+      <div class='d-flex justify-content-end'>
+        {%
+          include 'partials::base/b_link.twig' with {
+          text: 'Zur Anwendung',
+          icon: 'arrow-return-right',
+          href: href
+          }
+        %}
+      </div>
+    {% endif %}
+  </div>
+</div>
