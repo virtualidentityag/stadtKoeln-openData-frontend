@@ -1,0 +1,91 @@
+{% extends 'layouts::base.twig' %}
+{% set theme = 'default' %}
+
+{% block content %}
+  {%
+    include 'partials::base/b_breadcrumbs.twig' with {
+    links: [
+    {
+    href: './',
+    text: 'Startseite'
+    },
+    {
+    text: 'Blog-Übersicht'
+    }
+    ]
+    }
+  %}
+
+  <section class='row pt-3 pb-5 mb-3'>
+    <div class='col-12'>
+      <h1 class='display-3 mb-4'>News aus der Welt der offenen Daten</h1>
+
+      <a href='./blog' class='card border-0 text-decoration-none text-body'>
+        <div class='ratio ratio-21x9 rounded overflow-hidden mb-4'>
+          <img class='img-fluid' src='https://picsum.photos/960/540' alt>
+        </div>
+
+        <h2 class='fw-semibold mb-4'>Rückblick auf den "OPEN DATA DAY - Mit Digitalem Engagement zur Smarten Stadt"</h2>
+
+        <p class='fs-4 mb-4'>
+          Am Freitag, den 7. Juni 2024, fand im VHS Forum des Rautenstrauch-Joest-Museums in Köln der „OPEN DATA DAY –
+          Mit Digitalem.
+        </p>
+
+        <p>von Max Mustermann, 20.05.2024</p>
+      </a>
+    </div>
+  </section>
+
+  <section class='row pt-5 mb-3 border-gray border-top border-opacity-25'>
+    <div class='visually-hidden' role='region' aria-live='polite'>5 Ergebnisse</div>
+    <div class='col-md-6 mb-5' role='region' aria-live='polite'>
+      {%
+        include 'partials::content-layout/cl_blog.twig' with {
+        href: './blog',
+        title: 'Rückblick auf den "OPEN DATA DAY - Mit Digitalem Engagement zur Smarten Stadt"',
+        description: 'von Max Mustermann, 20.05.2024'
+        }
+      %}
+    </div>
+    <div class='col-md-6 mb-5'>
+      {%
+        include 'partials::content-layout/cl_blog.twig' with {
+        href: './blog',
+        title: 'Rückblick auf den "OPEN DATA DAY - Mit Digitalem Engagement zur Smarten Stadt"',
+        description: 'von Max Mustermann, 20.05.2024'
+        }
+      %}
+    </div>
+    <div class='col-md-6 mb-5'>
+      {%
+        include 'partials::content-layout/cl_blog.twig' with {
+        href: './blog',
+        title: 'Rückblick auf den "OPEN DATA DAY - Mit Digitalem Engagement zur Smarten Stadt"',
+        description: 'von Max Mustermann, 20.05.2024'
+        }
+      %}
+    </div>
+    <div class='col-md-6 mb-5'>
+      {%
+        include 'partials::content-layout/cl_blog.twig' with {
+        href: './blog',
+        title: 'Rückblick auf den "OPEN DATA DAY - Mit Digitalem Engagement zur Smarten Stadt"',
+        description: 'von Max Mustermann, 20.05.2024'
+        }
+      %}
+    </div>
+    <div class='col-md-6 mb-5'>
+      {%
+        include 'partials::content-layout/cl_blog.twig' with {
+        href: './blog',
+        title: 'Rückblick auf den "OPEN DATA DAY - Mit Digitalem Engagement zur Smarten Stadt"',
+        description: 'von Max Mustermann, 20.05.2024'
+        }
+      %}
+    </div>
+    <div class='col-12 justify-content-center mt-3'>
+      {% include 'partials::base/b_pagination.twig' %}
+    </div>
+  </section>
+{% endblock %}
