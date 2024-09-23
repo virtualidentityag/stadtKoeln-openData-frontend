@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 .hero {
   --hero-overflow: 320px;
 
@@ -52,11 +54,11 @@
       padding-top: 100%;
 
       @include media-breakpoint-up(sm) {
-        padding-top: (3 / 4) * 100%;
+        padding-top: math.div(3, 4) * 100%;
       }
 
       @include media-breakpoint-up(lg) {
-        padding-top: (9 / 21) * 100%;
+        padding-top: math.div(9, 21) * 100%;
       }
     }
 
