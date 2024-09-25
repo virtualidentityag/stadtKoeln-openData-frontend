@@ -86,7 +86,7 @@
       <p class='m-0'><strong>Sortieren nach</strong></p>
       <div class='dropdown'>
         <button
-          class='btn btn-light dropdown-toggle shadow-sm'
+          class='btn btn-light dropdown-toggle shadow-sm fw-normal fs-6'
           type='button'
           data-bs-toggle='dropdown'
           aria-expanded='false'
@@ -114,8 +114,8 @@
       </button>
     </div>
     <div class='visually-hidden' role='region' aria-live='polite'>5 Ergebnisse</div>
-    <div id='results' class='mt-3'>
-      <div class='pb-3'>
+    <div id='results' class='mt-3 d-flex flex-column gap-5'>
+      <div>
         {%
           include 'partials::content-layout/cl_result-card.twig' with {
           href: './dataset',
@@ -126,7 +126,7 @@
           }
         %}
       </div>
-      <div class='py-3'>
+      <div>
         {%
           include 'partials::content-layout/cl_result-card.twig' with {
           href: './dataset',
@@ -138,7 +138,7 @@
           }
         %}
       </div>
-      <div class='py-3'>
+      <div>
         {%
           include 'partials::content-layout/cl_result-card.twig' with {
           seen: true,
@@ -151,7 +151,7 @@
           }
         %}
       </div>
-      <div class='py-3'>
+      <div>
         {%
           include 'partials::content-layout/cl_result-card.twig' with {
           seen: true,
@@ -162,7 +162,7 @@
           }
         %}
       </div>
-      <div class='py-3'>
+      <div>
         {%
           include 'partials::content-layout/cl_result-card.twig' with {
           seen: true,
@@ -173,7 +173,7 @@
           }
         %}
       </div>
-      <div class='pt-3'>
+      <div>
         {% include 'partials::base/b_pagination.twig' %}
       </div>
     </div>

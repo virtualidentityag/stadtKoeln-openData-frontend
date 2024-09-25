@@ -22,13 +22,13 @@
     </button>
   </div>
   <div class='offcanvas-body'>
-    <h3 class='h5 mb-3'><strong>Filtern nach</strong></h3>
+    <h2 class='h5 mb-3'><strong>Filtern nach</strong></h2>
     <div class='d-flex flex-column gap-4' role='region' aria-live='polite'>
       {% for category in data %}
         <div class='mb-3'>
-          <h4 class='h6'>
+          <h3 class='h6'>
             <strong>{{ category.title }}</strong>
-          </h4>
+          </h3>
           <div class='d-flex flex-column gap-2 align-items-start'>
             {% for filter in category.filters %}
               {% set id = 'filter-' ~ loop.parent.loop.index ~ loop.index %}

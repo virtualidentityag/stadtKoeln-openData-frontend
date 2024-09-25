@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 .hero {
   --hero-overflow: 320px;
 
@@ -43,12 +45,29 @@
       aspect-ratio: 21 / 9;
     }
 
-    > img {
-      margin: 0 calc(var(--hero-overflow) * -1);
-      object-fit: cover;
+    &-ratio {
+      position: relative;
       width: 100vw;
       min-width: $body-min-width;
       max-width: calc(100% + var(--hero-overflow) * 2);
+      margin: 0 calc(var(--hero-overflow) * -1);
+      padding-top: 100%;
+
+      @include media-breakpoint-up(sm) {
+        padding-top: math.div(3, 4) * 100%;
+      }
+
+      @include media-breakpoint-up(lg) {
+        padding-top: math.div(9, 21) * 100%;
+      }
+    }
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      object-fit: cover;
     }
   }
 }
