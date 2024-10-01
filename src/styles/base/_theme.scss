@@ -27,6 +27,10 @@
       &::placeholder {
         color: var(--gray);
       }
+
+      &[type='search']::-webkit-search-cancel-button {
+        background-color: var(--color-on-primary);
+      }
     }
   }
 }
