@@ -54,7 +54,7 @@
     %}
   </div>
 
-  <div class='col-md-3 col-lg-2 d-none d-md-block'>
+  <div class='col-md-3 col-lg-2 mb-4 d-none d-md-block'>
     {%
       include 'partials::base/b_tile.twig' with {
       href: '#',
@@ -63,7 +63,7 @@
       }
     %}
   </div>
-  <div class='col-md-3 col-lg-2 d-none d-md-block'>
+  <div class='col-md-3 col-lg-2 mb-4 d-none d-md-block'>
     {%
       include 'partials::base/b_tile.twig' with {
       href: '#',
@@ -72,7 +72,7 @@
       }
     %}
   </div>
-  <div class='col-md-3 col-lg-2 d-none d-md-block'>
+  <div class='col-md-3 col-lg-2 mb-4 d-none d-md-block'>
     {%
       include 'partials::base/b_tile.twig' with {
       href: '#',
@@ -81,7 +81,7 @@
       }
     %}
   </div>
-  <div class='col-md-3 col-lg-2 d-none d-md-block'>
+  <div class='col-md-3 col-lg-2 mb-4 d-none d-md-block'>
     {%
       include 'partials::base/b_tile.twig' with {
       href: '#',
@@ -90,7 +90,7 @@
       }
     %}
   </div>
-  <div class='col-lg-2 d-none d-lg-block'>
+  <div class='col-lg-2 mb-4 d-none d-lg-block'>
     {%
       include 'partials::base/b_tile.twig' with {
       href: '#',
@@ -99,7 +99,7 @@
       }
     %}
   </div>
-  <div class='col-lg-2 d-none d-lg-block'>
+  <div class='col-lg-2 mb-4 d-none d-lg-block'>
     {%
       include 'partials::base/b_tile.twig' with {
       href: '#',
@@ -108,12 +108,30 @@
       }
     %}
   </div>
+  <div class='col-lg-2 d-none d-lg-block'>
+    {%
+      include 'partials::base/b_tile.twig' with {
+      href: '#',
+      icon: 'bar-chart-steps',
+      name: 'Bevölkerung'
+      }
+    %}
+  </div>
+  <div class='col-lg-2 d-none d-lg-block'>
+    {%
+      include 'partials::base/b_tile.twig' with {
+      href: '#',
+      icon: 'compass',
+      name: 'Geo'
+      }
+    %}
+  </div>
 
   <div class='col-12 mt-5 d-flex justify-content-center'>
     {%
       include 'partials::base/b_link.twig' with {
-      text: 'Alle Kategorien anzeigen',
-      icon: 'plus-lg'
+      text: 'Weniger Kategorien anzeigen',
+      icon: 'dash-lg'
       }
     %}
   </div>
