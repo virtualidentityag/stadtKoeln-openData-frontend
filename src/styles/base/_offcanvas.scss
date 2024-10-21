@@ -3,6 +3,7 @@
     @include media-breakpoint-up($breakpoint) {
       --offcanvas-color: var(--body-color);
       --offcanvas-bg: var(--body-bg);
+      --focus-ring-color: var(--primary);
 
       position: unset;
       transform: unset;
@@ -12,6 +13,11 @@
 
       ~ .offcanvas-backdrop {
         display: none;
+      }
+
+      .btn-link {
+        --link-hover-color: var(--primary-hover);
+        --link-hover-color-rgb: var(--primary-hover-rgb);
       }
     }
 
@@ -32,8 +38,18 @@
   --offcanvas-color: var(--light);
   --offcanvas-bg: var(--dark);
   --link-color: var(--offcanvas-color);
+  --focus-ring-color: var(--color-on-primary);
 
   .offcanvas-body {
     scrollbar-color: var(--light) var(--dark);
   }
+
+  .btn-link {
+    --link-hover-color: var(--offcanvas-color);
+    --link-hover-color-rgb: var(--offcanvas-color);
+  }
+}
+
+[data-bs-theme='dark'] .offcanvas {
+  --focus-ring-color: var(--primary);
 }

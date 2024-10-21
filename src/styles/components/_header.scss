@@ -51,12 +51,10 @@
     }
 
     .link {
-      border: 0;
-      padding: 0;
-      --link-color-rgb: var(--light-rgb);
+      --link-color-rgb: var(--header-link-color);
 
       &:hover {
-        --link-color-rgb: var(--primary-rgb);
+        --link-color-rgb: var(--header-link-hover-color);
       }
     }
   }
