@@ -46,8 +46,8 @@
   .offcanvas {
     @include media-breakpoint-down(xl) {
       --header-link-color: var(--offcanvas-color);
-      --header-link-hover-color: var(--primary);
-      --focus-ring-color: var(--primary);
+      --header-link-hover-color: var(--color-on-primary);
+      --focus-ring-color: var(--color-on-primary);
     }
 
     .link {
@@ -75,5 +75,14 @@
   .link {
     border: 0;
     padding: 0;
+  }
+}
+
+[data-bs-theme='dark'] .header {
+  .offcanvas {
+    @include media-breakpoint-down(xl) {
+      --header-link-hover-color: var(--primary);
+      --focus-ring-color: var(--primary);
+    }
   }
 }
