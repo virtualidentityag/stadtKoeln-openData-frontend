@@ -8,6 +8,7 @@
   background-color: var(--footer-background);
 
   .logo {
+    filter: brightness(0) invert(1);
     height: 58px;
   }
 

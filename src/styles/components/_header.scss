@@ -57,6 +57,10 @@
         --link-color-rgb: var(--header-link-hover-color);
       }
     }
+
+    .logo {
+      filter: brightness(0) invert(1);
+    }
   }
 
   .navbar-toggler {
@@ -82,5 +86,9 @@
       --header-link-hover-color: var(--primary);
       --focus-ring-color: var(--primary);
     }
+  }
+  
+  .logo {
+    filter: brightness(0) invert(1);
   }
 }
