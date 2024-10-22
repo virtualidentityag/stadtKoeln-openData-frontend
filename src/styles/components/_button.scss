@@ -52,12 +52,15 @@
   border: 0;
   font-weight: 400;
   text-decoration: none;
+  padding: 0;
   padding-bottom: 4px;
   border-bottom: 2px solid var(--link-color);
   color: rgba(var(--link-color-rgb), 1);
 
-  &:focus {
-    border-color: rgba(var(--link-hover-color-rgb), 1);
-    color: rgba(var(--link-hover-color-rgb), 1);
+  &:hover,
+  &:focus,
+  &:focus-within {
+    --link-color: rgba(var(--link-hover-color-rgb), 1);
+    --link-color-rgb: var(--link-hover-color-rgb);
   }
 }

@@ -50,13 +50,16 @@
       --focus-ring-color: var(--color-on-primary);
     }
 
-    .link,
     .btn-link {
       --link-color-rgb: var(--header-link-color);
 
       &:hover {
         --link-color-rgb: var(--header-link-hover-color);
       }
+    }
+
+    .dropdown-item {
+      --focus-ring-color: var(--primary);
     }
 
     .logo {
@@ -75,7 +78,7 @@
     }
   }
 
-  .link {
+  .btn-link {
     border: 0;
     padding: 0;
   }
