@@ -58,7 +58,7 @@
     btnToActive.classList.add('active')
     btnToActive.setAttribute('aria-pressed', 'true')
     activeThemeIcon.classList.add(svgOfActiveBtn)
-    const themeSwitcherLabel = `${themeSwitcherText.textContent} (${btnToActive.dataset.bsThemeValue})`
+    const themeSwitcherLabel = `${themeSwitcherText.textContent} (${btnToActive.textContent})`
     themeSwitcher.setAttribute('aria-label', themeSwitcherLabel)
 
     if (focus) {
