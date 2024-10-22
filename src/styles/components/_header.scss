@@ -46,17 +46,15 @@
   .offcanvas {
     @include media-breakpoint-down(xl) {
       --header-link-color: var(--offcanvas-color);
-      --header-link-hover-color: var(--primary);
-      --focus-ring-color: var(--primary);
+      --header-link-hover-color: var(--color-on-primary);
+      --focus-ring-color: var(--color-on-primary);
     }
 
     .link {
-      border: 0;
-      padding: 0;
-      --link-color-rgb: var(--light-rgb);
+      --link-color-rgb: var(--header-link-color);
 
       &:hover {
-        --link-color-rgb: var(--primary-rgb);
+        --link-color-rgb: var(--header-link-hover-color);
       }
     }
 
@@ -82,6 +80,15 @@
   }
 }
 
-[data-bs-theme='dark'] .header .logo {
-  filter: brightness(0) invert(1);
+[data-bs-theme='dark'] .header {
+  .offcanvas {
+    @include media-breakpoint-down(xl) {
+      --header-link-hover-color: var(--primary);
+      --focus-ring-color: var(--primary);
+    }
+  }
+  
+  .logo {
+    filter: brightness(0) invert(1);
+  }
 }
