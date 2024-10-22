@@ -35,11 +35,9 @@
           </button>
         </div>
         <div class='offcanvas-body d-flex flex-column justify-content-between'>
-          <ul class='nav flex-column align-items-start flex-xl-row fs-5 pb-3 pb-xl-0 border-bottom'>
-            <li>
-              <button toggle-dark-mode class='nav-link rounded-0' aria-label='Toggle dark mode'>
-                <i class='bi bi-moon-fill'></i>
-              </button>
+          <ul class='nav flex-column align-items-start flex-xl-row align-items-xl-center fs-5 pb-3 pb-xl-0 border-bottom'>
+            <li class='nav-item'>
+              {% include 'partials::base/b_theme-switcher.twig' %}
             </li>
             <li><a href='./overview' class='nav-link'>Daten</a></li>
             <li><a href='#' class='nav-link'>News</a></li>

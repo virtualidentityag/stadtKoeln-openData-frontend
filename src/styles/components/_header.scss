@@ -58,6 +58,10 @@
       }
     }
 
+    .dropdown-item {
+      --focus-ring-color: var(--primary);
+    }
+
     .logo {
       filter: brightness(0) invert(1);
     }
@@ -77,6 +81,11 @@
   .btn-link {
     border: 0;
     padding: 0;
+  }
+
+  #bd-theme {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
   }
 }
 

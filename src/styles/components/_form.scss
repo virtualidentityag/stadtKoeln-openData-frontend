@@ -29,6 +29,13 @@
 .dropdown-menu {
   --dropdown-link-active-bg: var(--primary);
   --dropdown-link-active-color: var(--color-on-primary);
+
+  .dropdown-item {
+    &:focus,
+    &:focus-visible {
+      outline: solid var(--focus-ring-width) var(--focus-ring-color);
+    }
+  }
 }
 
 .form-switch .form-check-input {
