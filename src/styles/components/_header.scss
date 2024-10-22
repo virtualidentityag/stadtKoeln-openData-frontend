@@ -50,7 +50,7 @@
       --focus-ring-color: var(--color-on-primary);
     }
 
-    .link {
+    .btn-link {
       --link-color-rgb: var(--header-link-color);
 
       &:hover {
@@ -74,7 +74,7 @@
     }
   }
 
-  .link {
+  .btn-link {
     border: 0;
     padding: 0;
   }
@@ -87,7 +87,7 @@
       --focus-ring-color: var(--primary);
     }
   }
-  
+
   .logo {
     filter: brightness(0) invert(1);
   }
