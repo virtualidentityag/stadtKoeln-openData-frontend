@@ -19,4 +19,7 @@ export default {
       return `./${filename}`
     },
   },
+  css: {
+    devSourcemap: true,
+  },
 }
