@@ -21,6 +21,11 @@
   border-color: var(--primary);
 }
 
+[data-bs-theme='dark'] .form-check-input:checked {
+  background-color: var(--color-on-primary);
+  border-color: var(--color-on-primary);
+}
+
 .dropdown-menu {
   --dropdown-link-active-bg: var(--primary);
   --dropdown-link-active-color: var(--color-on-primary);
