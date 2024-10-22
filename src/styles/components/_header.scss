@@ -59,6 +59,10 @@
         --link-color-rgb: var(--primary-rgb);
       }
     }
+
+    .logo {
+      filter: brightness(0) invert(1);
+    }
   }
 
   .navbar-toggler {
@@ -76,4 +80,8 @@
     border: 0;
     padding: 0;
   }
+}
+
+[data-bs-theme='dark'] .header .logo {
+  filter: brightness(0) invert(1);
 }
