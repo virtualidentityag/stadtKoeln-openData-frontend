@@ -1,0 +1,8 @@
+<div class='card h-100 d-flex flex-column justify-content-center p-3 border rounded'>
+  <h3 class='h4 mb-2'>{{ name }}</h3>
+  {% if href is defined %}
+    <a class='fs-5 text-body opacity-75 m-0' href='{{ href }}'>{{ info }}</a>
+  {% else %}
+    <p class='fs-5 text-body opacity-75 m-0'>{{ info }}</p>
+  {% endif %}
+</div>

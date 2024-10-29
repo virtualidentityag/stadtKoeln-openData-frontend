@@ -34,17 +34,3 @@
     }
   }
 }
-
-.dark-mode-only {
-  display: none;
-}
-
-[data-bs-theme='dark'] {
-  .light-mode-only {
-    display: none;
-  }
-
-  .dark-mode-only {
-    display: initial;
-  }
-}
