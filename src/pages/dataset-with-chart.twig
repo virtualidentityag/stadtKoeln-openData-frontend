@@ -1,0 +1,405 @@
+{% extends 'layouts::base.twig' %}
+{% set theme = 'default' %}
+
+{% block content %}
+  {%
+    include 'partials::base/b_breadcrumbs.twig' with {
+    links: [
+    {
+    href: './',
+    text: 'Startseite'
+    },
+    {
+    href: './overview',
+    text: 'Daten'
+    },
+    {
+    text: 'Dataset'
+    }
+    ]
+    }
+  %}
+
+  <section class='row pb-4'>
+    <div class='col-12 mb-4 d-flex justify-content-between align-items-center'>
+      <div class='d-flex align-items-start gap-3 flex-wrap'>
+        <h1 class='display-3 m-0'>Baumkataster Köln 2020</h1>
+        <span class='badge badge-small border border-2 border-body text-body'>Datenserie</span>
+      </div>
+      <button class='btn btn-dark d-none d-lg-block' aria-label='Teilen'>
+        <i class='bi bi-share'></i>
+      </button>
+    </div>
+
+    <div class='col-12 d-flex align-items-start justify-content-between'>
+      <div class='row'>
+        <h2 class='col-12 col-md-10 m-0 mb-4'>
+          Baumkataster Stand 2020. Inklusive Georeferenzierung und Angaben nach Art, Gattung und Alter der erfassten
+          Bäume.
+        </h2>
+
+        <p class='m-0'>
+          <strong>Aktualisierung:</strong>
+          15.08.2022
+        </p>
+      </div>
+      <button class='btn btn-dark d-block d-lg-none' aria-label='Teilen'>
+        <i class='bi bi-share'></i>
+      </button>
+    </div>
+  </section>
+
+  <section class='row pb-5'>
+    <div class='col-12 mt-3 mb-4 d-flex justify-content-between align-items-center'>
+      <h2 class='m-0'>Datenvisualisierung</h2>
+      <button class='btn btn-outline-primary'>Grafik modifizieren</button>
+    </div>
+
+    <div class='col-12'>
+      <img class='w-100' src='./assets/img/chart.png'>
+    </div>
+
+    <div class='col-12'>
+      <p class='m-0 mb-3 fs-4'>Bildende Kunst, Neue Medien und Atelier-Förderung 2019 - 2021</p>
+      <div class='d-flex align-items-center gap-2 flex-wrap'>
+        <p class='text-body opacity-75 m-0 fs-5'>Link zum Einbetten:</p>
+        <div class='d-flex gap-3 justify-content-center align-items-center border border-secondary py-2 px-3 rounded'>
+          <p class='m-0 text-body opacity-75'>https://dkan2-cgn-wireframe.stefankorn.de:8</p>
+          <button class='btn p-0' aria-label='Link kopieren'>
+            <i class='bi bi-copy'></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class='row pb-5'>
+    {%
+      include 'partials::content-layout/cl_section-header.twig' with {
+      title: 'Daten als Tabellen'
+      }
+    %}
+
+    <div class='col-12'>
+      <div class='row'>
+        <div class='col-12 col-md-6'>
+          <a href='#' class='card h4 border border rounded p-3'>
+            Bildende Kunst, Neue Medien und Atelier-Förderung 2019 - 2021
+          </a>
+        </div>
+        <div class='col-12 col-md-6'>
+          <a href='#' class='card h4 border border rounded p-3'>
+            Bildende Kunst, Neue Medien und Atelier-Förderung 2019 - 2021
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class='row border-bottom border-gray border-opacity-25'>
+    {%
+      include 'partials::content-layout/cl_section-header.twig' with {
+      title: 'Über diesen Datensatz'
+      }
+    %}
+    <article class='col-12 fs-4'>
+      <p><strong>Was bedeuten die Felder?</strong></p>
+      <p><strong>Objekttyp:</strong>Es gibt 14 Objekttypen die wie folgt unterteilt sind:</p>
+      <p>
+        1 NN; 2 Kleingarten; 3 Sportplatz; 4 Kinderspielplatz; 5 Gebäude/Schule/Heim; 6 Straße/Platz; 7 Grünanlage; 8
+        Friedhof; 9 Biotopflächen; 10 Fluss/Bach; 11 Sonderanlage; 12 Forst; 13 Ausgleichsfläche; 14 Unbekannt
+      </p>
+      <p>
+        <strong>Baumbest_1 :</strong>Z.B Baumbest:1 : 22P => 22 P ist die Baumnummer<br>
+        Gängig sind folgende Buchstabenkürzel:<br>
+        G = Bäume auf der Seite mit geraden Hausnummern<br>
+        U = Bäume auf der Seite mit ungeraden Hausnummern<br>
+        P = Bäume auf einen Platz<br>
+        M = Bäume auf einem Mittelstreifen<br>
+        MU = Bäume auf einem Mittelstreifen zur Seite mit den ungeraden Hausnummern<br>
+        MG = Bäume auf einem Mittelstreifen zur Seite mit den geraden Hausnummern<br>
+        MM = Bäume auf einem Mittelstreifen in der mittleren Reihe<br>
+        Ein Teil der Bäume hat auch nur eine Nummer, das ist z.B. auf Spielplätzen der Fall oder wenn in einer Straße
+        nur wenige Bäume stehen.<br>
+        Die Nummerierung ist teilweise so eingerichtet, dass bei einem Kontrollgang der kürzeste Weg genommen werden
+        kann – dafür sind die Buchstaben teilweise auch hinter die Baumnummern gesetzt.
+      </p>
+      <p>
+        <strong>STAMMVON:</strong>z.B. "STAMMVON": 0.0<br>
+        Bei 2- oder mehrstämmigen Bäumen wird einmal der kleinste und einmal der größte Stammdurchmesser in cm
+        angegeben.<br>
+        Der kleinste Stammdurchmesser wird bei „Stamm von“ und der größte bei „Stamm bis“
+      </p>
+      <p>
+        <strong>STAMMBIS:</strong>z.B. "STAMMBIS": 50.0<br>
+        Die ist die Angabe des Stammdurchmessers in cm.<br>
+        Bei 2- oder mehrstämmigen Bäume erfolgt hierunter der Eintrag des größten Stammdurchmessers
+      </p>
+      <p>
+        <strong>KRONE:</strong>z.B. "KRONE": 8.0<br>
+        Die ist die Angabe zum Durchmesser der Krone in Meter.
+      </p>
+      <p>
+        <strong>H_HE:</strong>z.B. "H_HE": 10.0,<br>
+        Dies ist die Angabe zur Höhe des Baumes in Meter.
+      </p>
+      <p>
+        <strong>Sorte:</strong>z.B.<br>
+        "Sorte": null,<br>
+        In der botanischen Nomenklatur unterteilt man Pflanzen in Gattung, Art und Sorte Bei Pflanzungen in früheren
+        Zeiten wurden hierzu leider keine Angaben gemacht. Bei Neupflanzungen sollen diese Einträge nun standardmäßig
+        durchgeführt werden.<br>
+        Der Eintrag „null“ gibt an, dass hier keine Sorte eingetragen wurde.
+      </p>
+      <p>
+        <strong>Information</strong><br>
+        Es sind noch nicht alle Bäume erfasst, die Erfassung des gesamten städtischen Baumbestandes wird angestrebt. Der
+        Datensatz wird aus diesem Grunde unregelmäßig aktualisiert. Der Einsatz einer neuen Software ist in Planung und
+        soll mittelfristig auch den Abruf von Daten des Baumkatatsers erleichtern.
+      </p>
+    </article>
+    <div class='d-flex justify-content-center my-5'>
+      {%
+        include 'partials::base/b_link.twig' with {
+        text: 'mehr Daten anzeigen',
+        icon: 'plus-lg'
+        }
+      %}
+    </div>
+  </section>
+
+  <section class='row pt-5 pb-4'>
+    <div class='col-12'>
+      {%
+        include 'partials::content-layout/cl_section-header.twig' with {
+        title: 'Kategorien'
+        }
+      %}
+      <div class='d-flex gap-2'>
+        <span class='badge border border-2 border-body text-body'>Umwelt und Klima</span>
+        <span class='badge border border-2 border-body text-body'>Geo</span>
+      </div>
+    </div>
+  </section>
+
+  <section class='row pt-5 pb-4'>
+    <div class='col-12'>
+      {%
+        include 'partials::content-layout/cl_section-header.twig' with {
+        title: 'Dateien und Quellen'
+        }
+      %}
+      <div class='d-flex flex-column gap-3 gap-md-4'>
+        {%
+          include 'partials::base/b_download.twig' with {
+          type: 'zip',
+          name: 'Bestand Einzelbaeume Koeln',
+          description: 'Stand 06 / 2020 Shape Datei'
+          }
+        %}
+        {%
+          include 'partials::base/b_download.twig' with {
+          type: 'csv',
+          name: 'Bestand Einzelbaeume Koeln',
+          description: 'Stand 06 / 2020'
+          }
+        %}
+        {%
+          include 'partials::base/b_download.twig' with {
+          type: 'json',
+          name: 'Bestand Einzelbaeume Koeln'
+          }
+        %}
+      </div>
+      <div class='d-flex justify-content-center mt-5'>
+        {%
+          include 'partials::base/b_link.twig' with {
+          text: 'alle herunterladen',
+          icon: 'plus-lg'
+          }
+        %}
+      </div>
+    </div>
+  </section>
+
+  <section class='row pt-5 pb-4'>
+    {%
+      include 'partials::content-layout/cl_section-header.twig' with {
+      title: 'Weitere Datensätze der Datenserie',
+      link: {
+      href: '#',
+      text: 'Alle anzeigen',
+      }
+      }
+    %}
+    <div class='col-12'>
+      <div class='row'>
+        {% for i in 0..3 %}
+          <div class='col-12 col-md-6 mb-4 mb-md-5'>
+            <a class='card text-decoration-none p-3 border rounded' href='#'>
+              <h3 class='h4 mb-2'><strong>Baumkataster Köln 2018</strong></h3>
+              <p class='m-0 d-flex flex-wrap align-items-center gap-2'>
+                <strong class='text-body opacity-75'>Formate:</strong>
+                <span class='p-2 small bg-body-secondary text-uppercase'>ZIP</span>
+                <span class='p-2 small bg-body-secondary text-uppercase'>JSON</span>
+              </p>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class='row pt-5 pb-4 border-gray border-bottom border-opacity-25'>
+    {%
+      include 'partials::content-layout/cl_section-header.twig' with {
+      title: 'Zusätzliche Informationen',
+      }
+    %}
+
+    <div class='col-12'>
+      <div class='row'>
+        <div class='col-12 col-md-6 mb-4 mb-md-5'>
+          {%
+            include 'partials::base/b_additional_info.twig' with {
+            name: 'Angepasst',
+            info: '2024-06-25'
+            }
+          %}
+        </div>
+        <div class='col-12 col-md-6 mb-4 mb-md-5'>
+          {%
+            include 'partials::base/b_additional_info.twig' with {
+            name: 'Veröffentlichungsdatum',
+            info: '2024-06-25'
+            }
+          %}
+        </div>
+        <div class='col-12 col-md-6 mb-4 mb-md-5'>
+          {%
+            include 'partials::base/b_additional_info.twig' with {
+            name: 'Aktualisierungsintervall',
+            info: 'Irregularly'
+            }
+          %}
+        </div>
+        <div class='col-12 col-md-6 mb-4 mb-md-5'>
+          {%
+            include 'partials::base/b_additional_info.twig' with {
+            name: 'Bezeichner',
+            info: '59dd9d5d-cd65-43f8-bd13-d82734e640ef'
+            }
+          %}
+        </div>
+        <div class='col-12 col-md-6 mb-4 mb-md-5'>
+          {%
+            include 'partials::base/b_additional_info.twig' with {
+            name: 'Herausgeber',
+            info: 'Stadt Köln',
+            href: '#',
+            }
+          %}
+        </div>
+        <div class='col-12 col-md-6 mb-4 mb-md-5'>
+          {%
+            include 'partials::base/b_additional_info.twig' with {
+            name: 'Standort Räumlich-Geografischer Ausdehnung',
+            info: 'https://www.geonames.org/2886242/koeln.html',
+            href: '#',
+            }
+          %}
+        </div>
+        <div class='col-12 col-md-6 mb-4 mb-md-5'>
+          {%
+            include 'partials::base/b_additional_info.twig' with {
+            name: 'Sprache',
+            info: 'German (Germany)'
+            }
+          %}
+        </div>
+        <div class='col-12 col-md-6 mb-4 mb-md-5'>
+          {%
+            include 'partials::base/b_additional_info.twig' with {
+            name: 'Lizenz',
+            info: 'Datenlizenz Deutschland – Zero – Version 2.0',
+            href: '#'
+            }
+          %}
+        </div>
+        <div class='col-12 col-md-6 mb-4 mb-md-5'>
+          {%
+            include 'partials::base/b_additional_info.twig' with {
+            name: 'Autor',
+            info: 'Stadt Köln'
+            }
+          %}
+        </div>
+        <div class='col-12 col-md-6 mb-4 mb-md-5'>
+          {%
+            include 'partials::base/b_additional_info.twig' with {
+            name: 'Kontakt',
+            info: 'Amt für Landschaftspflege und Grünflächen Stadt Köln'
+            }
+          %}
+        </div>
+        <div class='col-12 col-md-6 mb-4 mb-md-5'>
+          {%
+            include 'partials::base/b_additional_info.twig' with {
+            name: 'Kontakt Email',
+            info: 'johndoe@stadt-koeln.de',
+            href: 'mailto:johndoe@stadt-koeln.de'
+            }
+          %}
+        </div>
+        <div class='col-12 col-md-6 mb-4 mb-md-5'>
+          {%
+            include 'partials::base/b_additional_info.twig' with {
+            name: 'Zugriff',
+            info: 'Public'
+            }
+          %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class='row pt-5 pb-4 border-gray border-bottom border-opacity-25'>
+    {%
+      include 'partials::content-layout/cl_section-header.twig' with {
+      title: 'Metadaten Formate',
+      }
+    %}
+
+    <div class='col-12'>
+      <div class='row'>
+        <div class='col-12 col-md-6 mb-4 mb-md-5'>
+          <div class='card p-3 border rounded'>
+            <h3 class='h4 mb-3'>
+              Die Metadaten für dcat:Dataset - Datensatz im DCAT-AP.de-Profil stehen in den folgenden Formaten zur
+              Verfügung:
+            </h3>
+            <div class='d-flex gap-2 flex-wrap'>
+              <span class='p-2 small bg-body-secondary text-uppercase'>JSON</span>
+              <span class='p-2 small bg-body-secondary text-uppercase'>RDF</span>
+              <span class='p-2 small bg-body-secondary text-uppercase'>TTL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class='row py-5 mb-5 border-gray border-bottom border-opacity-25'>
+    {%
+      include 'partials::content-layout/cl_section-header.twig' with {
+      title: 'Tags',
+      }
+    %}
+
+    <div class='d-flex gap-2 flex-wrap'>
+      <span class='badge badge-md-large rounded-pill bg-dark text-light border border-light text-uppercase'>LOREM</span>
+      <span class='badge badge-md-large rounded-pill bg-dark text-light border border-light text-uppercase'>LOREM</span>
+      <span class='badge badge-md-large rounded-pill bg-dark text-light border border-light text-uppercase'>LOREM</span>
+    </div>
+  </section>
+
+  {% include 'partials::content-layout/cl_feedback-form.twig' %}
+{% endblock %}
