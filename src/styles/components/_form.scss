@@ -9,7 +9,8 @@
 }
 
 .form-control,
-.form-check-input {
+.form-check-input,
+.form-select {
   &:focus {
     border-color: var(--primary);
     box-shadow: 0 0 0 var(--focus-ring-width) var(--focus-ring-color);
