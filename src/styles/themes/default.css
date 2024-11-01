@@ -32,4 +32,8 @@
 
   --border-color: #827d73;
   --header-border-color: #827d73;
+
+  .bg-light-gray {
+    --bg-opacity: 0;
+  }
 }
