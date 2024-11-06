@@ -1,7 +1,14 @@
 <div class='row position-relative'>
   <div class='col-lg-8'>
-    <div class=' ratio ratio-16x9'>
+    <div class='ratio ratio-16x9'>
       <img class='img-fluid' src='https://picsum.photos/960/540' alt>
+      {% if copyright is defined %}
+        <div>
+          <span class='position-absolute top-0 left-0 m-2 badge badge-small text-bg-secondary rounded-pill'>
+            &copy; {{ copyright }}
+          </span>
+        </div>
+      {% endif %}
     </div>
   </div>
   <div class='mt-n5 col-lg-6 position-lg-absolute z-1 end-0 top-0 mt-lg-5'>
