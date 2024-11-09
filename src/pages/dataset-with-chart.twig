@@ -49,8 +49,178 @@
     </div>
   </section>
 
-  <section class='row pb-3 border-gray border-bottom border-opacity-25'>
-    <article class='fs-4'>
+  <section class='row pb-5'>
+    <div class='col-12 mt-3 mb-4 d-flex justify-content-between align-items-center'>
+      <h2 class='m-0'>Datenvisualisierung</h2>
+      <button
+        class='btn btn-outline-primary'
+        type='button'
+        data-bs-toggle='offcanvas'
+        data-bs-target='#offcanvas-filters'
+        aria-controls='offcanvas-filters'
+        aria-label='Filter umschalten'
+      >
+        Grafik modifizieren
+      </button>
+    </div>
+
+    <aside
+      class='filters offcanvas offcanvas-light offcanvas-end'
+      id='offcanvas-filters'
+    >
+      <div
+        class='
+          offcanvas-header d-flex gap-2 align-items-center justify-content-between
+          {% if showDesktop %} d-lg-none {% endif %}
+        '
+      >
+        <p class='h3 m-0'>Grafik modifizieren</p>
+        <button
+          type='button'
+          class='btn'
+          data-bs-dismiss='offcanvas'
+          aria-label='Filter schließen'
+        >
+          <i class='bi bi-x-lg'></i>
+        </button>
+      </div>
+      <div class='offcanvas-body'>
+        <form class='row gap-4'>
+          <div class='col-12'>
+            <label for='grafik-typ' class='form-label fs-6'>Grafik-Typ</label>
+            <select id='grafik-typ' class='form-select' aria-label='Vertikale Säulen'>
+              <option value='Vertikale Säulen'>Vertikale Säulen</option>
+            </select>
+          </div>
+          <div class='col-12'>
+            <label for='parameter-x-axis' class='form-label fs-6'>Parameter x-Achse</label>
+            <select id='parameter-x-axis' class='form-select' aria-label='Jahr'>
+              <option value='Jahr'>Jahr</option>
+            </select>
+          </div>
+          <div class='col-12'>
+            <label for='calculation-y-axis' class='form-label fs-6'>Kalkulation y-Achse</label>
+            <select id='calculation-y-axis' class='form-select' aria-label='Summe'>
+              <option value='Summe'>Summe</option>
+            </select>
+          </div>
+          <div class='col-12'>
+            <label for='parameter-y-axis' class='form-label fs-6'>Parameter y-Achse</label>
+            <div class='px-3 py-2 border rounded'>
+              <div class='form-check mb-2'>
+                <input class='form-check-input' type='checkbox' value='' id='parameter-y-axis-1'>
+                <label class='form-check-label' for='parameter-y-axis-1'> Fördersumme in Euro </label>
+              </div>
+              <div class='form-check mb-2'>
+                <input class='form-check-input' type='checkbox' value='' id='parameter-y-axis-2'>
+                <label class='form-check-label' for='parameter-y-axis-2'>Lorem Ipsum</label>
+              </div>
+              <div class='form-check mb-2'>
+                <input class='form-check-input' type='checkbox' value='' id='parameter-y-axis-3'>
+                <label class='form-check-label' for='parameter-y-axis-3'>Lorem Ipsum</label>
+              </div>
+              <div class='form-check'>
+                <input class='form-check-input' type='checkbox' value='' id='parameter-y-axis-4'>
+                <label class='form-check-label' for='parameter-y-axis-4'>Lorem Ipsum</label>
+              </div>
+            </div>
+          </div>
+          <div class='col-12'>
+            <label for='serie' class='form-label fs-6'>Serie</label>
+            <select id='serie' class='form-select' aria-label='keine'>
+              <option value='keine'>keine</option>
+            </select>
+          </div>
+          <div class='col-12'>
+            <label for='filter' class='form-label fs-6'>Filter</label>
+            <div class='px-3 py-2 border rounded'>
+              <div class='form-check mb-2'>
+                <input class='form-check-input' type='checkbox' value='' id='filter-1'>
+                <label class='form-check-label' for='filter-1'>Lorem Ipsum</label>
+              </div>
+              <div class='form-check mb-2'>
+                <input class='form-check-input' type='checkbox' value='' id='filter-2'>
+                <label class='form-check-label' for='filter-2'>Lorem Ipsum</label>
+              </div>
+              <div class='form-check mb-2'>
+                <input class='form-check-input' type='checkbox' value='' id='filter-3'>
+                <label class='form-check-label' for='filter-3'>Lorem Ipsum</label>
+              </div>
+              <div class='form-check mb-2'>
+                <input class='form-check-input' type='checkbox' value='' id='filter-4'>
+                <label class='form-check-label' for='filter-4'>Lorem Ipsum</label>
+              </div>
+              <div class='form-check'>
+                <input class='form-check-input' type='checkbox' value='' id='filter-5'>
+                <label class='form-check-label' for='filter-5'>Lorem Ipsum</label>
+              </div>
+            </div>
+          </div>
+          <div class='col-12'>
+            <label for='begrenzung' class='form-label fs-6'>Begrenzung</label>
+            <select id='begrenzung' class='form-select' aria-label='keine'>
+              <option value='keine'>keine</option>
+            </select>
+          </div>
+          <div class='col-12'>
+            <label for='sortieren-nach' class='form-label fs-6'>Sortieren nach</label>
+            <select id='sortieren-nach' class='form-select' aria-label='keine'>
+              <option value='keine'>keine</option>
+            </select>
+          </div>
+          <div class='mt-4 d-flex justify-content-center'>
+            <button type='submit' class='btn btn-lg btn-primary'>Neu berechnen</button>
+          </div>
+        </form>
+      </div>
+    </aside>
+
+    <div class='col-12'>
+      <img class='w-100' src='./assets/img/chart.png' alt>
+    </div>
+
+    <div class='col-12'>
+      <p class='m-0 mb-3 fs-4'>Bildende Kunst, Neue Medien und Atelier-Förderung 2019 - 2021</p>
+      <div class='d-flex align-items-center gap-2 flex-wrap'>
+        <p class='text-body opacity-75 m-0 fs-5'>Link zum Einbetten:</p>
+        <div class='d-flex gap-3 justify-content-center align-items-center border border-secondary py-2 px-3 rounded'>
+          <p class='m-0 text-body opacity-75'>https://dkan2-cgn-wireframe.stefankorn.de:8</p>
+          <button class='btn p-0' aria-label='Link kopieren'>
+            <i class='bi bi-copy'></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class='row pb-5'>
+    {%
+      include 'partials::content-layout/cl_section-header.twig' with {
+      title: 'Daten als Tabellen'
+      }
+    %}
+
+    <div class='col-12'>
+      <div class='row'>
+        <div class='col-12 col-md-6'>
+          <a href='#' class='card h4 border border rounded p-3'>
+            Bildende Kunst, Neue Medien und Atelier-Förderung 2019 - 2021
+          </a>
+        </div>
+        <div class='col-12 col-md-6'>
+          <a href='#' class='card h4 border border rounded p-3'>
+            Bildende Kunst, Neue Medien und Atelier-Förderung 2019 - 2021
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class='row border-bottom border-gray border-opacity-25'>
+    {%
+      include 'partials::content-layout/cl_section-header.twig' with {
+      title: 'Über diesen Datensatz'
+      }
+    %}
+    <article class='col-12 fs-4'>
       <p><strong>Was bedeuten die Felder?</strong></p>
       <p><strong>Objekttyp:</strong>Es gibt 14 Objekttypen die wie folgt unterteilt sind:</p>
       <p>
