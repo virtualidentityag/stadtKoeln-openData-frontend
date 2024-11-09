@@ -1,0 +1,157 @@
+{% extends 'layouts::base.twig' %}
+{% set theme = 'default' %}
+
+{% block content %}
+  {%
+    include 'partials::base/b_breadcrumbs.twig' with {
+    links: [
+    {
+    href: './',
+    text: 'Startseite'
+    },
+    {
+    href: './overview',
+    text: 'Daten'
+    },
+    {
+    text: 'Baumkataster Köln 2020'
+    }
+    ]
+    }
+  %}
+
+  <section class='row pb-4'>
+    <div class='col-12 mb-4 d-flex justify-content-between align-items-center'>
+      <div class='d-flex align-items-start gap-3 flex-wrap'>
+        <h1 class='display-3 m-0'>Baumkataster Köln 2020</h1>
+        <span class='badge badge-small border border-2 border-body text-body'>Datenserie</span>
+      </div>
+      <button class='btn btn-dark d-none d-lg-block' aria-label='Teilen'>
+        <i class='bi bi-share'></i>
+      </button>
+    </div>
+
+    <div class='col-12 d-flex align-items-start justify-content-between'>
+      <div class='row'>
+        <h2 class='col-12 col-md-10 m-0 mb-4'>Bildende Kunst, Neue Medien und Atelier-Förderung 2019 - 2021</h2>
+      </div>
+      <button class='btn btn-dark d-block d-lg-none' aria-label='Teilen'>
+        <i class='bi bi-share'></i>
+      </button>
+    </div>
+  </section>
+
+  <section class='row pb-5'>
+    <div class='col-12 mt-3 mb-4 d-flex justify-content-end align-items-center gap-4'>
+      <div class='d-flex gap-2 align-items-center'>
+        <p class='m-0 text-body opacity-75'>Einstellungen</p>
+        <button
+          class='btn btn-dark'
+          type='button'
+          aria-label='Einstellungen'
+        >
+          <i class='bi bi-list-task'></i>
+        </button>
+      </div>
+      <div class='d-flex gap-2 align-items-center'>
+        <p class='m-0 text-body opacity-75'>Filter</p>
+        <button
+          class='btn btn-dark'
+          type='button'
+          aria-label='Filter'
+        >
+          <i class='bi bi-funnel-fill'></i>
+        </button>
+      </div>
+      <input
+        class='form-control form-control-lg w-auto'
+        type='search'
+        placeholder='Einträge suchen'
+        aria-label='Einträge suchen'
+      >
+    </div>
+
+    <div class='col-12 mb-5'>
+      <table class='w-100 table table-striped'>
+        <thead>
+          <tr>
+            <th>Jahr</th>
+            <th>Förderungsart</th>
+            <th>Einrichtung</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for i in 0..9 %}
+            <tr>
+              <td>2019</td>
+              <td>Intitutionelle Förderung</td>
+              <td>Förderverein Kunstraum Fuhrwerkswaage e.V</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <div class='d-flex justify-content-between'>
+        <div class='d-flex align-items-center gap-2'>
+          <label for='items-per-page' class='text-nowrap'>Einträge pro Seite</label>
+          <select id='items-per-page' class='form-select' aria-label='10 Einträge pro Seite'>
+            <option value='10'>10</option>
+            <option value='20'>20</option>
+            <option value='30'>30</option>
+          </select>
+        </div>
+        <div class='d-flex align-items-center gap-2'>
+          <p class='m-0'>1 bis 10 von 225 Einträgen</p>
+          {% include 'partials::base/b_pagination.twig' %}
+        </div>
+      </div>
+    </div>
+
+    <div class='col-12'>
+      <div class='d-flex align-items-center gap-2 flex-wrap'>
+        <p class='text-body opacity-75 m-0 fs-5'>Kopieren Sie diesen Link, um die Tabelle in Dokumente einzubetten:</p>
+        <div class='d-flex gap-3 justify-content-center align-items-center border border-secondary py-2 px-3 rounded'>
+          <p class='m-0 text-body opacity-75'>https://dkan2-cgn-wireframe.stefankorn.de:8</p>
+          <button class='btn p-0' aria-label='Link kopieren'>
+            <i class='bi bi-copy'></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class='row pt-5 pb-4'>
+    <div class='col-12'>
+      <div class='d-flex flex-column gap-3 gap-md-4'>
+        {%
+          include 'partials::base/b_download.twig' with {
+          type: 'csv',
+          name: 'Bildende Kunst, Neue Medien und Atelier-Förderung 2019 - 2021',
+          }
+        %}
+      </div>
+    </div>
+  </section>
+
+  <section class='row pt-5 pb-5'>
+    {%
+      include 'partials::content-layout/cl_section-header.twig' with {
+      title: 'Weitere Tabellen'
+      }
+    %}
+
+    <div class='col-12'>
+      <div class='row'>
+        <div class='col-12 col-md-6'>
+          <a href='#' class='card h4 border border rounded p-3'>
+            Bildende Kunst, Neue Medien und Atelier-Förderung 2019 - 2021
+          </a>
+        </div>
+        <div class='col-12 col-md-6'>
+          <a href='#' class='card h4 border border rounded p-3'>
+            Bildende Kunst, Neue Medien und Atelier-Förderung 2019 - 2021
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

@@ -1,8 +1,9 @@
-<div class='p-3 border rounded d-flex flex-wrap flex-sm-nowrap align-items-center gap-3'>
-  <div class='d-flex flex-grow-1 align-items-center gap-3'>
-    <div class='p-3 bg-body-secondary text-uppercase fw-bold'>{{ type }}</div>
-    <p class='h4 m-0'>{{ name }}</p>
+<div class='px-3 py-4 border rounded d-flex flex-wrap flex-sm-nowrap align-items-center gap-3'>
+  <div class='p-3 bg-body-secondary text-uppercase fw-bold'>{{ type }}</div>
+  <div class='py-3'>
+    <a class='h4 m-0' href='#'>{{ name }}</a>
+    {% if description is defined %}
+      <p class='m-0 mt-2 fs-5 text-body opacity-75'>{{ description }}</p>
+    {% endif %}
   </div>
-
-  <a class='btn btn-primary' href='#'>Herunterladen</a>
 </div>
