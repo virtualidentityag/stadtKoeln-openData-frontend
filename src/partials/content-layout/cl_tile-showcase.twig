@@ -1,4 +1,4 @@
-<div class='tile-showcase' aria-expanded='false'>
+<div class='tile-showcase' role='region' aria-live='polite' aria-expanded='false'>
   <div class='row row-gap-4 row-cols-2 row-cols-md-4 row-cols-lg-6'>
     <div class='col'>
       {%
@@ -114,7 +114,10 @@
       {%
         include 'partials::base/b_link.twig' with {
         text: 'Alle Kategorien anzeigen',
-        icon: 'plus-lg'
+        icon: 'plus-lg',
+        attributes: {
+        'aria-live': 'polite',
+        }
         }
       %}
     </div>
