@@ -152,46 +152,51 @@
         </div>
       </div>
 
-      <div class='d-flex flex-column gap-5 mb-5' role='region' aria-live='polite'>
-        {%
-          include 'partials::base/b_request.twig' with {
-          status: 'coordinating'
-          }
-        %}
-        {%
-          include 'partials::base/b_request.twig' with {
-          status: 'requested'
-          }
-        %}
-        {%
-          include 'partials::base/b_request.twig' with {
-          status: 'denied'
-          }
-        %}
-        {%
-          include 'partials::base/b_request.twig' with {
-          status: 'partially-provided'
-          }
-        %}
-        {%
-          include 'partials::base/b_request.twig' with {
-          status: 'ready'
-          }
-        %}
-        {%
-          include 'partials::base/b_request.twig' with {
-          status: 'reviewing'
-          }
-        %}
-      </div>
-
-      <div class='d-flex justify-content-center'>
-        {%
-          include 'partials::base/b_link.twig' with {
-          text: 'Mehr Datenanfragen anzeigen',
-          icon: 'plus-lg'
-          }
-        %}
+      <div load-more-section>
+        <div
+          class='d-flex flex-column gap-5 mb-5'
+          role='region'
+          aria-live='polite'
+          load-more-area
+          data-per-page='5'
+          data-page='0'
+        >
+          {% for i in 0..5 %}
+            {%
+              include 'partials::base/b_request.twig' with {
+              status: 'coordinating'
+              }
+            %}
+            {%
+              include 'partials::base/b_request.twig' with {
+              status: 'requested'
+              }
+            %}
+            {%
+              include 'partials::base/b_request.twig' with {
+              status: 'denied'
+              }
+            %}
+            {%
+              include 'partials::base/b_request.twig' with {
+              status: 'partially-provided'
+              }
+            %}
+            {%
+              include 'partials::base/b_request.twig' with {
+              status: 'ready'
+              }
+            %}
+          {% endfor %}
+        </div>
+        <div class='d-flex justify-content-center'>
+          {%
+            include 'partials::base/b_link.twig' with {
+            text: 'Mehr Datenanfragen anzeigen',
+            icon: 'plus-lg'
+            }
+          %}
+        </div>
       </div>
     </div>
   </section>
